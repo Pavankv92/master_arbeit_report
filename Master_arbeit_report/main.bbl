@@ -1,0 +1,937 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{EEG}{online}{}
+    \name{author}{1}{}{%
+      {{hash=e}{%
+         family={en.wikipedia.org},
+         familyi={e\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{e1}
+    \strng{fullhash}{e1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{MS Windows NT} Kernel Description}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Electroencephalography
+    \endverb
+    \field{year}{1999}
+    \field{urlday}{20}
+    \field{urlmonth}{05}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{ASingleCameraPhotogrammetry}{article}{}
+    \name{author}{2}{}{%
+      {{hash=QS}{%
+         family={Qian},
+         familyi={Q\bibinitperiod},
+         given={Shuo},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=SY}{%
+         family={Sheng},
+         familyi={S\bibinitperiod},
+         given={Yang},
+         giveni={Y\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{QSSY1}
+    \strng{fullhash}{QSSY1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1007/s10439-011-0374-6
+    \endverb
+    \field{pages}{2844\bibrangedash 56}
+    \field{title}{A Single Camera Photogrammetry System for Multi-angle Fast
+  Localization of EEG Electrodes}
+    \field{volume}{39}
+    \field{journaltitle}{Annals of biomedical engineering}
+    \field{month}{08}
+    \field{year}{2011}
+  \endentry
+
+  \entry{binnie1982practical}{article}{}
+    \name{author}{4}{}{%
+      {{hash=BC}{%
+         family={Binnie},
+         familyi={B\bibinitperiod},
+         given={CD},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=DE}{%
+         family={Dekker},
+         familyi={D\bibinitperiod},
+         given={E},
+         giveni={E},
+      }}%
+      {{hash=SA}{%
+         family={Smit},
+         familyi={S\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=VdLG}{%
+         prefix={Van\bibnamedelima der},
+         prefixi={V\bibinitperiod\bibinitdelim d\bibinitperiod},
+         family={Linden},
+         familyi={L\bibinitperiod},
+         given={G},
+         giveni={G},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{BCDESA+1}
+    \strng{fullhash}{BCDESALGVd1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{453\bibrangedash 458}
+    \field{title}{Practical considerations in the positioning of EEG
+  electrodes}
+    \field{volume}{53}
+    \field{journaltitle}{Electroencephalography and Clinical Neurophysiology}
+    \field{year}{1982}
+  \endentry
+
+  \entry{de1991practical}{article}{}
+    \name{author}{3}{}{%
+      {{hash=DMJ}{%
+         family={De\bibnamedelima Munck},
+         familyi={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+         given={JC},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=VP}{%
+         family={Vijn},
+         familyi={V\bibinitperiod},
+         given={PCM},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=SH}{%
+         family={Spekreijse},
+         familyi={S\bibinitperiod},
+         given={Henk},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{DMJVPSH1}
+    \strng{fullhash}{DMJVPSH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{85\bibrangedash 87}
+    \field{title}{A practical method for determining electrode positions on the
+  head}
+    \field{volume}{78}
+    \field{journaltitle}{Electroencephalography and clinical Neurophysiology}
+    \field{year}{1991}
+  \endentry
+
+  \entry{khosla1999spatial}{article}{}
+    \name{author}{3}{}{%
+      {{hash=KD}{%
+         family={Khosla},
+         familyi={K\bibinitperiod},
+         given={Deepak},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=DM}{%
+         family={Don},
+         familyi={D\bibinitperiod},
+         given={Manuel},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=KB}{%
+         family={Kwong},
+         familyi={K\bibinitperiod},
+         given={Betty},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{KDDMKB1}
+    \strng{fullhash}{KDDMKB1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{261\bibrangedash 271}
+    \field{title}{Spatial mislocalization of EEG electrodes--effects on
+  accuracy of dipole estimation}
+    \field{volume}{110}
+    \field{journaltitle}{Clinical neurophysiology}
+    \field{year}{1999}
+  \endentry
+
+  \entry{le1998rapid}{article}{}
+    \name{author}{4}{}{%
+      {{hash=LJ}{%
+         family={Le},
+         familyi={L\bibinitperiod},
+         given={Jian},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Min},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=PE}{%
+         family={Pellouchoud},
+         familyi={P\bibinitperiod},
+         given={Emiliana},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=GA}{%
+         family={Gevins},
+         familyi={G\bibinitperiod},
+         given={Alan},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{LJLMPE+1}
+    \strng{fullhash}{LJLMPEGA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{6}
+    \field{pages}{554\bibrangedash 558}
+    \field{title}{A rapid method for determining standard 10/10 electrode
+  positions for high resolution EEG studies}
+    \field{volume}{106}
+    \field{journaltitle}{Electroencephalography and clinical neurophysiology}
+    \field{year}{1998}
+  \endentry
+
+  \entry{steddin1995new}{article}{}
+    \name{author}{2}{}{%
+      {{hash=SS}{%
+         family={Steddin},
+         familyi={S\bibinitperiod},
+         given={S},
+         giveni={S},
+      }}%
+      {{hash=BK}{%
+         family={B{\"o}tzel},
+         familyi={B\bibinitperiod},
+         given={K},
+         giveni={K},
+      }}%
+    }
+    \strng{namehash}{SSBK1}
+    \strng{fullhash}{SSBK1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{65}
+    \field{title}{A new device for scalp electrode localization with
+  unrestrained head}
+    \field{volume}{242}
+    \field{journaltitle}{J. Neurol}
+    \field{year}{1995}
+  \endentry
+
+  \entry{koessler2011eeg}{article}{}
+    \name{author}{6}{}{%
+      {{hash=KL}{%
+         family={Koessler},
+         familyi={K\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CT}{%
+         family={Cecchin},
+         familyi={C\bibinitperiod},
+         given={Thierry},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=CO}{%
+         family={Caspary},
+         familyi={C\bibinitperiod},
+         given={Olivier},
+         giveni={O\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Benhadid},
+         familyi={B\bibinitperiod},
+         given={Adnane},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=VH}{%
+         family={Vespignani},
+         familyi={V\bibinitperiod},
+         given={Herv{\'e}},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=ML}{%
+         family={Maillard},
+         familyi={M\bibinitperiod},
+         given={Louis},
+         giveni={L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{KLCTCO+1}
+    \strng{fullhash}{KLCTCOBAVHML1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{3}
+    \field{pages}{983\bibrangedash 995}
+    \field{title}{EEG--MRI Co-registration and sensor labeling using a 3D laser
+  scanner}
+    \field{volume}{39}
+    \field{journaltitle}{Annals of Biomedical Engineering}
+    \field{year}{2011}
+  \endentry
+
+  \entry{bauer2000measurement}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BH}{%
+         family={Bauer},
+         familyi={B\bibinitperiod},
+         given={Herbert},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=LC}{%
+         family={Lamm},
+         familyi={L\bibinitperiod},
+         given={Claus},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=HS}{%
+         family={Holzreiter},
+         familyi={H\bibinitperiod},
+         given={Stefan},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HI}{%
+         family={Holl{\"a}nder},
+         familyi={H\bibinitperiod},
+         given={Igor},
+         giveni={I\bibinitperiod},
+      }}%
+      {{hash=LU}{%
+         family={Leodolter},
+         familyi={L\bibinitperiod},
+         given={Ulrich},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=LM}{%
+         family={Leodolter},
+         familyi={L\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Academic Press}%
+    }
+    \strng{namehash}{BHLCHS+1}
+    \strng{fullhash}{BHLCHSHILULM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{S461}
+    \field{title}{Measurement of 3D electrode coordinates by means of a 3D
+  photogrammetric head digitizer}
+    \field{volume}{11}
+    \field{journaltitle}{NeuroImage}
+    \field{year}{2000}
+  \endentry
+
+  \entry{russell2005geodesic}{article}{}
+    \name{author}{5}{}{%
+      {{hash=RGS}{%
+         family={Russell},
+         familyi={R\bibinitperiod},
+         given={Gerald\bibnamedelima S},
+         giveni={G\bibinitperiod\bibinitdelim S\bibinitperiod},
+      }}%
+      {{hash=EKJ}{%
+         family={Eriksen},
+         familyi={E\bibinitperiod},
+         given={K\bibnamedelima Jeffrey},
+         giveni={K\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=PP}{%
+         family={Poolman},
+         familyi={P\bibinitperiod},
+         given={Pieter},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=LP}{%
+         family={Luu},
+         familyi={L\bibinitperiod},
+         given={Phan},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=TDM}{%
+         family={Tucker},
+         familyi={T\bibinitperiod},
+         given={Don\bibnamedelima M},
+         giveni={D\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{RGSEKJPP+1}
+    \strng{fullhash}{RGSEKJPPLPTDM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{1130\bibrangedash 1140}
+    \field{title}{Geodesic photogrammetry for localizing sensor positions in
+  dense-array EEG}
+    \field{volume}{116}
+    \field{journaltitle}{Clinical Neurophysiology}
+    \field{year}{2005}
+  \endentry
+
+  \entry{koessler2007spatial}{article}{}
+    \name{author}{6}{}{%
+      {{hash=KL}{%
+         family={Koessler},
+         familyi={K\bibinitperiod},
+         given={Laurent},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ML}{%
+         family={Maillard},
+         familyi={M\bibinitperiod},
+         given={Louis},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=BA}{%
+         family={Benhadid},
+         familyi={B\bibinitperiod},
+         given={Adnane},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=VJP}{%
+         family={Vignal},
+         familyi={V\bibinitperiod},
+         given={J-P},
+         giveni={J\bibinithyphendelim P\bibinitperiod},
+      }}%
+      {{hash=BM}{%
+         family={Braun},
+         familyi={B\bibinitperiod},
+         given={Marc},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=VH}{%
+         family={Vespignani},
+         familyi={V\bibinitperiod},
+         given={Herv{\'e}},
+         giveni={H\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{KLMLBA+1}
+    \strng{fullhash}{KLMLBAVJPBMVH1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{2}
+    \field{pages}{97\bibrangedash 102}
+    \field{title}{Spatial localization of EEG electrodes}
+    \field{volume}{37}
+    \field{journaltitle}{Neurophysiologie Clinique/Clinical Neurophysiology}
+    \field{year}{2007}
+  \endentry
+
+  \entry{baysal2010single}{article}{}
+    \name{author}{2}{}{%
+      {{hash=BU}{%
+         family={Baysal},
+         familyi={B\bibinitperiod},
+         given={U{\u{g}}ur},
+         giveni={U\bibinitperiod},
+      }}%
+      {{hash=SG}{%
+         family={{\c{S}}eng{\"u}l},
+         familyi={{\c{S}}\bibinitperiod},
+         given={G{\"o}khan},
+         giveni={G\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{BUSG1}
+    \strng{fullhash}{BUSG1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{1539\bibrangedash 1547}
+    \field{title}{Single camera photogrammetry system for EEG electrode
+  identification and localization}
+    \field{volume}{38}
+    \field{journaltitle}{Annals of biomedical engineering}
+    \field{year}{2010}
+  \endentry
+
+  \entry{chen2019spatial}{article}{}
+    \name{author}{5}{}{%
+      {{hash=CS}{%
+         family={Chen},
+         familyi={C\bibinitperiod},
+         given={Shengyong},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=HY}{%
+         family={He},
+         familyi={H\bibinitperiod},
+         given={Yu},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=QH}{%
+         family={Qiu},
+         familyi={Q\bibinitperiod},
+         given={Huili},
+         giveni={H\bibinitperiod},
+      }}%
+      {{hash=YX}{%
+         family={Yan},
+         familyi={Y\bibinitperiod},
+         given={Xi},
+         giveni={X\bibinitperiod},
+      }}%
+      {{hash=ZM}{%
+         family={Zhao},
+         familyi={Z\bibinitperiod},
+         given={Meng},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Frontiers}%
+    }
+    \strng{namehash}{CSHYQH+1}
+    \strng{fullhash}{CSHYQHYXZM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{21}
+    \field{title}{Spatial localization of EEG electrodes in a TOF+ CCD camera
+  system}
+    \field{volume}{13}
+    \field{journaltitle}{Frontiers in neuroinformatics}
+    \field{year}{2019}
+  \endentry
+
+  \entry{besl1992method}{inproceedings}{}
+    \name{author}{2}{}{%
+      {{hash=BPJ}{%
+         family={Besl},
+         familyi={B\bibinitperiod},
+         given={Paul\bibnamedelima J},
+         giveni={P\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+      {{hash=MND}{%
+         family={McKay},
+         familyi={M\bibinitperiod},
+         given={Neil\bibnamedelima D},
+         giveni={N\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \list{organization}{2}{%
+      {International Society for Optics}%
+      {Photonics}%
+    }
+    \strng{namehash}{BPJMND1}
+    \strng{fullhash}{BPJMND1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Sensor fusion IV: control paradigms and data structures}
+    \field{pages}{586\bibrangedash 606}
+    \field{title}{Method for registration of 3-D shapes}
+    \field{volume}{1611}
+    \field{year}{1992}
+  \endentry
+
+  \entry{grisetti2010tutorial}{article}{}
+    \name{author}{4}{}{%
+      {{hash=GG}{%
+         family={Grisetti},
+         familyi={G\bibinitperiod},
+         given={Giorgio},
+         giveni={G\bibinitperiod},
+      }}%
+      {{hash=KR}{%
+         family={K{\"u}mmerle},
+         familyi={K\bibinitperiod},
+         given={Rainer},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SC}{%
+         family={Stachniss},
+         familyi={S\bibinitperiod},
+         given={Cyrill},
+         giveni={C\bibinitperiod},
+      }}%
+      {{hash=BW}{%
+         family={Burgard},
+         familyi={B\bibinitperiod},
+         given={Wolfram},
+         giveni={W\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{GGKRSC+1}
+    \strng{fullhash}{GGKRSCBW1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{31\bibrangedash 43}
+    \field{title}{A tutorial on graph-based SLAM}
+    \field{volume}{2}
+    \field{journaltitle}{IEEE Intelligent Transportation Systems Magazine}
+    \field{year}{2010}
+  \endentry
+
+  \entry{soderkvist2009using}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SI}{%
+         family={S{\"o}derkvist},
+         familyi={S\bibinitperiod},
+         given={Inge},
+         giveni={I\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SI1}
+    \strng{fullhash}{SI1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{Using SVD for some fitting problems}
+    \field{journaltitle}{University Lecture}
+    \field{year}{2009}
+  \endentry
+
+  \entry{10.5555/1121596}{book}{}
+    \name{author}{3}{}{%
+      {{hash=TS}{%
+         family={Thrun},
+         familyi={T\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=BW}{%
+         family={Burgard},
+         familyi={B\bibinitperiod},
+         given={Wolfram},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=FD}{%
+         family={Fox},
+         familyi={F\bibinitperiod},
+         given={Dieter},
+         giveni={D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {The MIT Press}%
+    }
+    \strng{namehash}{TSBWFD1}
+    \strng{fullhash}{TSBWFD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{isbn}{0262201623}
+    \field{title}{Probabilistic Robotics (Intelligent Robotics and Autonomous
+  Agents)}
+    \field{year}{2005}
+  \endentry
+
+  \entry{smith1990estimating}{incollection}{}
+    \name{author}{3}{}{%
+      {{hash=SR}{%
+         family={Smith},
+         familyi={S\bibinitperiod},
+         given={Randall},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SM}{%
+         family={Self},
+         familyi={S\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=CP}{%
+         family={Cheeseman},
+         familyi={C\bibinitperiod},
+         given={Peter},
+         giveni={P\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{SRSMCP1}
+    \strng{fullhash}{SRSMCP1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{booktitle}{Autonomous robot vehicles}
+    \field{pages}{167\bibrangedash 193}
+    \field{title}{Estimating uncertain spatial relationships in robotics}
+    \field{year}{1990}
+  \endentry
+
+  \entry{castellanos1999spmap}{article}{}
+    \name{author}{4}{}{%
+      {{hash=CJA}{%
+         family={Castellanos},
+         familyi={C\bibinitperiod},
+         given={Jose\bibnamedelima A},
+         giveni={J\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+      {{hash=MJ}{%
+         family={Montiel},
+         familyi={M\bibinitperiod},
+         given={JMM},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=NJ}{%
+         family={Neira},
+         familyi={N\bibinitperiod},
+         given={Jos{\'e}},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=TJD}{%
+         family={Tard{\'o}s},
+         familyi={T\bibinitperiod},
+         given={Juan\bibnamedelima D},
+         giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {IEEE}%
+    }
+    \strng{namehash}{CJAMJNJ+1}
+    \strng{fullhash}{CJAMJNJTJD1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{948\bibrangedash 952}
+    \field{title}{The SPmap: A probabilistic framework for simultaneous
+  localization and map building}
+    \field{volume}{15}
+    \field{journaltitle}{IEEE Transactions on robotics and Automation}
+    \field{year}{1999}
+  \endentry
+
+  \entry{montemerlo2002fastslam}{article}{}
+    \true{moreauthor}
+    \true{morelabelname}
+    \name{author}{4}{}{%
+      {{hash=MM}{%
+         family={Montemerlo},
+         familyi={M\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=TS}{%
+         family={Thrun},
+         familyi={T\bibinitperiod},
+         given={Sebastian},
+         giveni={S\bibinitperiod},
+      }}%
+      {{hash=KD}{%
+         family={Koller},
+         familyi={K\bibinitperiod},
+         given={Daphne},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=WB}{%
+         family={Wegbreit},
+         familyi={W\bibinitperiod},
+         given={Ben},
+         giveni={B\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{MMTSKD+1}
+    \strng{fullhash}{MMTSKDWB+1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{FastSLAM: A factored solution to the simultaneous
+  localization and mapping problem}
+    \field{volume}{593598}
+    \field{journaltitle}{Aaai/iaai}
+    \field{year}{2002}
+  \endentry
+
+  \entry{lu1997globally}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LF}{%
+         family={Lu},
+         familyi={L\bibinitperiod},
+         given={Feng},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=ME}{%
+         family={Milios},
+         familyi={M\bibinitperiod},
+         given={Evangelos},
+         giveni={E\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Springer}%
+    }
+    \strng{namehash}{LFME1}
+    \strng{fullhash}{LFME1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{333\bibrangedash 349}
+    \field{title}{Globally consistent range scan alignment for environment
+  mapping}
+    \field{volume}{4}
+    \field{journaltitle}{Autonomous robots}
+    \field{year}{1997}
+  \endentry
+
+  \entry{dellaert2006square}{article}{}
+    \name{author}{2}{}{%
+      {{hash=DF}{%
+         family={Dellaert},
+         familyi={D\bibinitperiod},
+         given={Frank},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=KM}{%
+         family={Kaess},
+         familyi={K\bibinitperiod},
+         given={Michael},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Sage Publications Sage CA: Thousand Oaks, CA}%
+    }
+    \strng{namehash}{DFKM1}
+    \strng{fullhash}{DFKM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{12}
+    \field{pages}{1181\bibrangedash 1203}
+    \field{title}{Square Root SAM: Simultaneous localization and mapping via
+  square root information smoothing}
+    \field{volume}{25}
+    \field{journaltitle}{The International Journal of Robotics Research}
+    \field{year}{2006}
+  \endentry
+
+  \entry{OpenCV}{online}{}
+    \name{author}{1}{}{%
+      {{hash=o}{%
+         family={opencv.org},
+         familyi={o\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{o1}
+    \strng{fullhash}{o1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{MS Windows NT} Kernel Description}
+    \verb{url}
+    \verb https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_an
+    \verb d_3d_reconstruction.html
+    \endverb
+    \field{year}{1999}
+    \field{urlday}{20}
+    \field{urlmonth}{05}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{Hartley:2003:MVG:861369}{book}{}
+    \name{author}{2}{}{%
+      {{hash=HR}{%
+         family={Hartley},
+         familyi={H\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=ZA}{%
+         family={Zisserman},
+         familyi={Z\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \keyw{geometry multiple view zisserman}
+    \strng{namehash}{HRZA1}
+    \strng{fullhash}{HRZA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{2}
+    \field{isbn}{0521540518}
+    \field{title}{Multiple View Geometry in Computer Vision}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{2003}
+  \endentry
+
+  \entry{Zhang}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ZZ}{%
+         family={{Zhang}},
+         familyi={Z\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZZ1}
+    \strng{fullhash}{ZZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/34.888718
+    \endverb
+    \field{issn}{0162-8828}
+    \field{number}{11}
+    \field{pages}{1330\bibrangedash 1334}
+    \field{title}{A flexible new technique for camera calibration}
+    \field{volume}{22}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{2000}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+\enddatalist
+\endinput
