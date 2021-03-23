@@ -23,7 +23,39 @@
 
 \noindent if SVD of $ \matr{Q} = \matr{U}\matr{D}\matr{V}^T $ , then Matrix $\matr{R}$ which satisfies above condition is  $\matr{R} = \matr{U}\matr{V}^T$ per \cite{Zhang}.
 
+\section{Gaussian distribution}
+A random variable possess probability density fucntions (PDF's) like one dimensional normal distribution fucntion with mean $\mu$ and variance $\sigma^2$. PDF of the normal distribution function is given by,
 
+\begin{equation*}
+		p(x) = (2\pi\sigma^2)^{-\frac{1}{2}} \exp\{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2}\}	
+	\label{eq:one_dim_pdf}
+\end{equation*} 
+
+PDF of a vector valued variable is called multivariate normal distribution with mean $\mu$ and a postive semidefinite and symmetric matrix called cavariance matrix $\Sigma$. PDF of a multivariate is given by
+
+\begin{equation*}
+	p(x) =  det(2\pi \Sigma)^{-\frac{1}{2}} \exp\{-\frac{1}{2} (x-\mu)^T \invMat{\Sigma} (x-\mu)\} 
+	\label{eq:multivariate_pdf}
+\end{equation*} 
+
+Canonical representation of the a multivariate is given by a information matrix $\Omega$ and an information vector $\xi$ 
+
+\begin{equation*}
+\begin{split}
+	\displaystyle
+	\Omega =  \invMat{\Sigma} \\
+	\xi = \invMat{\Sigma} \mu \\
+\end{split}
+\label{eq:canonical_multivariate}
+\end{equation*} 
+
+With few rearrangement cannocical form of PDF for multivariate normal distribution can be given by
+
+\begin{equation*}
+	p(x) =  \eta \exp\{-\frac{1}{2} x^T \Omega x + x^T \xi \} 
+	\label{eq:canonical_multivariate_pdf}
+\end{equation*}
+ 
 
 
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  24 JAN 2021 15:42
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  22 MAR 2021 13:04
 entering extended mode
 **./main.tex
 (main.tex
@@ -483,6 +483,70 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 ))
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\adjustbo
+x.sty"
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
+
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xkeyval\xkeyval.st
+y"
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.
+tex"
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/xkeyval\xkvutils
+.tex"
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
+)
+\XKV@depth=\count269
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\adjcalc.
+sty"
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\trimclip
+.sty"
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/collectbox\collect
+box.sty"
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box52
+)
+\tc@llx=\dimen150
+\tc@lly=\dimen151
+\tc@urx=\dimen152
+\tc@ury=\dimen153
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\tc-pdfte
+x.def"
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen154
+\adjbox@Height=\dimen155
+\adjbox@Depth=\dimen156
+\adjbox@Totalheight=\dimen157
+\adjbox@pwidth=\dimen158
+\adjbox@pheight=\dimen159
+\adjbox@pdepth=\dimen160
+\adjbox@ptotalheight=\dimen161
+
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifoddpage\ifoddpag
+e.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count270
+)
+("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/varwidth\varwidth.
+sty"
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box53
+\sift@deathcycles=\count271
+\@vwid@loff=\dimen162
+\@vwid@roff=\dimen163
+))
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
 y"
 Package: caption 2020/01/03 v3.4h Customizing captions (AR)
@@ -491,26 +555,26 @@ Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 ty"
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen150
-\captionmargin@=\dimen151
-\captionwidth=\dimen152
-\caption@tempdima=\dimen153
-\caption@indent=\dimen154
-\caption@parindent=\dimen155
-\caption@hangindent=\dimen156
+\captionmargin=\dimen164
+\captionmargin@=\dimen165
+\captionwidth=\dimen166
+\caption@tempdima=\dimen167
+\caption@indent=\dimen168
+\caption@parindent=\dimen169
+\caption@hangindent=\dimen170
 Package caption Info: KOMA-Script document class detected.
 )
 Package caption Info: KOMA-Script document class.
-\c@caption@flags=\count269
-\c@continuedfloat=\count270
+\c@caption@flags=\count272
+\c@continuedfloat=\count273
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\subcaption
 .sty"
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
-\c@subfigure=\count271
-\c@subtable=\count272
+\c@subfigure=\count274
+\c@subtable=\count275
 )
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.sty"
 Package: babel 2020/03/22 3.42 The Babel package
@@ -531,13 +595,13 @@ Language: english 2017/06/06 v3.3r English support from the babel system
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\babel.def"
 File: babel.def 2020/03/22 3.42 Babel common definitions
-\babel@savecnt=\count273
-\U@D=\dimen157
+\babel@savecnt=\count276
+\U@D=\dimen171
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/generic/babel\txtbabel.d
 ef")
 \bbl@readstream=\read2
-\bbl@dirlevel=\count274
+\bbl@dirlevel=\count277
 )
 Package babel Info: \l@canadian = using hyphenrules for english
 (babel)             (\language0) on input line 102.
@@ -548,8 +612,8 @@ Package babel Info: \l@newzealand = using hyphenrules for ukenglish
 ))
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
-\inpenc@prehook=\toks24
-\inpenc@posthook=\toks25
+\inpenc@prehook=\toks26
+\inpenc@posthook=\toks27
 ) ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\fontenc.sty
 "
 Package: fontenc 2020/02/11 v2.0o Standard LaTeX package
@@ -591,12 +655,12 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtyp
 e.sty"
 Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
-\MT@toks=\toks26
-\MT@count=\count275
+\MT@toks=\toks28
+\MT@count=\count278
 LaTeX Info: Redefining \textls on input line 790.
-\MT@outer@kern=\dimen158
+\MT@outer@kern=\dimen172
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count276
+\MT@listname@count=\count279
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/microtype\microtyp
 e-pdftex.def"
@@ -619,58 +683,58 @@ Package: biblatex 2019/12/01 v3.14 programmable bibliographies (PK/MW)
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
 sty"
 Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count277
+\etb@tempcnta=\count280
 )
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count278
+\lrq@indent=\count281
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
 )) ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
 "
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@tabx@nest=\count279
-\c@listtotal=\count280
-\c@listcount=\count281
-\c@liststart=\count282
-\c@liststop=\count283
-\c@citecount=\count284
-\c@citetotal=\count285
-\c@multicitecount=\count286
-\c@multicitetotal=\count287
-\c@instcount=\count288
-\c@maxnames=\count289
-\c@minnames=\count290
-\c@maxitems=\count291
-\c@minitems=\count292
-\c@citecounter=\count293
-\c@maxcitecounter=\count294
-\c@savedcitecounter=\count295
-\c@uniquelist=\count296
-\c@uniquename=\count297
-\c@refsection=\count298
-\c@refsegment=\count299
-\c@maxextratitle=\count300
-\c@maxextratitleyear=\count301
-\c@maxextraname=\count302
-\c@maxextradate=\count303
-\c@maxextraalpha=\count304
-\c@abbrvpenalty=\count305
-\c@highnamepenalty=\count306
-\c@lownamepenalty=\count307
-\c@maxparens=\count308
-\c@parenlevel=\count309
-\blx@tempcnta=\count310
-\blx@tempcntb=\count311
-\blx@tempcntc=\count312
-\blx@maxsection=\count313
-\blx@maxsegment@0=\count314
-\blx@notetype=\count315
-\blx@parenlevel@text=\count316
-\blx@parenlevel@foot=\count317
-\blx@sectionciteorder@0=\count318
-\blx@entrysetcounter=\count319
+\c@tabx@nest=\count282
+\c@listtotal=\count283
+\c@listcount=\count284
+\c@liststart=\count285
+\c@liststop=\count286
+\c@citecount=\count287
+\c@citetotal=\count288
+\c@multicitecount=\count289
+\c@multicitetotal=\count290
+\c@instcount=\count291
+\c@maxnames=\count292
+\c@minnames=\count293
+\c@maxitems=\count294
+\c@minitems=\count295
+\c@citecounter=\count296
+\c@maxcitecounter=\count297
+\c@savedcitecounter=\count298
+\c@uniquelist=\count299
+\c@uniquename=\count300
+\c@refsection=\count301
+\c@refsegment=\count302
+\c@maxextratitle=\count303
+\c@maxextratitleyear=\count304
+\c@maxextraname=\count305
+\c@maxextradate=\count306
+\c@maxextraalpha=\count307
+\c@abbrvpenalty=\count308
+\c@highnamepenalty=\count309
+\c@lownamepenalty=\count310
+\c@maxparens=\count311
+\c@parenlevel=\count312
+\blx@tempcnta=\count313
+\blx@tempcntb=\count314
+\blx@tempcntc=\count315
+\blx@maxsection=\count316
+\blx@maxsegment@0=\count317
+\blx@notetype=\count318
+\blx@parenlevel@text=\count319
+\blx@parenlevel@foot=\count320
+\blx@sectionciteorder@0=\count321
+\blx@entrysetcounter=\count322
 \labelnumberwidth=\skip69
 \labelalphawidth=\skip70
 \biblabelsep=\skip71
@@ -682,9 +746,9 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \blx@bcfin=\read3
 \blx@bcfout=\write3
 \blx@langwohyphens=\language78
-\c@mincomprange=\count320
-\c@maxcomprange=\count321
-\c@mincompwidth=\count322
+\c@mincomprange=\count323
+\c@maxcomprange=\count324
+\c@mincompwidth=\count325
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -696,74 +760,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'ieee.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count323
-\c@savedafterword=\count324
-\c@annotator=\count325
-\c@savedannotator=\count326
-\c@author=\count327
-\c@savedauthor=\count328
-\c@bookauthor=\count329
-\c@savedbookauthor=\count330
-\c@commentator=\count331
-\c@savedcommentator=\count332
-\c@editor=\count333
-\c@savededitor=\count334
-\c@editora=\count335
-\c@savededitora=\count336
-\c@editorb=\count337
-\c@savededitorb=\count338
-\c@editorc=\count339
-\c@savededitorc=\count340
-\c@foreword=\count341
-\c@savedforeword=\count342
-\c@holder=\count343
-\c@savedholder=\count344
-\c@introduction=\count345
-\c@savedintroduction=\count346
-\c@namea=\count347
-\c@savednamea=\count348
-\c@nameb=\count349
-\c@savednameb=\count350
-\c@namec=\count351
-\c@savednamec=\count352
-\c@translator=\count353
-\c@savedtranslator=\count354
-\c@shortauthor=\count355
-\c@savedshortauthor=\count356
-\c@shorteditor=\count357
-\c@savedshorteditor=\count358
-\c@labelname=\count359
-\c@savedlabelname=\count360
-\c@institution=\count361
-\c@savedinstitution=\count362
-\c@lista=\count363
-\c@savedlista=\count364
-\c@listb=\count365
-\c@savedlistb=\count366
-\c@listc=\count367
-\c@savedlistc=\count368
-\c@listd=\count369
-\c@savedlistd=\count370
-\c@liste=\count371
-\c@savedliste=\count372
-\c@listf=\count373
-\c@savedlistf=\count374
-\c@location=\count375
-\c@savedlocation=\count376
-\c@organization=\count377
-\c@savedorganization=\count378
-\c@origlocation=\count379
-\c@savedoriglocation=\count380
-\c@origpublisher=\count381
-\c@savedorigpublisher=\count382
-\c@publisher=\count383
-\c@savedpublisher=\count384
-\c@language=\count385
-\c@savedlanguage=\count386
-\c@origlanguage=\count387
-\c@savedoriglanguage=\count388
-\c@pageref=\count389
-\c@savedpageref=\count390
+\c@afterword=\count326
+\c@savedafterword=\count327
+\c@annotator=\count328
+\c@savedannotator=\count329
+\c@author=\count330
+\c@savedauthor=\count331
+\c@bookauthor=\count332
+\c@savedbookauthor=\count333
+\c@commentator=\count334
+\c@savedcommentator=\count335
+\c@editor=\count336
+\c@savededitor=\count337
+\c@editora=\count338
+\c@savededitora=\count339
+\c@editorb=\count340
+\c@savededitorb=\count341
+\c@editorc=\count342
+\c@savededitorc=\count343
+\c@foreword=\count344
+\c@savedforeword=\count345
+\c@holder=\count346
+\c@savedholder=\count347
+\c@introduction=\count348
+\c@savedintroduction=\count349
+\c@namea=\count350
+\c@savednamea=\count351
+\c@nameb=\count352
+\c@savednameb=\count353
+\c@namec=\count354
+\c@savednamec=\count355
+\c@translator=\count356
+\c@savedtranslator=\count357
+\c@shortauthor=\count358
+\c@savedshortauthor=\count359
+\c@shorteditor=\count360
+\c@savedshorteditor=\count361
+\c@labelname=\count362
+\c@savedlabelname=\count363
+\c@institution=\count364
+\c@savedinstitution=\count365
+\c@lista=\count366
+\c@savedlista=\count367
+\c@listb=\count368
+\c@savedlistb=\count369
+\c@listc=\count370
+\c@savedlistc=\count371
+\c@listd=\count372
+\c@savedlistd=\count373
+\c@liste=\count374
+\c@savedliste=\count375
+\c@listf=\count376
+\c@savedlistf=\count377
+\c@location=\count378
+\c@savedlocation=\count379
+\c@organization=\count380
+\c@savedorganization=\count381
+\c@origlocation=\count382
+\c@savedoriglocation=\count383
+\c@origpublisher=\count384
+\c@savedorigpublisher=\count385
+\c@publisher=\count386
+\c@savedpublisher=\count387
+\c@language=\count388
+\c@savedlanguage=\count389
+\c@origlanguage=\count390
+\c@savedoriglanguage=\count391
+\c@pageref=\count392
+\c@savedpageref=\count393
 \shorthandwidth=\skip77
 \shortjournalwidth=\skip78
 \shortserieswidth=\skip79
@@ -803,19 +867,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
 def"
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count391
-\c@textcitetotal=\count392
-\c@textcitemaxnames=\count393
-\c@biburlbigbreakpenalty=\count394
-\c@biburlbreakpenalty=\count395
-\c@biburlnumpenalty=\count396
-\c@biburlucpenalty=\count397
-\c@biburllcpenalty=\count398
+\c@textcitecount=\count394
+\c@textcitetotal=\count395
+\c@textcitemaxnames=\count396
+\c@biburlbigbreakpenalty=\count397
+\c@biburlbreakpenalty=\count398
+\c@biburlnumpenalty=\count399
+\c@biburlucpenalty=\count400
+\c@biburllcpenalty=\count401
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count399
+\c@smartand=\count402
 )
 Package biblatex Info: Trying to load bibliography style 'ieee'...
 Package biblatex Info: ... file 'ieee.bbx' found.
@@ -841,8 +905,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\stand
 ard.bbx"
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count400
-\c@bbx:relatedtotal=\count401
+\c@bbx:relatedcount=\count403
+\c@bbx:relatedtotal=\count404
 ))))
 Package biblatex Info: Trying to load citation style 'ieee'...
 Package biblatex Info: ... file 'ieee.cbx' found.
@@ -856,8 +920,8 @@ Package biblatex Info: ... file 'numeric-comp.cbx' found.
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\numer
 ic-comp.cbx"
 File: numeric-comp.cbx 2019/12/01 v3.14 biblatex citation style (PK/MW)
-\c@cbx@tempcnta=\count402
-\c@cbx@tempcntb=\count403
+\c@cbx@tempcnta=\count405
+\c@cbx@tempcntb=\count406
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
 Package biblatex Info: Redefining '\footcite'.
@@ -883,13 +947,13 @@ File: biblatex.cfg
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquotes.
 sty"
 Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
-\csq@reset=\count404
-\csq@gtype=\count405
-\csq@glevel=\count406
-\csq@qlevel=\count407
-\csq@maxlvl=\count408
-\csq@tshold=\count409
-\csq@ltx@everypar=\toks27
+\csq@reset=\count407
+\csq@gtype=\count408
+\csq@glevel=\count409
+\csq@qlevel=\count410
+\csq@maxlvl=\count411
+\csq@tshold=\count412
+\csq@ltx@everypar=\toks29
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/csquotes\csquotes.
 def"
@@ -918,71 +982,71 @@ Package: expl3 2020-04-06 L3 programming layer (loader)
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backen
 d-pdfmode.def"
 File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count410
-\l__pdf_internal_box=\box52
+\l__kernel_color_stack_int=\count413
+\l__pdf_internal_box=\box54
 ))
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/xparse\
 xparse.sty"
 Package: xparse 2020-03-06 L3 Experimental document command parser
-\l__xparse_current_arg_int=\count411
-\g__xparse_grabber_int=\count412
-\l__xparse_m_args_int=\count413
-\l__xparse_v_nesting_int=\count414
+\l__xparse_current_arg_int=\count414
+\g__xparse_grabber_int=\count415
+\l__xparse_m_args_int=\count416
+\l__xparse_v_nesting_int=\count417
 )
 Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
 Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
-\col@sep=\dimen159
-\ar@mcellbox=\box53
-\extrarowheight=\dimen160
-\NC@list=\toks28
+\col@sep=\dimen173
+\ar@mcellbox=\box55
+\extrarowheight=\dimen174
+\NC@list=\toks30
 \extratabsurround=\skip91
 \backup@length=\skip92
-\ar@cellbox=\box54
+\ar@cellbox=\box56
 )
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/l3keys2
 e\l3keys2e.sty"
 Package: l3keys2e 2020-03-06 LaTeX2e option processing using LaTeX3 keys
 )
-\l__siunitx_tmp_box=\box55
-\l__siunitx_tmp_dim=\dimen161
-\l__siunitx_tmp_int=\count415
-\l__siunitx_number_mantissa_length_int=\count416
-\l__siunitx_number_uncert_length_int=\count417
-\l__siunitx_round_int=\count418
-\l__siunitx_process_decimal_int=\count419
-\l__siunitx_process_uncertainty_int=\count420
-\l__siunitx_process_fixed_int=\count421
-\l__siunitx_process_integer_min_int=\count422
-\l__siunitx_process_precision_int=\count423
-\l__siunitx_group_min_int=\count424
-\l__siunitx_angle_marker_box=\box56
-\l__siunitx_angle_unit_box=\box57
-\l__siunitx_angle_marker_dim=\dimen162
-\l__siunitx_angle_unit_dim=\dimen163
-\l__siunitx_unit_int=\count425
-\l__siunitx_unit_denominator_int=\count426
-\l__siunitx_unit_numerator_int=\count427
-\l__siunitx_unit_prefix_int=\count428
-\l__siunitx_unit_prefix_base_int=\count429
-\l__siunitx_unit_prefix_gram_int=\count430
-\l__siunitx_number_product_int=\count431
+\l__siunitx_tmp_box=\box57
+\l__siunitx_tmp_dim=\dimen175
+\l__siunitx_tmp_int=\count418
+\l__siunitx_number_mantissa_length_int=\count419
+\l__siunitx_number_uncert_length_int=\count420
+\l__siunitx_round_int=\count421
+\l__siunitx_process_decimal_int=\count422
+\l__siunitx_process_uncertainty_int=\count423
+\l__siunitx_process_fixed_int=\count424
+\l__siunitx_process_integer_min_int=\count425
+\l__siunitx_process_precision_int=\count426
+\l__siunitx_group_min_int=\count427
+\l__siunitx_angle_marker_box=\box58
+\l__siunitx_angle_unit_box=\box59
+\l__siunitx_angle_marker_dim=\dimen176
+\l__siunitx_angle_unit_dim=\dimen177
+\l__siunitx_unit_int=\count428
+\l__siunitx_unit_denominator_int=\count429
+\l__siunitx_unit_numerator_int=\count430
+\l__siunitx_unit_prefix_int=\count431
+\l__siunitx_unit_prefix_base_int=\count432
+\l__siunitx_unit_prefix_gram_int=\count433
+\l__siunitx_number_product_int=\count434
 \c__siunitx_one_fill_skip=\skip93
 \l__siunitx_table_unit_align_skip=\skip94
-\l__siunitx_table_exponent_dim=\dimen164
-\l__siunitx_table_integer_dim=\dimen165
-\l__siunitx_table_mantissa_dim=\dimen166
-\l__siunitx_table_marker_dim=\dimen167
-\l__siunitx_table_result_dim=\dimen168
-\l__siunitx_table_uncert_dim=\dimen169
-\l__siunitx_table_fill_pre_dim=\dimen170
-\l__siunitx_table_fill_post_dim=\dimen171
-\l__siunitx_table_fill_mid_dim=\dimen172
-\l__siunitx_table_pre_box=\box58
-\l__siunitx_table_post_box=\box59
-\l__siunitx_table_mantissa_box=\box60
-\l__siunitx_table_result_box=\box61
+\l__siunitx_table_exponent_dim=\dimen178
+\l__siunitx_table_integer_dim=\dimen179
+\l__siunitx_table_mantissa_dim=\dimen180
+\l__siunitx_table_marker_dim=\dimen181
+\l__siunitx_table_result_dim=\dimen182
+\l__siunitx_table_uncert_dim=\dimen183
+\l__siunitx_table_fill_pre_dim=\dimen184
+\l__siunitx_table_fill_post_dim=\dimen185
+\l__siunitx_table_fill_mid_dim=\dimen186
+\l__siunitx_table_pre_box=\box60
+\l__siunitx_table_post_box=\box61
+\l__siunitx_table_mantissa_box=\box62
+\l__siunitx_table_result_box=\box63
 \l__siunitx_table_number_align_skip=\skip95
 \l__siunitx_table_text_align_skip=\skip96
 
@@ -995,6 +1059,24 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'english'.
  (main.aux
+
+LaTeX Warning: Label `fig:2D_3D' multiply defined.
+
+
+LaTeX Warning: Label `fig:2D_3D@cref' multiply defined.
+
+
+LaTeX Warning: Label `eq:min_geometric' multiply defined.
+
+
+LaTeX Warning: Label `eq:min_geometric@cref' multiply defined.
+
+
+LaTeX Warning: Label `eq:mat_pixel_t_camera' multiply defined.
+
+
+LaTeX Warning: Label `eq:mat_pixel_t_camera@cref' multiply defined.
+
 
 LaTeX Warning: Label `eq:solution_orthogonal_procrustes_problem' multiply defin
 ed.
@@ -1009,61 +1091,49 @@ LaTeX Warning: Label `eq:compute_closest_point' multiply defined.
 
 LaTeX Warning: Label `eq:compute_closest_point@cref' multiply defined.
 
-
-LaTeX Warning: Label `fig:2D_3D' multiply defined.
-
-
-LaTeX Warning: Label `fig:2D_3D@cref' multiply defined.
-
-
-LaTeX Warning: Label `eq:min_geometric' multiply defined.
-
-
-LaTeX Warning: Label `eq:min_geometric@cref' multiply defined.
-
 (chapters/declaration.aux))
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Trying to load font information for T1+lmr on input line 45
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 46
 .
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmr.fd"
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Package scrbase Info: activating english \contentsname on input line 45.
-Package scrbase Info: activating english \listfigurename on input line 45.
-Package scrbase Info: activating english \listtablename on input line 45.
+Package scrbase Info: activating english \contentsname on input line 46.
+Package scrbase Info: activating english \listfigurename on input line 46.
+Package scrbase Info: activating english \listtablename on input line 46.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count432
-\scratchdimen=\dimen173
-\scratchbox=\box62
-\nofMPsegments=\count433
-\nofMParguments=\count434
-\everyMPshowfont=\toks29
-\MPscratchCnt=\count435
-\MPscratchDim=\dimen174
-\MPnumerator=\count436
-\makeMPintoPDFobject=\count437
-\everyMPtoPDFconversion=\toks30
+\scratchcounter=\count435
+\scratchdimen=\dimen187
+\scratchbox=\box64
+\nofMPsegments=\count436
+\nofMParguments=\count437
+\everyMPshowfont=\toks31
+\MPscratchCnt=\count438
+\MPscratchDim=\dimen188
+\MPnumerator=\count439
+\makeMPintoPDFobject=\count440
+\everyMPtoPDFconversion=\toks32
 )
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/epstopdf-pkg\epsto
 pdf-base.sty"
@@ -1071,46 +1141,46 @@ Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
-Package scrbase Info: activating english \projectpapername on input line 45.
-Package scrbase Info: activating english \seminarpapername on input line 45.
-Package scrbase Info: activating english \studentresearchname on input line 45.
+Package scrbase Info: activating english \projectpapername on input line 46.
+Package scrbase Info: activating english \seminarpapername on input line 46.
+Package scrbase Info: activating english \studentresearchname on input line 46.
 
-Package scrbase Info: activating english \diplomathesisname on input line 45.
-Package scrbase Info: activating english \degreethesisname on input line 45.
-Package scrbase Info: activating english \masterthesisname on input line 45.
-Package scrbase Info: activating english \bachelorthesisname on input line 45.
-Package scrbase Info: activating english \ordinal on input line 45.
-Package scrbase Info: activating english \presentedbyname on input line 45.
-Package scrbase Info: activating english \supervisorname on input line 45.
-Package scrbase Info: activating english \supervisorsname on input line 45.
-Package scrbase Info: activating english \authorname on input line 45.
-Package scrbase Info: activating english \titlename on input line 45.
-Package scrbase Info: activating english \datename on input line 45.
-Package scrbase Info: activating english \thename on input line 45.
-Package scrbase Info: activating english \ofthename on input line 45.
-Package scrbase Info: activating english \fromname on input line 45.
-Package scrbase Info: activating english \fromplacename on input line 45.
-Package scrbase Info: activating english \articleAname on input line 45.
-Package scrbase Info: activating english \writtenatthename on input line 45.
+Package scrbase Info: activating english \diplomathesisname on input line 46.
+Package scrbase Info: activating english \degreethesisname on input line 46.
+Package scrbase Info: activating english \masterthesisname on input line 46.
+Package scrbase Info: activating english \bachelorthesisname on input line 46.
+Package scrbase Info: activating english \ordinal on input line 46.
+Package scrbase Info: activating english \presentedbyname on input line 46.
+Package scrbase Info: activating english \supervisorname on input line 46.
+Package scrbase Info: activating english \supervisorsname on input line 46.
+Package scrbase Info: activating english \authorname on input line 46.
+Package scrbase Info: activating english \titlename on input line 46.
+Package scrbase Info: activating english \datename on input line 46.
+Package scrbase Info: activating english \thename on input line 46.
+Package scrbase Info: activating english \ofthename on input line 46.
+Package scrbase Info: activating english \fromname on input line 46.
+Package scrbase Info: activating english \fromplacename on input line 46.
+Package scrbase Info: activating english \articleAname on input line 46.
+Package scrbase Info: activating english \writtenatthename on input line 46.
 Package scrbase Info: activating english \incollaborationwithname on input line
- 45.
+ 46.
 Package scrbase Info: activating english \submittedinpartialfulfillmentname on 
-input line 45.
-Package scrbase Info: activating english \refereename on input line 45.
-Package scrbase Info: activating english \refereesname on input line 45.
+input line 46.
+Package scrbase Info: activating english \refereename on input line 46.
+Package scrbase Info: activating english \refereesname on input line 46.
 Package scrbase Info: activating english \oralexaminationdatename on input line
- 45.
-Package scrbase Info: activating english \durationname on input line 45.
+ 46.
+Package scrbase Info: activating english \durationname on input line 46.
 Package scrbase Info: activating english \matriculationnumbername on input line
- 45.
-Package scrbase Info: activating english \coursename on input line 45.
-Package scrbase Info: activating english \companyname on input line 45.
-Package scrbase Info: activating english \examinationname on input line 45.
-Package scrbase Info: activating english \buildingname on input line 45.
-Package scrbase Info: activating english \tuhhname on input line 45.
-Package scrbase Info: activating english \mtecname on input line 45.
-\AtBeginShipoutBox=\box63
-Package hyperref Info: Link coloring OFF on input line 45.
+ 46.
+Package scrbase Info: activating english \coursename on input line 46.
+Package scrbase Info: activating english \companyname on input line 46.
+Package scrbase Info: activating english \examinationname on input line 46.
+Package scrbase Info: activating english \buildingname on input line 46.
+Package scrbase Info: activating english \tuhhname on input line 46.
+Package scrbase Info: activating english \mtecname on input line 46.
+\AtBeginShipoutBox=\box65
+Package hyperref Info: Link coloring OFF on input line 46.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\nameref.s
 ty"
@@ -1124,11 +1194,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ettitlestring.sty"
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count438
+\c@section@level=\count441
 )
-LaTeX Info: Redefining \ref on input line 45.
-LaTeX Info: Redefining \pageref on input line 45.
-LaTeX Info: Redefining \nameref on input line 45.
+LaTeX Info: Redefining \ref on input line 46.
+LaTeX Info: Redefining \pageref on input line 46.
+LaTeX Info: Redefining \nameref on input line 46.
  (main.out) (main.out)
 \@outlinefile=\write4
 \openout4 = `main.out'.
@@ -1140,7 +1210,7 @@ Class scrbook Info: loading recommended package `bookmark'.
 (scrbook)           `bookmarkpackage=false' before \begin{document} and
 (scrbook)           you can avoid this message adding:
 (scrbook)             \usepackage{bookmark}
-(scrbook)           before \begin{document} on input line 45.
+(scrbook)           before \begin{document} on input line 46.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/bookmark\bookmark.
 sty"
@@ -1152,18 +1222,18 @@ File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 Package auxhook Info: \AddLineBeginMainAux comes a little late,
 (auxhook)             because the main .aux file is already opened on input lin
 e 168.
-\BKM@id=\count439
+\BKM@id=\count442
 ))
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Redefining \microtypecontext on input line 45.
+LaTeX Info: Redefining \microtypecontext on input line 46.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `basictext'.
-LaTeX Info: Redefining \showhyphens on input line 45.
+LaTeX Info: Redefining \showhyphens on input line 46.
 Package microtype Info: Tracking enabled.
 Package microtype Info: Using default tracking set `smallcaps'.
 Package microtype Info: No adjustment of interword spacing.
@@ -1198,8 +1268,8 @@ Package biblatex Warning: BibTeX reported the following issues
 (biblatex)                - Invalid format of field 'month'.
 
 )
-Package biblatex Info: Reference section=0 on input line 45.
-Package biblatex Info: Reference segment=0 on input line 45.
+Package biblatex Info: Reference section=0 on input line 46.
+Package biblatex Info: Reference segment=0 on input line 46.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator\transla
 tor-basic-dictionary-English.dict"
@@ -1210,36 +1280,36 @@ breviations.cfg"
 File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 4
-5.
+6.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 4
-5.
+6.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-45.
+46.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-45.
+46.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 45.
+(Font)              <10.95> on input line 46.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 45.
+(Font)              <8> on input line 46.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 45.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+(Font)              <6> on input line 46.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
 
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd"
@@ -1249,7 +1319,7 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 fg"
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
 
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd"
@@ -1260,7 +1330,7 @@ fg"
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmss on input line 
-45.
+46.
  ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1269,7 +1339,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Trying to load font information for OT1+lmtt on input line 
-45.
+46.
  ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1278,22 +1348,22 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 Package titlepage Info: leaving not defined pre-title page empty on input line 
-51.
+52.
 Package titlepage Info: leaving not defined back of pre-title page empty on inp
-ut line 51.
+ut line 52.
 <logo/logo_tuhh_en.pdf, id=3, 1204.5pt x 329.23pt>
 File: logo/logo_tuhh_en.pdf Graphic file (type pdf)
 <use logo/logo_tuhh_en.pdf>
-Package pdftex.def Info: logo/logo_tuhh_en.pdf  used on input line 51.
+Package pdftex.def Info: logo/logo_tuhh_en.pdf  used on input line 52.
 (pdftex.def)             Requested size: 341.43314pt x 93.32413pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 51.
+(Font)              <14.4> on input line 52.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 51.
+(Font)              <10> on input line 52.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 51.
+(Font)              <7> on input line 52.
 LaTeX Font Info:    Trying to load font information for T1+lmss on input line 5
-1.
+2.
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmss.fd"
 File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1304,7 +1374,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 <logo/logo_mtec.pdf, id=4, 949.14622pt x 305.99626pt>
 File: logo/logo_mtec.pdf Graphic file (type pdf)
 <use logo/logo_mtec.pdf>
-Package pdftex.def Info: logo/logo_mtec.pdf  used on input line 51.
+Package pdftex.def Info: logo/logo_mtec.pdf  used on input line 52.
 (pdftex.def)             Requested size: 105.89813pt x 34.1433pt.
 
 [1
@@ -1322,11 +1392,11 @@ le pdfs with page group included in a single page
 
 ]
 Package titlepage Info: leaving not defined back of main-title page empty on in
-put line 51.
+put line 52.
 Package titlepage Info: leaving not defined post-title page empty on input line
- 51.
+ 52.
 Package titlepage Info: leaving not defined back of post-title page empty on in
-put line 51.
+put line 52.
  [3] [4
 
 
@@ -1351,144 +1421,119 @@ Class scrbook Warning: \float@addtolists detected!
 
 ]) [2]
 chapter 2.
-(chapters/background.tex [3
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 78--80
-
- []
-
-[4]
-Underfull \hbox (badness 10000) in paragraph at lines 156--158
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 160--162
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 176--178
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 188--190
-
- []
-
-[6]
-<./figures/perspective_projection_4.png, id=137, 457.71pt x 331.2375pt>
+(chapters/background.tex
+<./figures/perspective_projection_4.png, id=72, 457.71pt x 331.2375pt>
 File: ./figures/perspective_projection_4.png Graphic file (type png)
 <use ./figures/perspective_projection_4.png>
 Package pdftex.def Info: ./figures/perspective_projection_4.png  used on input 
-line 210.
+line 7.
 (pdftex.def)             Requested size: 228.85445pt x 165.61833pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 217--218
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
  []
 
-[7 <./figures/perspective_projection_4.png>]
-<./figures/mm_to_pixel.png, id=156, 410.13225pt x 289.08pt>
+[3
+
+ <./figures/perspective_projection_4.png>]
+<./figures/mm_to_pixel.png, id=97, 410.13225pt x 289.08pt>
 File: ./figures/mm_to_pixel.png Graphic file (type png)
 <use ./figures/mm_to_pixel.png>
-Package pdftex.def Info: ./figures/mm_to_pixel.png  used on input line 238.
+Package pdftex.def Info: ./figures/mm_to_pixel.png  used on input line 35.
 (pdftex.def)             Requested size: 415.84805pt x 293.11093pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 243--244
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-[8 <./figures/mm_to_pixel.png>]
-<./figures/2D_3D.png, id=176, 801.59476pt x 426.99525pt>
+[4 <./figures/mm_to_pixel.png>]
+<./figures/2D_3D.png, id=120, 801.59476pt x 426.99525pt>
 File: ./figures/2D_3D.png Graphic file (type png)
 <use ./figures/2D_3D.png>
-Package pdftex.def Info: ./figures/2D_3D.png  used on input line 362.
+Package pdftex.def Info: ./figures/2D_3D.png  used on input line 159.
 (pdftex.def)             Requested size: 415.84805pt x 221.51758pt.
- [9] [10 <./figures/2D_3D.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 428--429
+ [5] [6 <./figures/2D_3D.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 225--226
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 430--431
+Underfull \hbox (badness 10000) in paragraph at lines 227--228
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--441
+Underfull \hbox (badness 10000) in paragraph at lines 236--238
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 456--457
+Underfull \hbox (badness 10000) in paragraph at lines 253--254
 
  []
 
-[11]
-<./figures/2D_2D.png, id=214, 606.46574pt x 416.15475pt>
+[7]
+<./figures/2D_2D.png, id=159, 606.46574pt x 416.15475pt>
 File: ./figures/2D_2D.png Graphic file (type png)
 <use ./figures/2D_2D.png>
-Package pdftex.def Info: ./figures/2D_2D.png  used on input line 463.
+Package pdftex.def Info: ./figures/2D_2D.png  used on input line 260.
 (pdftex.def)             Requested size: 415.84805pt x 285.36273pt.
- [12 <./figures/2D_2D.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
+ [8 <./figures/2D_2D.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 555--557
+Underfull \hbox (badness 10000) in paragraph at lines 352--354
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 558--559
+Underfull \hbox (badness 10000) in paragraph at lines 355--356
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 560--561
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 569--571
+Underfull \hbox (badness 10000) in paragraph at lines 366--368
 
  []
 
-[13]
-Underfull \hbox (badness 10000) in paragraph at lines 584--586
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 592--594
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 381--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 627--628
+Underfull \hbox (badness 10000) in paragraph at lines 389--391
 
  []
 
-[14]
-<./figures/distortion.png, id=247, 566.71725pt x 219.219pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+
+ []
+
+[10]
+<./figures/distortion.png, id=193, 566.71725pt x 219.219pt>
 File: ./figures/distortion.png Graphic file (type png)
 <use ./figures/distortion.png>
-Package pdftex.def Info: ./figures/distortion.png  used on input line 645.
+Package pdftex.def Info: ./figures/distortion.png  used on input line 442.
 (pdftex.def)             Requested size: 415.84805pt x 160.86478pt.
- [15 <./figures/distortion.png>]
-<./figures/chessboard_corners.png, id=262, 514.92375pt x 504.6855pt>
+ [11 <./figures/distortion.png>]
+<./figures/chessboard_corners.png, id=207, 514.92375pt x 504.6855pt>
 File: ./figures/chessboard_corners.png Graphic file (type png)
 <use ./figures/chessboard_corners.png>
-Package pdftex.def Info: ./figures/chessboard_corners.png  used on input line 6
-72.
+Package pdftex.def Info: ./figures/chessboard_corners.png  used on input line 4
+69.
 (pdftex.def)             Requested size: 308.95662pt x 302.81363pt.
- [16 <./figures/chessboard_corners.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
-78.
+ [12 <./figures/chessboard_corners.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
+75.
 
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -1497,31 +1542,107 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-)
+<./figures/handeye_calibration.png, id=217, 533.05188pt x 404.03296pt>
+File: ./figures/handeye_calibration.png Graphic file (type png)
+<use ./figures/handeye_calibration.png>
+Package pdftex.def Info: ./figures/handeye_calibration.png  used on input line 
+537.
+(pdftex.def)             Requested size: 266.52528pt x 202.01598pt.
+
+[13] [14 <./figures/handeye_calibration.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 610--611
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--614
+
+ []
+
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 724--726
+
+ []
+
 [17]
+Underfull \hbox (badness 10000) in paragraph at lines 801--803
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 805--807
+
+ []
+
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 808--810
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 820--822
+
+ []
+
+<./figures/graph_based_slam.png, id=303, 830.6232pt x 96.8418pt>
+File: ./figures/graph_based_slam.png Graphic file (type png)
+<use ./figures/graph_based_slam.png>
+Package pdftex.def Info: ./figures/graph_based_slam.png  used on input line 839
+.
+(pdftex.def)             Requested size: 415.31058pt x 48.42076pt.
+[19]
+<./figures/graph_construction.png, id=316, 788.7066pt x 311.7246pt>
+File: ./figures/graph_construction.png Graphic file (type png)
+<use ./figures/graph_construction.png>
+Package pdftex.def Info: ./figures/graph_construction.png  used on input line 8
+50.
+(pdftex.def)             Requested size: 354.91469pt x 140.27477pt.
+<./figures/error_function.png, id=318, 314.6154pt x 280.8894pt>
+File: ./figures/error_function.png Graphic file (type png)
+<use ./figures/error_function.png>
+Package pdftex.def Info: ./figures/error_function.png  used on input line 860.
+(pdftex.def)             Requested size: 157.30731pt x 140.44435pt.
+ [20 <./figures/graph_based_slam.png> <./figures/graph_construction.png> <./fig
+ures/error_function.png>] [21]
+<./figures/yolo_detection.jpg, id=345, 408.02437pt x 333.49594pt>
+File: ./figures/yolo_detection.jpg Graphic file (type jpg)
+<use ./figures/yolo_detection.jpg>
+Package pdftex.def Info: ./figures/yolo_detection.jpg  used on input line 936.
+(pdftex.def)             Requested size: 203.76782pt x 166.54909pt.
+<./figures/yolo_detection_2.jpg, id=346, 284.56313pt x 309.40594pt>
+File: ./figures/yolo_detection_2.jpg Graphic file (type jpg)
+<use ./figures/yolo_detection_2.jpg>
+Package pdftex.def Info: ./figures/yolo_detection_2.jpg  used on input line 941
+.
+(pdftex.def)             Requested size: 153.86174pt x 167.29861pt.
+) [22 <./figures/yolo_detection.jpg> <./figures/yolo_detection_2.jpg>]
+chapter A.
+(chapters/appendix.tex [23
+
+]) [24]
 chapter without number
-[18
+[25
 
 
-] [19]
+] [26]
 \openout2 = `chapters/declaration.aux'.
 
  (chapters/declaration.tex
 chapter without number
 )
-Overfull \hbox (10.95pt too wide) in paragraph at lines 11--71
+Overfull \hbox (10.95pt too wide) in paragraph at lines 11--72
 []$[]$ 
  []
 
-[20
+[27
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 72.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 72.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 73.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 73.
  (main.aux (chapters/declaration.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 72.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 72.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 73.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 73.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1531,23 +1652,23 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 72.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
  ) 
 Here is how much of TeX's memory you used:
- 28351 strings out of 480930
- 578188 string characters out of 2899761
- 1201217 words of memory out of 3000000
- 43516 multiletter control sequences out of 15000+200000
- 681884 words of font info for 203 fonts, out of 3000000 for 9000
+ 29563 strings out of 480930
+ 599994 string characters out of 2899761
+ 1382223 words of memory out of 3000000
+ 44641 multiletter control sequences out of 15000+200000
+ 682180 words of font info for 206 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,20n,90p,10123b,2024s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 60i,20n,106p,10123b,2078s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
-c}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
-c}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
-y.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
-athit.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
-lm-mathex.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips
-/lm/lm-rmtt.enc}<C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+c}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmtt.
+enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.
+enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
+hsy.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm
+-mathex.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/l
+m/lm-mathit.enc}<C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmbx10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
 e1/public/lm/lmbx12.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts
 /type1/public/lm/lmcsc10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/
@@ -1567,11 +1688,13 @@ pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Us
 ers/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:
 /Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
 <C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.
-pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfon
-ts/symbols/msam10.pfb>
-Output written on main.pdf (24 pages, 2118484 bytes).
+pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmt
+t8.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/symbols/msam10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (31 pages, 2616284 bytes).
 PDF statistics:
- 439 PDF objects out of 1000 (max. 8388607)
- 108 named destinations out of 1000 (max. 500000)
- 42665 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 598 PDF objects out of 1000 (max. 8388607)
+ 151 named destinations out of 1000 (max. 500000)
+ 42799 words of extra memory for PDF output out of 42996 (max. 10000000)
 

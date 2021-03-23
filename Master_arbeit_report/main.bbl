@@ -622,6 +622,190 @@
     \field{year}{2010}
   \endentry
 
+  \entry{OpenCV}{online}{}
+    \name{author}{1}{}{%
+      {{hash=o}{%
+         family={opencv.org},
+         familyi={o\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{o1}
+    \strng{fullhash}{o1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{MS Windows NT} Kernel Description}
+    \verb{url}
+    \verb https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_an
+    \verb d_3d_reconstruction.html
+    \endverb
+    \field{year}{1999}
+    \field{urlday}{20}
+    \field{urlmonth}{05}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{Hartley:2003:MVG:861369}{book}{}
+    \name{author}{2}{}{%
+      {{hash=HR}{%
+         family={Hartley},
+         familyi={H\bibinitperiod},
+         given={Richard},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=ZA}{%
+         family={Zisserman},
+         familyi={Z\bibinitperiod},
+         given={Andrew},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Cambridge University Press}%
+    }
+    \keyw{geometry multiple view zisserman}
+    \strng{namehash}{HRZA1}
+    \strng{fullhash}{HRZA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{edition}{2}
+    \field{isbn}{0521540518}
+    \field{title}{Multiple View Geometry in Computer Vision}
+    \list{location}{1}{%
+      {New York, NY, USA}%
+    }
+    \field{year}{2003}
+  \endentry
+
+  \entry{Zhang}{article}{}
+    \name{author}{1}{}{%
+      {{hash=ZZ}{%
+         family={{Zhang}},
+         familyi={Z\bibinitperiod},
+         given={Z.},
+         giveni={Z\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{ZZ1}
+    \strng{fullhash}{ZZ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \verb{doi}
+    \verb 10.1109/34.888718
+    \endverb
+    \field{issn}{0162-8828}
+    \field{number}{11}
+    \field{pages}{1330\bibrangedash 1334}
+    \field{title}{A flexible new technique for camera calibration}
+    \field{volume}{22}
+    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
+  Intelligence}
+    \field{year}{2000}
+    \warn{\item Invalid format of field 'month'}
+  \endentry
+
+  \entry{ernst}{article}{}
+    \name{author}{7}{}{%
+      {{hash=EF}{%
+         family={Ernst},
+         familyi={E\bibinitperiod},
+         given={Floris},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=RL}{%
+         family={Richter},
+         familyi={R\bibinitperiod},
+         given={Lars},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=ML}{%
+         family={Matth{\"a}us},
+         familyi={M\bibinitperiod},
+         given={Lars},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=MV}{%
+         family={Martens},
+         familyi={M\bibinitperiod},
+         given={Volker},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=BR}{%
+         family={Bruder},
+         familyi={B\bibinitperiod},
+         given={Ralf},
+         giveni={R\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Schlaefer},
+         familyi={S\bibinitperiod},
+         given={Alexander},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=SA}{%
+         family={Schweikard},
+         familyi={S\bibinitperiod},
+         given={Achim},
+         giveni={A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Wiley Online Library}%
+    }
+    \strng{namehash}{EFRLML+1}
+    \strng{fullhash}{EFRLMLMVBRSASA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{407\bibrangedash 420}
+    \field{title}{Non-orthogonal tool/flange and robot/world calibration}
+    \field{volume}{8}
+    \field{journaltitle}{The International Journal of Medical Robotics and
+  Computer Assisted Surgery}
+    \field{year}{2012}
+  \endentry
+
+  \entry{QRdecomposition}{online}{}
+    \name{author}{1}{}{%
+      {{hash=W}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{W1}
+    \strng{fullhash}{W1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{MS Windows NT} Kernel Description}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/QR_decomposition
+    \endverb
+    \field{year}{1999}
+    \field{urlday}{20}
+    \field{urlmonth}{05}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{axis-angle}{online}{}
+    \name{author}{1}{}{%
+      {{hash=W}{%
+         family={Wikipedia},
+         familyi={W\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{W1}
+    \strng{fullhash}{W1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{MS Windows NT} Kernel Description}
+    \verb{url}
+    \verb https://en.wikipedia.org/wiki/Axis%E2%80%93angle_representation
+    \endverb
+    \field{year}{1999}
+    \field{urlday}{20}
+    \field{urlmonth}{05}
+    \field{urlyear}{2020}
+  \endentry
+
   \entry{soderkvist2009using}{article}{}
     \name{author}{1}{}{%
       {{hash=SI}{%
@@ -851,87 +1035,6 @@
     \field{volume}{25}
     \field{journaltitle}{The International Journal of Robotics Research}
     \field{year}{2006}
-  \endentry
-
-  \entry{OpenCV}{online}{}
-    \name{author}{1}{}{%
-      {{hash=o}{%
-         family={opencv.org},
-         familyi={o\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{o1}
-    \strng{fullhash}{o1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{title}{{MS Windows NT} Kernel Description}
-    \verb{url}
-    \verb https://docs.opencv.org/2.4/modules/calib3d/doc/camera_calibration_an
-    \verb d_3d_reconstruction.html
-    \endverb
-    \field{year}{1999}
-    \field{urlday}{20}
-    \field{urlmonth}{05}
-    \field{urlyear}{2020}
-  \endentry
-
-  \entry{Hartley:2003:MVG:861369}{book}{}
-    \name{author}{2}{}{%
-      {{hash=HR}{%
-         family={Hartley},
-         familyi={H\bibinitperiod},
-         given={Richard},
-         giveni={R\bibinitperiod},
-      }}%
-      {{hash=ZA}{%
-         family={Zisserman},
-         familyi={Z\bibinitperiod},
-         given={Andrew},
-         giveni={A\bibinitperiod},
-      }}%
-    }
-    \list{publisher}{1}{%
-      {Cambridge University Press}%
-    }
-    \keyw{geometry multiple view zisserman}
-    \strng{namehash}{HRZA1}
-    \strng{fullhash}{HRZA1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \field{edition}{2}
-    \field{isbn}{0521540518}
-    \field{title}{Multiple View Geometry in Computer Vision}
-    \list{location}{1}{%
-      {New York, NY, USA}%
-    }
-    \field{year}{2003}
-  \endentry
-
-  \entry{Zhang}{article}{}
-    \name{author}{1}{}{%
-      {{hash=ZZ}{%
-         family={{Zhang}},
-         familyi={Z\bibinitperiod},
-         given={Z.},
-         giveni={Z\bibinitperiod},
-      }}%
-    }
-    \strng{namehash}{ZZ1}
-    \strng{fullhash}{ZZ1}
-    \field{labelnamesource}{author}
-    \field{labeltitlesource}{title}
-    \verb{doi}
-    \verb 10.1109/34.888718
-    \endverb
-    \field{issn}{0162-8828}
-    \field{number}{11}
-    \field{pages}{1330\bibrangedash 1334}
-    \field{title}{A flexible new technique for camera calibration}
-    \field{volume}{22}
-    \field{journaltitle}{IEEE Transactions on Pattern Analysis and Machine
-  Intelligence}
-    \field{year}{2000}
-    \warn{\item Invalid format of field 'month'}
   \endentry
 \enddatalist
 \endinput
