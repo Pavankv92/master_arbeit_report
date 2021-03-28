@@ -1,4 +1,4 @@
-\section{Camera fundamenals}
+\section{Camera fundamentals}
 A gentle introduction to the pinhole camera model, projection matrix, calibration (internal and external), the underlying mathematics.
 
 \begin{figure}[hbt!]
@@ -222,7 +222,7 @@ A projection matrix has 12 non-trivial elements thus 11 degrees of freedom (igno
 	\label{eq:mat_projection_final}
 \end{equation} 
 
-\textbf{Exact solution.} With a minimum of 6 correspondences, the solution to \ref{eq:mat_projection_final} will be exact which means 3D world points will be exactly gets projected to their measured image points correspondingly. The exact solution p, to Ap = 0 is the right nullspace of matrix A.\\
+\textbf{Exact solution.} With a minimum of 6 correspondences, the solution to \ref{eq:mat_projection_final} will be exact which means 3D world points will be exactly gets projected to their measured image points correspondingly. The exact solution p, to Ap = 0 is the right null-space of matrix A.\\
 
 \textbf{Over-determined solution.} Practical measurements will be noisy due to various reasons and therefore we may require more than 6 2D/3D correspondences. In this case, the solution to Ap = 0 will be obtained by minimizing the algebraic or geometric error of projection, subjected to some valid constraints.\\ 
 
@@ -379,7 +379,7 @@ where $u_i$ is measured point in image and $\hat{u}_i$ is H \textbf{$X_i$} which
 	\end{matrix}
 	\label{eq:min_geometric}
 \end{equation}
-is the maximum likelihood of H. Minimizing geometric error requires non-linear iterative methods such as Levenberg-Marquardt (LM) algorithms. Local minima can be found via LM, in order to find the global minima, initial starting point can be linear soution obtained from \ref{eq:min_algebraic}.\\
+is the maximum likelihood of H. Minimizing geometric error requires non-linear iterative methods such as Levenberg-Marquardt (LM) algorithms. Local minima can be found via LM, in order to find the global minima, initial starting point can be linear solution obtained from \ref{eq:min_algebraic}.\\
 
 The disadvantage of 2D/2D homography is that with a single homography, not all the parameters of a projection matrix can be determined as Z coordinate of the world point is eliminated.  
 \begin{equation*}
@@ -423,7 +423,7 @@ defining $\textbf{$\omega$}$ = $K^{-T} K^{-1}$ as a symmetric matrix, above equa
 
 $\textbf{p}_1$ and $\textbf{p}_2$ are known from homography matrix and $\vect{\omega}$ has to be calculated. $\vect{\omega}$  can be estimated with techniques that we employed earlier with DLT and SVD by defining $ \textbf{b} = (\omega_{11}\ \omega_{12}\ \omega_{13}\  \omega_{22}\ \omega_{23}\ \omega_{33})^T $ and solving $ \textbf{A} \textbf{b} = 0.$ Each homography provides 2 independent rows therfore 3 such homographies are required to estimate $\vect{\omega}$ . Once the $\vect{\omega}$  is computed it can be decomposed in to $K^{-T} K^{-1}$ using Cholesky decomposition.\\
 
-\textbf{Extrinsics.} Computing extrinsics post intrinsics is very straight forward as given by \cite{Zhang} we will first calculate rotation matrix followed by translation vector. $H = K\ [\textbf{r}_1\  \textbf{r}_2\  \textbf{t}] $ having known K we can rearrange as $\inv{K}\ H = H^{'} =  [\textbf{h}_1^{'}\  \textbf{h}_2^{'}\  \textbf{h}_3^{'}] $ which is theoritically equal to $[\textbf{r}_1\  \textbf{r}_2\  \textbf{t}] $. Since the rotational matrix is a orthogonal matrix, third column is othogonal to first 2 and therefore can be calculated by vector cross product $ [\textbf{h}_1^{'} \times \textbf{h}_2^{'} ] $ hence, the complete rotational matrix is  $ Q = [\textbf{h}_1^{'}\ \textbf{h}_2^{'}\ \textbf{h}_1^{'} \times\ \textbf{h}_2^{'} ] $ again which is theoritically equal to $ R = [\textbf{r}_1\ \textbf{r}_2\ \textbf{r}_1\ \times\ \textbf{r}_2\ ] $ which may not be true due to the noisy data. Therefore,  it necessary to find a best 3x3 rotation matrix  R from a given 3x3 matrix Q, here "best" in the sense of smallest Frobenius norm of the difference $[R-Q]$ (see appendix). If the SVD of given matrix is $ Q = UDV^T $, then the best rotation matrix is given by $UV^T$. The translation vector can be calculated as  $ \textbf{t} = \textbf{h}_3^{'}$ but the vector $\textbf{t} $ has to be normalised therefore $\textbf{t} = \textbf{h}_3^{'} / \|\textbf{h}_1^{'}\|$.
+\textbf{Extrinsics.} Computing extrinsics post intrinsics is very straight forward as given by \cite{Zhang} we will first calculate rotation matrix followed by translation vector. $H = K\ [\textbf{r}_1\  \textbf{r}_2\  \textbf{t}] $ having known K we can rearrange as $\inv{K}\ H = H^{'} =  [\textbf{h}_1^{'}\  \textbf{h}_2^{'}\  \textbf{h}_3^{'}] $ which is theoretically equal to $[\textbf{r}_1\  \textbf{r}_2\  \textbf{t}] $. Since the rotational matrix is a orthogonal matrix, third column is orthogonal to first 2 and therefore can be calculated by vector cross product $ [\textbf{h}_1^{'} \times \textbf{h}_2^{'} ] $ hence, the complete rotational matrix is  $ Q = [\textbf{h}_1^{'}\ \textbf{h}_2^{'}\ \textbf{h}_1^{'} \times\ \textbf{h}_2^{'} ] $ again which is theoretically equal to $ R = [\textbf{r}_1\ \textbf{r}_2\ \textbf{r}_1\ \times\ \textbf{r}_2\ ] $ which may not be true due to the noisy data. Therefore,  it necessary to find a best 3x3 rotation matrix  R from a given 3x3 matrix Q, here "best" in the sense of smallest Frobenius norm of the difference $[R-Q]$ (see appendix). If the SVD of given matrix is $ Q = UDV^T $, then the best rotation matrix is given by $UV^T$. The translation vector can be calculated as  $ \textbf{t} = \textbf{h}_3^{'}$ but the vector $\textbf{t} $ has to be normalized therefore $\textbf{t} = \textbf{h}_3^{'} / \|\textbf{h}_1^{'}\|$.
 
 \subsection{Lens distortions} A world point is mapped to image plane as \( (x, y, z)^T \) = \( (\textit{f}\frac{X_c}{Z_c}, \textit{f}\frac{Y_c}{Z_c}, \textit{f} )^T\) then image points are mapped to pixel coordinates as \( (u, v, z)^T \) = \( ( x+C_x, y+C_y, \textit{f} )^T \) however, usually, there are radial and tangential distortions in the lens as depicted in \cref{fig:distortion} therefore, image coordinates have to be corrected before mapping to pixel coordinates. The corrected image coordinates are
 
@@ -444,7 +444,7 @@ $\textbf{p}_1$ and $\textbf{p}_2$ are known from homography matrix and $\vect{\o
 	\label{fig:distortion}
 \end{figure}
 \newpage
-Camera calibration is the process of determining, intrinsic, extrinsic parameters along with distortion coefficients. The \cref{tab:Calibration_summary_table} summarizes the calibration process discussed above. 
+Camera calibration is the process of determining, intrinsic, extrinsic parameters along with distortion coefficients. The \cref{tab:Calibration_summary_table} summarizes the calibration process discussed above.
 
 \begin{table}[hbt!]
 	\centering
@@ -461,37 +461,9 @@ Camera calibration is the process of determining, intrinsic, extrinsic parameter
 	\label{tab:Calibration_summary_table}
 \end{table}
 
-\section{Camera calibration and pose estimation}
-Camera calibration is carried out using open-source computer vision library OpenCV \cite{OpenCV}. Camera calibration is based on 2D/2D point correspondences with the chessboard as a 2D planar object. The homography is calculated using square corners of a chessboard (world points) and its image points. OpenCV needs an arrays of world points and image points and the grid size of the chessboard (in our case its 5 rows, 8 columns). Therefore, 10 RGB images of the chessboard at different position and orientation was recorded and an array of world points (x,y) location of chessboard corners [(0,0), (40,0), (80,0)...] was fed to the algorithm. OpenCV automatically detects these chessboard corners from the images as shown in \cref{fig:chessboard_corners} and refines them accordingly.
-
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[scale=0.6]{chessboard_corners.png}
-	\caption{Chessboard corners(image points) detection in OpenCV}
-	\label{fig:chessboard_corners}
-\end{figure}
-
-\begingroup\makeatletter\def\@currenvir{verbatim}
-\verbatim
-cv2.calibrateCamera(object_points, image_points, ...)
-output: rms, camera_matrix, dist_coeffs, rot_vecs, trans_vecs
-\end{verbatim}
-
-The OpenCV function cv2.calibrateCamera takes in these world points (object points), image points and some more arguements then outputs geometric error of reprojection (rms), intrinsic parameters (camera\_matrix) distortion coefficients (dist\_coeffs) and extrinsic parameters $(rot\_vecs, trans\_vecs)$.
-
-Having completed the camera calibration we can now make use of the intrinsic parameters and the distortion coefficients as an input to the pose estimation algorithm provided by OpenCV. 
-
-\begingroup\makeatletter\def\@currenvir{verbatim}
-\verbatim
-cv2.solvePnP(object_points, image_points, intr_mat, dist_coeffs)
-output: rot_vecs, trans_vecs 
-\end{verbatim}
-
-
-The OpenCV function cv2.solvePnP takes object points, image points, intrinsic matrix, and distortion coeffcients as the arguments and computes rotation and translation vectors. Rotation vector can be converted to 3$\times$3 rotational matrix using cv2.Rodrigues function provided by openCV. By combining rotation matrix and translation vector we can form 4$\times$4 homogenious matrix for further manipulation.
 
 \section{Pixel to 3D points} 
-Having obatined RGB and corresponding depth images of the scene (assuming depth to RGB calibrated), any specific pixel coordinates can be out-projected to obtain 3D locations expressed in the camera coordinates. Recall \cref{eq:mat_image_t_camera}
+Having obtained RGB and corresponding depth images of the scene (assuming depth to RGB calibrated), any specific pixel coordinates can be out-projected to obtain 3D locations expressed in the camera coordinates. Recall \cref{eq:mat_image_t_camera}
 a 3D world point \((X_c, Y_c, Z_C)^T\) is mapped to the pixel coordinates and can be expressed as a matrix multiplication. $\lambda$ is the scaling factor.
 
 \begin{equation*}
@@ -546,7 +518,7 @@ Figure \cref{fig:handeye_calibration_setup} depicts the robot and camera set up 
 	\label{eq:hand-eye}
 \end{equation}
 
-\noindent per \cite{ernst} where $\matr{M}$ is obtained through forward kinematics, $\matr{N}$ is obtained by calculating the pose of the calibration pattern from the camera image. Hand-eye calibration aims to solve the two unknowns in \cref{eq:hand-eye} i.e the chessboard position with respect to the robot's end effector $\matr{X}$ and the camera position with respect to the robot's base $\matr{Y}$.
+\noindent per \cite{ernst} where $\matr{M}$ is obtained through forward kinematics, $\matr{N}$ is obtained by calculating the pose of the calibration pattern from the camera image. Hand-eye calibration aims to solve the two unknowns in \cref{eq:hand-eye} i.e the chessboard position with respect to the robot's end-effector $\matr{X}$ and the camera position with respect to the robot's base $\matr{Y}$.
 
 The equation \ref{eq:hand-eye} is transformed to A system of linear equations as  
 
@@ -599,7 +571,7 @@ where, $\vect{w} = [x_{11}, x_{21},.....,x_{34},y_{11},y_{21},..........,y_{34}]
 	\right]
 \end{equation*}
 
-\noindent Here, $ \mathtt{R}[\matr{M}]_i \in \mathbb{R}^{3\times3} $ is rotaional part of $ \matr{M}_i $ and $ \mathtt{T}[\matr{M}_i] \in \mathbb{R}^{3} $ is translational part of $ \matr{M}_i $. $ \matr{Z}_{m \times n} $ is a m $\times$ n zero matrix and $\matr{E}_{k} $ is a k $ \times $ k identity matrix.
+\noindent Here, $ \mathtt{R}[\matr{M}]_i \in \mathbb{R}^{3\times3} $ is rotational part of $ \matr{M}_i $ and $ \mathtt{T}[\matr{M}_i] \in \mathbb{R}^{3} $ is translational part of $ \matr{M}_i $. $ \matr{Z}_{m \times n} $ is a m $\times$ n zero matrix and $\matr{E}_{k} $ is a k $ \times $ k identity matrix.
 \\
 \noindent \textbf{Over-determined solution} The system of equation \ref{eq:hand-eye} is a form of least square of type I (see appendix) and can be solved using QR factorisation \cite{QRdecomposition} by minimizing quadratic error.
 
@@ -610,10 +582,10 @@ where, $\vect{w} = [x_{11}, x_{21},.....,x_{34},y_{11},y_{21},..........,y_{34}]
 \noindent Where, $\|.\|_{f}$ is frobenoius norm. The above algorithm is called QR-24 according to \cite{ernst}.\\
 
 
-\noindent \textbf{Orthonormalisation} Note that matrices computed not necessarily orthogonal therefore we need to orthonormalise using singular value decompostion (SVD)\\
+\noindent \textbf{Orthonormalization} Note that matrices computed not necessarily orthogonal therefore we need to orthonormalise using singular value decomposition (SVD)\\
 
 
-\noindent \textbf{Calibration error} Having finished the hand-eye calibation, It is ncessary to investigate the accuracy of the obtained results. Accuarcy can be obained by rearranging the equation \ref{eq:hand-eye} as,
+\noindent \textbf{Calibration error} Having finished the hand-eye calibration, It is necessary to investigate the accuracy of the obtained results. Accuracy can be obtained by rearranging the equation \ref{eq:hand-eye} as,
 
 \begin{equation*}
 	(\tfMat{EE}{T}{CB})^{-1} (\tfMat{Base}{T}{EE})^{-1} \tfMat{Base}{T}{Cam} \tfMat{Cam}{T}{CB} = \matr{I}_{4\times4}
@@ -647,7 +619,7 @@ The above equation will not hold in reality due to noisy data, camera calibratio
 \section{Point cloud registration}
 The objective of any point cloud registration algorithm is to find the best transformation that aligns 2 point clouds (source and target). The main point cloud registration technique is iterative closest point (ICP) algorithm introduced in \cite{besl1992method}. A brief introduction to ICP is provided in this section. 
 
-Let \( \displaystyle P = \{p_1, p_2,...,p_m\} \) be the source point cloud set that needs to be aligned with the target point cloud set  \( \displaystyle Q = \{q_1, q_2,...,q_n\} \)  with correspondenses  \( \displaystyle C = \{ (i,j) \} \).
+Let \( \displaystyle P = \{p_1, p_2,...,p_m\} \) be the source point cloud set that needs to be aligned with the target point cloud set  \( \displaystyle Q = \{q_1, q_2,...,q_n\} \)  with correspondences  \( \displaystyle C = \{ (i,j) \} \).
 
 objective : find the best transformation \( \displaystyle T = [R|t] \) that aligns the source point cloud set to the target point cloud set which minimizes the mean square objective function given below.
 
@@ -660,9 +632,9 @@ or \\
 \label{eq:mean_square_objective_function}
 \end{equation}
 
-where, R is a 3X3 rotaion matrix, t is a 3X1 tranlation vector, and T[R|t] is a 4X4 homogeneous tranformation matrix.
+where, R is a 3X3 rotation matrix, t is a 3X1 translation vector, and T[R|t] is a 4X4 homogeneous transformation matrix.
 
-\textbf{Case 1: Known data association.} where each point in source point cloud set \( \displaystyle p_i \) coressponds to \( \displaystyle q_j \) point in the target point cloud set with same index or to any known index. then, \cref{eq:mean_square_objective_function} can be solved by finding the center of mass and singular value decomposition as follows.
+\textbf{Case 1: Known data association.} where each point in source point cloud set \( \displaystyle p_i \) corresponds to \( \displaystyle q_j \) point in the target point cloud set with same index or to any known index. then, \cref{eq:mean_square_objective_function} can be solved by finding the center of mass and singular value decomposition as follows.
 
 center of mass for the source point cloud set and target point cloud set is 
 
@@ -703,7 +675,7 @@ W = \sum_{(i,j) \in C} {q_i'} {p_j'}^T
 \label{eq:cross-covariance_matrix}
 \end{equation} 
 
-Use the SVD to decompose the cross-covariance matrix hence find the transformation between the 2 point clouds.
+Use the SVD to decompose the cross-covariance matrix hence find the transformation between  2 point clouds.
 
 \begin{equation}
 \begin{split}
@@ -714,7 +686,7 @@ t = \mu_q - R\mu_p \\
 \label{eq:solution_orthogonal_procrustes_problem}
 \end{equation} 
 
-In conclusion, a point cloud matching algorithm estimates the 3X3 rotation matrix R and 3X1 traslation vector t. 
+In conclusion, a point cloud matching algorithm estimates the 3X3 rotation matrix R and 3X1 translation vector t. 
 
 \begin{equation*}
 \begin{split}
@@ -725,9 +697,9 @@ In conclusion, a point cloud matching algorithm estimates the 3X3 rotation matri
 where, T[R|t] is the 4X4 homogeneous transformation between source and target point cloud and MSE is the mean square error of matching as in \cref{eq:mean_square_objective_function}.\\
 
 
-\textbf{Case 2: Unnown data association.} when the correspondece between source \& target point cloud set is unknown, we resort to iterative closest point algorithm. Where for each point in the source point cloud set \( \displaystyle P = \{p_1, p_2,...,p_m\} \) coressponding closest point in the target point cloud \( \displaystyle Q = \{q_1, q_2,...,q_n\} \) is calculated before proceeding to the point cloud matching. 
+\textbf{Case 2: Unknown data association.} when the correspondence between source \& target point cloud set is unknown, we resort to iterative closest point algorithm. Where for each point in the source point cloud set \( \displaystyle P = \{p_1, p_2,...,p_m\} \) corresponding closest point in the target point cloud \( \displaystyle Q = \{q_1, q_2,...,q_n\} \) is calculated before proceeding to the point cloud matching. 
 
-The Eucledian distance $d(\vec{p}_1 , \vec{p}_2)$ between two points $\vec{p}_1 = (x_1, y_1, z_1)$ and $\vec{p}_2 = (x_2, y_2, z_2) $ is 
+The Euclidean distance $d(\vec{p}_1 , \vec{p}_2)$ between two points $\vec{p}_1 = (x_1, y_1, z_1)$ and $\vec{p}_2 = (x_2, y_2, z_2) $ is 
 \begin{equation*}
 	\begin{split}
 		d(\vec{p}_1 , \vec{p}_2) = \|  \vec{p}_1  -  \vec{p}_2 \|  = \sqrt{ {(x_2-x_1)^2} + {(y_2-y_1)^2} + { (z_2-z_1)^2} }\\
@@ -798,14 +770,14 @@ Formally, a map m is a list of objects in the environment along with their prope
 where, N is the total number of electrodes on the cap and $m_n$  where $1 \le n \le N$ represents the 3D location of the $n^{th}$ electrode. 
 
 \subsection{Localization}
-In simple words, localization is the pose estimation problem. It is the process of determining the pose of a camera with respect to the given map of the electrodes using wide vareity of sensor data i.e RGBD images and odometry etc. Localization is also the problem of establishing the correspondence between coordinate system based on which the map is defined (often, global coordinate system) and the camera's local coordinate system. This correspondence enables the camera to express the electrodes in the map in it's local coordinate system to be able to successfully navigate through the environment. Unfortunately, sensor measurements are noisy therefore pose has to be inferred from the noisy data which makes localization a difficult problem to solve. There are many probablistic approaches to solve localization problems, the reader is encouraged to refer \cite{10.5555/1121596} for more details.
+In simple words, localization is the pose estimation problem. It is the process of determining the pose of a camera with respect to the given map of the electrodes using wide variety of sensor data i.e RGB-D images and odometry etc. Localization is also the problem of establishing the correspondence between coordinate system based on which the map is defined (often, global coordinate system) and the camera's local coordinate system. This correspondence enables the camera to express the electrodes in the map in it's local coordinate system to be able to successfully navigate through the environment. Unfortunately, sensor measurements are noisy therefore pose has to be inferred from the noisy data which makes localization a difficult problem to solve. There are many probabilistic approaches to solve localization problems, the reader is encouraged to refer \cite{10.5555/1121596} for more details.
 \\
 
 \subsection{SLAM} 
-Simultaneous localization and mapping (SLAM) is a special case where the camera neither have the pre-build map of the electrodes nor does it know its pose with respect to the map. Camera can however be moved along a trajectory either with a help of a robot or manually with in the environment and also collect RGB and depth images along the way. Finally, task is to build the map of the electrodes and simultaneously localize the camera with this map. Due to the fact that measurements are prone to noise, SLAM problems are modelled probabalistically.
+Simultaneous localization and mapping (SLAM) is a special case where the camera neither have the pre-build map of the electrodes nor does it know its pose with respect to the map. Camera can however be moved along a trajectory either with a help of a robot or manually with in the environment and also collect RGB and depth images along the way. Finally, task is to build the map of the electrodes and simultaneously localize the camera with this map. Due to the fact that measurements are prone to noise, SLAM problems are modelled probabilistically.
 \\
 
-\textbf{Probabilistic formulation of SLAM.} The camera moves with in an unknown environment along a trajectory. Camera poses along the trajectory are described by the random variables $x_{1:t} = \{x_1,......, x_t\}$. A set of odometry can be generated along the trajectory $u_{1:t} = \{u_1,......, u_t\}$ and percieved 3D electrode position can be expressed by $z_{1:t} = \{z_1,......, z_t\}$. SLAM can be broadly classified in to 2 types, online-SLAM and full-SLAM.
+\textbf{Probabilistic formulation of SLAM.} The camera moves with in an unknown environment along a trajectory. Camera poses along the trajectory are described by the random variables $x_{1:t} = \{x_1,......, x_t\}$. A set of odometry can be generated along the trajectory $u_{1:t} = \{u_1,......, u_t\}$ and perceived 3D electrode position can be expressed by $z_{1:t} = \{z_1,......, z_t\}$. SLAM can be broadly classified in to 2 types, online-SLAM and full-SLAM.
 \\
 
 \textbf{Online-SLAM.} Estimating the current pose and the map.
@@ -817,7 +789,7 @@ Simultaneous localization and mapping (SLAM) is a special case where the camera 
 	\label{eq:online_slam}
 \end{equation*} 
 
-where $x_t$ is the camera pose at current time t, m is map, $z_{1:t}$ and $u_{1:t}$ are measurement and control inputs untill the current time t respectively. Online-SLAM is essentially a online state estimation problem where state is the current camera pose and the map. The pose and the map is estimated and refined as and when the new measurements are avaiable. Online-SLAM problem is is modelled and solved using filtering techninques such as Kalman and information filters \cite{smith1990estimating} \cite{castellanos1999spmap} and partical filters \cite{montemerlo2002fastslam}.
+where $x_t$ is the camera pose at current time t, m is map, $z_{1:t}$ and $u_{1:t}$ are measurement and control inputs untill the current time t respectively. Online-SLAM is essentially a online state estimation problem where state is the current camera pose and the map. The pose and the map is estimated and refined as and when the new measurements are available. Online-SLAM problem is is modelled and solved using filtering techniques such as Kalman and information filters \cite{smith1990estimating} \cite{castellanos1999spmap} and particle filters \cite{montemerlo2002fastslam}.
 \\
 
 \textbf{Full-SLAM.} Estimating the entire camera trajectory and the map instead of just momentary pose.
@@ -829,7 +801,7 @@ where $x_t$ is the camera pose at current time t, m is map, $z_{1:t}$ and $u_{1:
 	\label{eq:full_slam}
 \end{equation*} 
 
-Full-SLAM estimates $x_{1:t}$ the entire trajectory of the camera and simulataneously mapping the electrodes by incororating full set of measurements and control inputs $z_{1:t}$ and $u_{1:t}$. Smoothing techniques like \cite{lu1997globally} \cite{dellaert2006square} are employed to solve the full-SLAM problems. The modern and intuitive approach for solving full-SLAM problem is to use graph-based formulation. Due to the improvements in the areas of computational power and efficient linear algebra solvers, graph-based formulations have gained popularity over the years \cite{lu1997globally}.  
+Full-SLAM estimates $x_{1:t}$ the entire trajectory of the camera and simultaneously mapping the electrodes by incorporating full set of measurements and control inputs $z_{1:t}$ and $u_{1:t}$. Smoothing techniques like \cite{lu1997globally} \cite{dellaert2006square} are employed to solve the full-SLAM problems. The modern and intuitive approach for solving full-SLAM problem is to use graph-based formulation. Due to the improvements in the areas of computational power and efficient linear algebra solvers, graph-based formulations have gained popularity over the years \cite{lu1997globally}.  
 
 \section{Graph-Based SLAM (Pose-Graph SLAM)}
 Graph-based approach uses an intuitive graph which consists of nodes and edges to represent the full-SLAM problem. Each node corresponds to the camera pose along the trajectory and an edge between two nodes corresponds to the spatial constraints (odometry/loop closure constraints) between them. These constraints are inherently uncertain in nature. The idea of graph-based approach is to first construct the pose-graph and determine an optimised node configuration (camera poses) that minimizes the error introduced by spatial constraints. Finally, render a map based on these optimized poses as shown in \cref{fig:graph_based_slam}.
@@ -853,12 +825,12 @@ Graph consists of n nodes $x_{1:t}$ which corresponds to the camera pose at time
 \end{figure}
 
 
-Since spatial constraints associated with edges (sensor measurement of some sort) are inherently noisy, these are modelled probabalistically. Let $Z_{ij}$ and $\Omega$ be mean and information matrix of an measurement (please see appendix on Gaussian distribution) between node $x_i$ and $x_j$. Let $\hat{Z}_{ij}$ the prediction of this measurement given a node configuration $x_i$ and $x_j$ as shown in \cref{fig:error_function}.  
+Since spatial constraints associated with edges (sensor measurement of some sort) are inherently noisy, these are modeled probabilistically. Let $Z_{ij}$ and $\Omega$ be mean and information matrix of an measurement (please see appendix on Gaussian distribution) between node $x_i$ and $x_j$. Let $\hat{Z}_{ij}$ the prediction of this measurement given a node configuration $x_i$ and $x_j$ as shown in \cref{fig:error_function}.  
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[scale=0.5]{error_function.png}
-	\caption{Probabalistic model of measurements.}
+	\caption{Probabilistic model of measurements.}
 	\label{fig:error_function}
 \end{figure}
 
@@ -889,7 +861,7 @@ Let $\mathcal{C}$ be the set with many nodes for which observation $Z_{ij}$ exis
 \end{equation*}
 
 which can be rewritten as,
-
+{\scriptsize {\large }}
 \begin{equation}
 	\begin{split}
 		X^* = \underset{x}{\mathrm{argmin}}  \sum_{(i,j) \in \mathcal{C}}  e_{ij}^T \Omega_{ij} e_{ij}
@@ -899,7 +871,7 @@ which can be rewritten as,
 
 \subsection{Pose-Graph optimization}
 
-The \cref{eq:non_linear_least_square_problem} is nonlinear least square problem and solution can be obtained using Gauss-Newton or Lavenberg-Marquardt alogorithms \cite{grisetti2010tutorial}. Dellaert and Kaess \cite{dellaert2006square} have shown connection between factor graphs and nonlinear least square problems. A Factor graphs easily encodes probabalistic nature of SLAM and the sparsity of a SLAM problem can be easily visualised. A factor graph represents joint probabalities of all the factors with factor nodes $f_i \in \mathcal{F}$ variable nodes $x_i \in \mathcal{X}$.  
+The \cref{eq:non_linear_least_square_problem} is non-linear least square problem and solution can be obtained using Gauss-Newton or Lavenberg-Marquardt algorithms \cite{grisetti2010tutorial}. Dellaert and Kaess \cite{dellaert2006square} have shown connection between factor graphs and non-linear least square problems. A Factor graphs easily encodes probabilistic nature of SLAM and the sparsity of a SLAM problem can be easily visualised. A factor graph represents joint probabilities of all the factors with factor nodes $f_i \in \mathcal{F}$ variable nodes $x_i \in \mathcal{X}$.  
 
 \begin{equation}
 	\begin{split}
@@ -928,7 +900,7 @@ with $\| e \|_\Sigma^2 = e^T\invMat{\Sigma}e$ being the Mahalanobis distance wit
 
 
 \section{Electrode detection and localization}
-Electrodes captured in sequence of RGB images needs to be detected and simultaneously localised as shown in \cref{fig:yolo_detection} inorder to create 3D point clouds for sequential ICP registration and SLAM. YOLO(You Only Look Once) being one of most popular convolutional neural network based object detection and localization algorithm has been employed for this very purpose. YOLO has been trained on a large dataset of EEG cap and trained weights are available as a part of the pipileine.
+Electrodes captured in sequence of RGB images needs to be detected and simultaneously localized as shown in \cref{fig:yolo_detection} in order to create 3D point clouds for sequential ICP registration and SLAM. YOLO(You Only Look Once) being one of most popular convolutional neural network based object detection and localization algorithm has been employed for this very purpose. YOLO has been trained on a large dataset of EEG cap and trained weights are available as a part of the pipeline.
 
 \begin{figure}[hbt!]
 	\centering
@@ -947,4 +919,4 @@ Electrodes captured in sequence of RGB images needs to be detected and simultane
   
 
 \section{Cluster centers}
-A single electrode is seen from multiple adjacent camera poses and even after having contruscted the electrode map with the best estimates of the camera poses, errors associated with camera calibration, hand-eye calibration, YOLO localization, ICP drift, SLAM etc. will result in as many unlabelled clusters as the number of electrodes. Centroids of these clusters will be treated as the electorde position.
+A single electrode is seen from multiple adjacent camera poses and even after having constructed the electrode map with the best estimates of the camera poses, errors associated with camera calibration, hand-eye calibration, YOLO localization, ICP drift, SLAM etc. will result in as many unlabeled clusters as the number of electrodes. The centroids of these clusters will be treated as the electrode position.

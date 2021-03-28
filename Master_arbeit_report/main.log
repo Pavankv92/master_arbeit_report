@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  22 MAR 2021 13:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  27 MAR 2021 11:10
 entering extended mode
 **./main.tex
 (main.tex
@@ -1473,11 +1473,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 253--254
  []
 
 [7]
-<./figures/2D_2D.png, id=159, 606.46574pt x 416.15475pt>
+<./figures/2D_2D.png, id=159, 733.7814pt x 531.9072pt>
 File: ./figures/2D_2D.png Graphic file (type png)
 <use ./figures/2D_2D.png>
 Package pdftex.def Info: ./figures/2D_2D.png  used on input line 260.
-(pdftex.def)             Requested size: 415.84805pt x 285.36273pt.
+(pdftex.def)             Requested size: 415.84805pt x 301.45337pt.
  [8 <./figures/2D_2D.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 347--348
 
@@ -1525,16 +1525,104 @@ File: ./figures/distortion.png Graphic file (type png)
 Package pdftex.def Info: ./figures/distortion.png  used on input line 442.
 (pdftex.def)             Requested size: 415.84805pt x 160.86478pt.
  [11 <./figures/distortion.png>]
-<./figures/chessboard_corners.png, id=207, 514.92375pt x 504.6855pt>
+<./figures/handeye_calibration.png, id=206, 533.05188pt x 404.03296pt>
+File: ./figures/handeye_calibration.png Graphic file (type png)
+<use ./figures/handeye_calibration.png>
+Package pdftex.def Info: ./figures/handeye_calibration.png  used on input line 
+509.
+(pdftex.def)             Requested size: 266.52528pt x 202.01598pt.
+ [12] [13 <./figures/handeye_calibration.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--586
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 696--698
+
+ []
+
+[15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 773--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 777--779
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 780--782
+
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 792--794
+
+ []
+
+<./figures/graph_based_slam.png, id=292, 830.6232pt x 96.8418pt>
+File: ./figures/graph_based_slam.png Graphic file (type png)
+<use ./figures/graph_based_slam.png>
+Package pdftex.def Info: ./figures/graph_based_slam.png  used on input line 811
+.
+(pdftex.def)             Requested size: 415.31058pt x 48.42076pt.
+[18 <./figures/graph_based_slam.png>]
+<./figures/graph_construction.png, id=306, 788.7066pt x 311.7246pt>
+File: ./figures/graph_construction.png Graphic file (type png)
+<use ./figures/graph_construction.png>
+Package pdftex.def Info: ./figures/graph_construction.png  used on input line 8
+22.
+(pdftex.def)             Requested size: 354.91469pt x 140.27477pt.
+<./figures/error_function.png, id=308, 314.6154pt x 280.8894pt>
+File: ./figures/error_function.png Graphic file (type png)
+<use ./figures/error_function.png>
+Package pdftex.def Info: ./figures/error_function.png  used on input line 832.
+(pdftex.def)             Requested size: 157.30731pt x 140.44435pt.
+ [19 <./figures/graph_construction.png> <./figures/error_function.png>]
+<./figures/yolo_detection.jpg, id=325, 408.02437pt x 333.49594pt>
+File: ./figures/yolo_detection.jpg Graphic file (type jpg)
+<use ./figures/yolo_detection.jpg>
+Package pdftex.def Info: ./figures/yolo_detection.jpg  used on input line 908.
+(pdftex.def)             Requested size: 203.76782pt x 166.54909pt.
+<./figures/yolo_detection_2.jpg, id=326, 284.56313pt x 309.40594pt>
+File: ./figures/yolo_detection_2.jpg Graphic file (type jpg)
+<use ./figures/yolo_detection_2.jpg>
+Package pdftex.def Info: ./figures/yolo_detection_2.jpg  used on input line 913
+.
+(pdftex.def)             Requested size: 153.86174pt x 167.29861pt.
+) [20] [21 <./figures/yolo_detection.jpg> <./figures/yolo_detection_2.jpg>]
+chapter 3.
+(chapters/software_architecture.tex) (chapters/camera_calibration.tex
+Underfull \vbox (badness 2376) has occurred while \output is active []
+
+ [22
+
+]
+<./figures/chessboard_corners.png, id=363, 514.92375pt x 504.6855pt>
 File: ./figures/chessboard_corners.png Graphic file (type png)
 <use ./figures/chessboard_corners.png>
-Package pdftex.def Info: ./figures/chessboard_corners.png  used on input line 4
-69.
-(pdftex.def)             Requested size: 308.95662pt x 302.81363pt.
- [12 <./figures/chessboard_corners.png>]
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 4
-75.
+Package pdftex.def Info: ./figures/chessboard_corners.png  used on input line 9
+.
+(pdftex.def)             Requested size: 145.54935pt x 142.65092pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 10--10
+[][][]|\T1/lmr/m/n/10 (+20) Chess-board cor-ners(image
+ []
+
+<./figures/camera_calib_matlab.PNG, id=364, 533.5935pt x 364.36125pt>
+File: ./figures/camera_calib_matlab.PNG Graphic file (type png)
+<use ./figures/camera_calib_matlab.PNG>
+Package pdftex.def Info: ./figures/camera_calib_matlab.PNG  used on input line 
+15.
+(pdftex.def)             Requested size: 203.76782pt x 139.14255pt.
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 2
+4.
 ("C:\Users\pavan\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\t1lmtt.fd"
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -1542,107 +1630,205 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `lmtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-<./figures/handeye_calibration.png, id=217, 533.05188pt x 404.03296pt>
-File: ./figures/handeye_calibration.png Graphic file (type png)
-<use ./figures/handeye_calibration.png>
-Package pdftex.def Info: ./figures/handeye_calibration.png  used on input line 
-537.
-(pdftex.def)             Requested size: 266.52528pt x 202.01598pt.
 
-[13] [14 <./figures/handeye_calibration.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 610--611
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 613--614
-
- []
-
-[15] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 724--726
-
- []
-
-[17]
-Underfull \hbox (badness 10000) in paragraph at lines 801--803
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 805--807
-
- []
-
-[18]
-Underfull \hbox (badness 10000) in paragraph at lines 808--810
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 820--822
-
- []
-
-<./figures/graph_based_slam.png, id=303, 830.6232pt x 96.8418pt>
-File: ./figures/graph_based_slam.png Graphic file (type png)
-<use ./figures/graph_based_slam.png>
-Package pdftex.def Info: ./figures/graph_based_slam.png  used on input line 839
-.
-(pdftex.def)             Requested size: 415.31058pt x 48.42076pt.
-[19]
-<./figures/graph_construction.png, id=316, 788.7066pt x 311.7246pt>
-File: ./figures/graph_construction.png Graphic file (type png)
-<use ./figures/graph_construction.png>
-Package pdftex.def Info: ./figures/graph_construction.png  used on input line 8
-50.
-(pdftex.def)             Requested size: 354.91469pt x 140.27477pt.
-<./figures/error_function.png, id=318, 314.6154pt x 280.8894pt>
-File: ./figures/error_function.png Graphic file (type png)
-<use ./figures/error_function.png>
-Package pdftex.def Info: ./figures/error_function.png  used on input line 860.
-(pdftex.def)             Requested size: 157.30731pt x 140.44435pt.
- [20 <./figures/graph_based_slam.png> <./figures/graph_construction.png> <./fig
-ures/error_function.png>] [21]
-<./figures/yolo_detection.jpg, id=345, 408.02437pt x 333.49594pt>
-File: ./figures/yolo_detection.jpg Graphic file (type jpg)
-<use ./figures/yolo_detection.jpg>
-Package pdftex.def Info: ./figures/yolo_detection.jpg  used on input line 936.
-(pdftex.def)             Requested size: 203.76782pt x 166.54909pt.
-<./figures/yolo_detection_2.jpg, id=346, 284.56313pt x 309.40594pt>
+[23 <./figures/chessboard_corners.png> <./figures/camera_calib_matlab.PNG>]
+<./figures/out_projection_600.png, id=378, 896.59969pt x 502.12593pt>
+File: ./figures/out_projection_600.png Graphic file (type png)
+<use ./figures/out_projection_600.png>
+Package pdftex.def Info: ./figures/out_projection_600.png  used on input line 4
+8.
+(pdftex.def)             Requested size: 203.76782pt x 114.11507pt.
+<./figures/out_projection_1800.png, id=379, 867.99281pt x 523.9575pt>
+File: ./figures/out_projection_1800.png Graphic file (type png)
+<use ./figures/out_projection_1800.png>
+Package pdftex.def Info: ./figures/out_projection_1800.png  used on input line 
+53.
+(pdftex.def)             Requested size: 203.76782pt x 123.0021pt.
+<./figures/pixel_value_out_projection.png, id=381, 435.5472pt x 237.5274pt>
+File: ./figures/pixel_value_out_projection.png Graphic file (type png)
+<use ./figures/pixel_value_out_projection.png>
+Package pdftex.def Info: ./figures/pixel_value_out_projection.png  used on inpu
+t line 63.
+(pdftex.def)             Requested size: 348.43822pt x 190.02217pt.
+)
+(chapters/data_acquisition.tex
+<./figures/robotic_data_acquisition.png, id=383, 663.9204pt x 499.1448pt>
+File: ./figures/robotic_data_acquisition.png Graphic file (type png)
+<use ./figures/robotic_data_acquisition.png>
+Package pdftex.def Info: ./figures/robotic_data_acquisition.png  used on input 
+line 7.
+(pdftex.def)             Requested size: 415.84805pt x 312.6426pt.
+ [24 <./figures/out_projection_600.png> <./figures/out_projection_1800.png>] [2
+5 <./figures/pixel_value_out_projection.png> <./figures/robotic_data_acquisitio
+n.png>]
+<./figures/hand_data_acquisition.png, id=405, 593.5776pt x 483.2454pt>
+File: ./figures/hand_data_acquisition.png Graphic file (type png)
+<use ./figures/hand_data_acquisition.png>
+Package pdftex.def Info: ./figures/hand_data_acquisition.png  used on input lin
+e 18.
+(pdftex.def)             Requested size: 415.84805pt x 338.55704pt.
+<./figures/blue_kinect_marker.png, id=409, 325.94255pt x 238.15147pt>
+File: ./figures/blue_kinect_marker.png Graphic file (type png)
+<use ./figures/blue_kinect_marker.png>
+Package pdftex.def Info: ./figures/blue_kinect_marker.png  used on input line 3
+0.
+(pdftex.def)             Requested size: 162.97087pt x 119.07544pt.
+<./figures/handeye_calibration_hand_data.png, id=410, 804.1242pt x 434.1018pt>
+File: ./figures/handeye_calibration_hand_data.png Graphic file (type png)
+<use ./figures/handeye_calibration_hand_data.png>
+Package pdftex.def Info: ./figures/handeye_calibration_hand_data.png  used on i
+nput line 37.
+(pdftex.def)             Requested size: 415.84805pt x 224.49557pt.
+) (chapters/yolo_depth_point_cloud.tex
 File: ./figures/yolo_detection_2.jpg Graphic file (type jpg)
 <use ./figures/yolo_detection_2.jpg>
-Package pdftex.def Info: ./figures/yolo_detection_2.jpg  used on input line 941
-.
-(pdftex.def)             Requested size: 153.86174pt x 167.29861pt.
-) [22 <./figures/yolo_detection.jpg> <./figures/yolo_detection_2.jpg>]
+Package pdftex.def Info: ./figures/yolo_detection_2.jpg  used on input line 6.
+(pdftex.def)             Requested size: 203.76782pt x 221.5682pt.
+<./figures/yolo_detection_depth_2.jpg, id=412, 407.5225pt x 507.8975pt>
+File: ./figures/yolo_detection_depth_2.jpg Graphic file (type jpg)
+<use ./figures/yolo_detection_depth_2.jpg>
+Package pdftex.def Info: ./figures/yolo_detection_depth_2.jpg  used on input li
+ne 11.
+(pdftex.def)             Requested size: 174.65541pt x 217.67093pt.
+<./figures/yolo_performance.png, id=413, 362.3136pt x 384.9582pt>
+File: ./figures/yolo_performance.png Graphic file (type png)
+<use ./figures/yolo_performance.png>
+Package pdftex.def Info: ./figures/yolo_performance.png  used on input line 19.
+
+(pdftex.def)             Requested size: 289.85127pt x 307.96698pt.
+
+[26 <./figures/hand_data_acquisition.png>]
+<./figures/camera_scans.png, id=425, 244.7544pt x 262.581pt>
+File: ./figures/camera_scans.png Graphic file (type png)
+<use ./figures/camera_scans.png>
+Package pdftex.def Info: ./figures/camera_scans.png  used on input line 28.
+(pdftex.def)             Requested size: 195.80377pt x 210.06506pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [27 <./figures/blue_kinect_marker.png> <./figures/handeye_calibration_hand_dat
+a.png>])
+(chapters/ground_truth_data_acquisition.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [28 <./figures/yolo_detection_depth_2.jpg> <./figures/yolo_performance.png>]
+<./figures/ground_truth_data_acquisition.png, id=443, 566.115pt x 424.9476pt>
+File: ./figures/ground_truth_data_acquisition.png Graphic file (type png)
+<use ./figures/ground_truth_data_acquisition.png>
+Package pdftex.def Info: ./figures/ground_truth_data_acquisition.png  used on i
+nput line 5.
+(pdftex.def)             Requested size: 415.84805pt x 312.16089pt.
+<./figures/error_analysis.png, id=444, 682.7106pt x 516.9714pt>
+File: ./figures/error_analysis.png Graphic file (type png)
+<use ./figures/error_analysis.png>
+Package pdftex.def Info: ./figures/error_analysis.png  used on input line 12.
+(pdftex.def)             Requested size: 415.84805pt x 314.90245pt.
+<./figures/depth_offset_determination.png, id=446, 713.5458pt x 431.211pt>
+File: ./figures/depth_offset_determination.png Graphic file (type png)
+<use ./figures/depth_offset_determination.png>
+Package pdftex.def Info: ./figures/depth_offset_determination.png  used on inpu
+t line 21.
+(pdftex.def)             Requested size: 415.84805pt x 251.30664pt.
+ [29 <./figures/camera_scans.png>]
+<./figures/depth_offset_robot_no_yolo.png, id=459, 614.7768pt x 316.5426pt>
+File: ./figures/depth_offset_robot_no_yolo.png Graphic file (type png)
+<use ./figures/depth_offset_robot_no_yolo.png>
+Package pdftex.def Info: ./figures/depth_offset_robot_no_yolo.png  used on inpu
+t line 31.
+(pdftex.def)             Requested size: 332.6797pt x 171.29753pt.
+<./figures/depth_offset_robot_yolo.png, id=460, 612.8496pt x 318.4698pt>
+File: ./figures/depth_offset_robot_yolo.png Graphic file (type png)
+<use ./figures/depth_offset_robot_yolo.png>
+Package pdftex.def Info: ./figures/depth_offset_robot_yolo.png  used on input l
+ine 38.
+(pdftex.def)             Requested size: 332.6797pt x 172.87498pt.
+<./figures/depth_offset_robot_cluster_no_yolo.png, id=463, 727.0362pt x 308.833
+8pt>
+File: ./figures/depth_offset_robot_cluster_no_yolo.png Graphic file (type png)
+<use ./figures/depth_offset_robot_cluster_no_yolo.png>
+Package pdftex.def Info: ./figures/depth_offset_robot_cluster_no_yolo.png  used
+ on input line 50.
+(pdftex.def)             Requested size: 415.84805pt x 176.64499pt.
+<./figures/depth_offset_robot_cluster_yolo.png, id=464, 713.064pt x 308.352pt>
+File: ./figures/depth_offset_robot_cluster_yolo.png Graphic file (type png)
+<use ./figures/depth_offset_robot_cluster_yolo.png>
+Package pdftex.def Info: ./figures/depth_offset_robot_cluster_yolo.png  used on
+ input line 57.
+(pdftex.def)             Requested size: 415.84805pt x 179.83234pt.
+<./figures/depth_offset_beta_variations.png, id=465, 718.3638pt x 259.6902pt>
+File: ./figures/depth_offset_beta_variations.png Graphic file (type png)
+<use ./figures/depth_offset_beta_variations.png>
+Package pdftex.def Info: ./figures/depth_offset_beta_variations.png  used on in
+put line 66.
+(pdftex.def)             Requested size: 415.84805pt x 150.33113pt.
+) (chapters/slam.tex [30 <./figures/ground_truth_data_acquisition.png>]
+
+LaTeX Warning: Text page 31 contains only floats.
+
+
+Overfull \vbox (0.20879pt too high) has occurred while \output is active []
+
+
+[31 <./figures/error_analysis.png> <./figures/depth_offset_determination.png>]
+<./figures/pose_graph.png, id=482, 626.34pt x 415.7934pt>
+File: ./figures/pose_graph.png Graphic file (type png)
+<use ./figures/pose_graph.png>
+Package pdftex.def Info: ./figures/pose_graph.png  used on input line 7.
+(pdftex.def)             Requested size: 415.84805pt x 276.0677pt.
+
+[32 <./figures/depth_offset_robot_no_yolo.png> <./figures/depth_offset_robot_yo
+lo.png>]
+Underfull \vbox (badness 2426) has occurred while \output is active []
+
+ [33 <./figures/depth_offset_robot_cluster_no_yolo.png> <./figures/depth_offset
+_robot_cluster_yolo.png> <./figures/depth_offset_beta_variations.png>]
+<./figures/loop_closure.png, id=502, 641.7576pt x 390.258pt>
+File: ./figures/loop_closure.png Graphic file (type png)
+<use ./figures/loop_closure.png>
+Package pdftex.def Info: ./figures/loop_closure.png  used on input line 23.
+(pdftex.def)             Requested size: 415.84805pt x 252.87865pt.
+<./figures/one_to_one_correspondence.png, id=503, 659.46375pt x 551.05875pt>
+File: ./figures/one_to_one_correspondence.png Graphic file (type png)
+<use ./figures/one_to_one_correspondence.png>
+Package pdftex.def Info: ./figures/one_to_one_correspondence.png  used on input
+ line 30.
+(pdftex.def)             Requested size: 415.84805pt x 347.49677pt.
+ [34 <./figures/pose_graph.png>]
+<./figures/cluster_and_its_centers.png, id=514, 898.3161pt x 521.0667pt>
+File: ./figures/cluster_and_its_centers.png Graphic file (type png)
+<use ./figures/cluster_and_its_centers.png>
+Package pdftex.def Info: ./figures/cluster_and_its_centers.png  used on input l
+ine 44.
+(pdftex.def)             Requested size: 415.84805pt x 241.21219pt.
+) [35 <./figures/loop_closure.png>] [36 <./figures/one_to_one_correspondence.pn
+g>] [37 <./figures/cluster_and_its_centers.png>]
 chapter A.
-(chapters/appendix.tex [23
+(chapters/appendix.tex [38
 
-]) [24]
+]) [39]
 chapter without number
-[25
+[40
 
 
-] [26]
+] [41] [42]
 \openout2 = `chapters/declaration.aux'.
 
  (chapters/declaration.tex
 chapter without number
 )
-Overfull \hbox (10.95pt too wide) in paragraph at lines 11--72
+Overfull \hbox (10.95pt too wide) in paragraph at lines 11--75
 []$[]$ 
  []
 
-[27
+[43
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 73.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 73.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 76.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 76.
  (main.aux (chapters/declaration.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 73.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 73.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 76.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 76.
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1652,16 +1838,16 @@ LaTeX Warning: There were multiply-defined labels.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 73.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 76.
  ) 
 Here is how much of TeX's memory you used:
- 29563 strings out of 480930
- 599994 string characters out of 2899761
- 1382223 words of memory out of 3000000
- 44641 multiletter control sequences out of 15000+200000
- 682180 words of font info for 206 fonts, out of 3000000 for 9000
+ 29891 strings out of 480930
+ 609565 string characters out of 2899761
+ 1386068 words of memory out of 3000000
+ 44864 multiletter control sequences out of 15000+200000
+ 685361 words of font info for 209 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 60i,20n,106p,10123b,2078s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,20n,106p,10123b,3083s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.en
 c}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmtt.
 enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.
@@ -1692,9 +1878,9 @@ pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmt
 t8.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/symbols/msam10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (31 pages, 2616284 bytes).
+Output written on main.pdf (47 pages, 9189449 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 151 named destinations out of 1000 (max. 500000)
- 42799 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 851 PDF objects out of 1000 (max. 8388607)
+ 211 named destinations out of 1000 (max. 500000)
+ 45114 words of extra memory for PDF output out of 51595 (max. 10000000)
 

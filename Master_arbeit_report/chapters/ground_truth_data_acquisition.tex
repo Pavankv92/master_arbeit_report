@@ -1,0 +1,72 @@
+\section{Ground truth data acquisition} As shown in the \cref{fig:ground_truth_data_acquisition}  a reflective marker is used to acquire 3D position of all the electrodes. Marker tip is carefully placed on each electrode and the 3D position is recorded in the tracking camera.  As kinect frame is chosen to be the single frame of reference for entire project, points recorded in tracking camera are then transferred to kinect frame via series of transformation and associated errors can be visualized in \cref{fig:error_analysis}. When out-projected points are compared with ground truth values, there will be an additional out-projection error. 
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{ground_truth_data_acquisition.png}
+	\caption{ground truth data acquisition using a reflective marker.}
+	\label{fig:ground_truth_data_acquisition}
+\end{figure}
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{error_analysis.png}
+	\caption{Potential error analysis in acquiring ground truth data.}
+	\label{fig:error_analysis}
+\end{figure}
+
+\subsection{Depth offset determination} One way to better understand all the errors associated is to directly compare the out-projected and ground truth values and by measuring the difference in them. It is already known that chessboard out-projection using raw depth value led to over estimation of the object points. Therefore, we intend to find the parameter $\beta$ that minimizes the error between ground truth and out-projected values with [ raw depth -  $\beta$ ]. As shown in \cref{fig:depth_offset_determination} this can be addressed in two ways, 1) at each camera position $x_{1:t} $ both ground truth and out-projected point clouds are known (only those electrodes that are visible from a particular camera pose) and an iterative closest point registration can be performed and output RMSE (root mean square error) can be used as a metric and averaged over all camera poses. 2) since all the camera poses (robotic/hand guided trajectory) and corresponding out-projected point clouds are known ahead of time, one can stitch the point clouds and find the cluster centers and compare them to the ground truth values and measure L2 norm. Note that there are as many cluster centers as number of electrodes on the EEG cap.   
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{depth_offset_determination.png}
+	\caption{Depth offset $\beta$ determination process.}
+	\label{fig:depth_offset_determination}
+\end{figure}
+
+For the ICP scan registration, $\beta$ is varied from 10 to 30 mm (i.e. out-projected points will be raw kinect depth -  $\beta$) brute forcing with the step of 1 mm. The \cref{fig:depth_offset_robot_no_yolo} shows result for 6 robot guided trajectories (2/cap, for 3 caps) which YOLO has never seen and \cref{fig:depth_offset_robot_yolo} shows for the trajectories on which YOLO has been trained. It is evident that mean RMSE is lower at depth offset $\beta$ between 24-26 mm.
+
+\begin{figure}[hbt!]
+	\centering
+	\begin{subfigure}{0.80\textwidth}
+		\includegraphics[width=\linewidth]{depth_offset_robot_no_yolo.png}	
+		\caption{mean RMSE vs depth offset $\beta$ for trajectory YOLO has not seen.}
+		\label{fig:depth_offset_robot_no_yolo} 
+	\end{subfigure}
+	\\
+	\begin{subfigure}{0.80\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{depth_offset_robot_yolo.png}	
+		\caption{mean RMSE vs depth offset $\beta$ for trajectory YOLO has seen.}
+			\label{fig:depth_offset_robot_yolo} 
+	\end{subfigure}
+	\label{fig:icp_depth_offset} 
+\end{figure} 
+
+Similarly, with same $\beta$ variation for cluster center comparison, \cref{fig:cluster_depth_offset} shows the results. Mean L2 norm is lower at depth offset $\beta$ between 24-26 mm. Effect of $\beta$ on the point cloud can be visualized in \cref{fig:depth_offset_beta_variations}. At $\beta = 10$ clusters are overlapped with each other, at $\beta = 25$ clusters are well separated tightly bound and At $\beta = 30$ it starts to deteriorate again. 
+
+\begin{figure}[hbt!]
+	\centering
+	\begin{subfigure}{\textwidth}
+		\includegraphics[width=\linewidth]{depth_offset_robot_cluster_no_yolo.png}	
+		\caption{mean L2 norm vs depth offset $\beta$ for trajectory YOLO has not seen.}
+		\label{fig:depth_offset_robot_cluster_no_yolo} 
+	\end{subfigure}
+	\\
+	\begin{subfigure}{\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{depth_offset_robot_cluster_yolo.png}	
+		\caption{mean L2 norm vs depth offset $\beta$ for trajectory YOLO has seen.}
+		\label{fig:depth_offset_robot_cluster_yolo} 
+	\end{subfigure}
+	\label{fig:cluster_depth_offset} 
+\end{figure} 
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{depth_offset_beta_variations.png}
+	\caption{Effect of change in $\beta$ on point cloud.}
+	\label{fig:depth_offset_beta_variations}
+\end{figure}
+
+
+TODO : add hand trajectory details
