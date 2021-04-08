@@ -1,0 +1,100 @@
+In this section, we provide the detailed results for both robot and hand guided trajectory. 
+
+\section{Robot-guided trajectory}
+
+\begin{table}[hbt!]
+	\begin{adjustbox}{width=\columnwidth,center}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			\hline
+			Absloute L2 norm   & 11 mm $\pm$ 5 mm  & 11.5 mm $\pm$ 4.5 mm & 12.5 mm $\pm$ 5 mm \\
+			\hline
+			Post registration RMSE & 3.5 mm $\pm$ 0.5  & 5.5 mm$\pm$ 0.5 mm  & 6.3 mm $\pm$ 1.9 mm \\
+			\hline
+		\end{tabular}
+	\end{adjustbox}
+	\caption{3D position error}
+	\label{tab:3d_position_error_robot}
+\end{table}
+
+\begin{table}[hbt!]
+	\begin{adjustbox}{width=\columnwidth,center}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			\hline
+			Translation error   & 6 mm $\pm$ 13.7 mm  & 9.3 mm $\pm$ 11.4 mm & 11.8 mm $\pm$ 14.78 mm \\
+			\hline
+ 			Rotational error & 3.8\textdegree $\pm$ 1.2\textdegree  & 4\textdegree $\pm$ 1.52\textdegree  & 6.4\textdegree $\pm$ 3.4\textdegree \\
+ 			\hline
+		\end{tabular}
+	\end{adjustbox}
+	\caption{Trajectory Comparison}
+	\label{tab:trajectory_caomparison_robot}
+\end{table}
+
+\begin{table}[hbt!]
+	\begin{adjustbox}{width=\columnwidth,center}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			\hline
+			Translation error   & 0.25 mm $\pm$ 1.6 mm  & 0.8 mm $\pm$ 2.4 mm & 1.2 mm $\pm$ 2.85 mm \\
+			\hline
+			Rotational error & 0.4\textdegree $\pm$ 0.2\textdegree  & 0.6\textdegree $\pm$ 0.3\textdegree  & 0.8\textdegree $\pm$ 0.4\textdegree \\
+			\hline
+		\end{tabular}
+	\end{adjustbox}
+	\caption{ICP vs ground truth comparison}
+	\label{tab:icp_gt_robot}
+\end{table}
+
+
+\section{Hand-guided trajectory}
+
+One of the limitation during hand guided data acquisition was limited field of view (FOV) of the tracking camera. The \cref{fig:fov_tracking_camera} shows approximate radius of the phantom head is $\approx$ 70mm and recommended distance for depth is 250 - 2210 mm for azure kinect in $WFOV\ 2x2\ binned$ mode. Hence we maintained the hand guided radius $>$ 350mm. However, due to the limited FOV of the tracking camera full trajectory of the Azure Kinect was not been able to capture. A top view of an example trajectory is shown in \cref{fig:cut_trajectory} where it starts form 1 and ends at 6. The segments 1-2, 3-4 and 5-6 are seen while 2-3, 4-5, 6-1 are not, $nav\_msgs/Path$ message type from ROS automatically fills these gaps with straight lines. One of the consequences is that full trajectory is not available for comparison. Therefore, only visible segments are compared. Depending upon the camera trajectory, there are few invisible/partly visible electrodes, especially at top of the phantom head as shown in \cref{fig:invisible_electrodes}. On the other hand, there are few cases where electrodes are visible but not detected by YOLO as shown in \cref{fig:electrodes_seen_but_not_detected}.
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{fov_tracking_camera.png}
+	\caption{Hand-guided radius is $>$ 350mm.}
+	\label{fig:fov_tracking_camera}
+\end{figure}
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[scale=0.6]{cut_trajectory.png}
+	\caption{An example for ground truth hand guided trajectory (1-6).}
+	\label{fig:cut_trajectory}
+\end{figure}
+
+\begin{figure}[hbt!]
+	\centering
+	\begin{subfigure}{0.49\textwidth}
+		\includegraphics[width=\linewidth]{invisible_electrodes_63.png}	
+	\end{subfigure}
+	\\
+	\begin{subfigure}{0.49\textwidth}
+		\centering
+		\includegraphics[width=\linewidth]{invisible_electrodes_23.png}	
+	\end{subfigure}
+	\caption{Invisible/partly seen electrodes, top : cap with 63 electrodes, bottom: cap with 23 electrodes}
+	\label{fig:invisible_electrodes} 
+\end{figure}  
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{electrodes_seen_but_not_detected.png}
+	\caption{Electrodes are visible but not detected by YOLO.}
+	\label{fig:electrodes_seen_but_not_detected}
+\end{figure}
+
+
+
+
+
+

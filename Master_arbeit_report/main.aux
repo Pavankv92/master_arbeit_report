@@ -83,9 +83,9 @@
 \@writefile{toc}{\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Comaparision of typical methods from \cite {chen2019spatial}\relax }}{1}{table.1.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {1.1}{\ignorespaces Comparison of typical methods from \cite {chen2019spatial}\relax }}{1}{table.1.1}\protected@file@percent }
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{tab:state_of_the_art}{{1.1}{1}{Comaparision of typical methods from \cite {chen2019spatial}\relax }{table.1.1}{}}
+\newlabel{tab:state_of_the_art}{{1.1}{1}{Comparison of typical methods from \cite {chen2019spatial}\relax }{table.1.1}{}}
 \newlabel{tab:state_of_the_art@cref}{{[table][1][1]1.1}{[1][1][]1}}
 \BKM@entry{id=2,dest={636861707465722E32},srcline={55}}{4261636B67726F756E64}
 \BKM@entry{id=3,dest={73656374696F6E2E322E31},srcline={1}}{43616D6572612066756E64616D656E74616C73}
@@ -299,7 +299,7 @@
 \abx@aux@cite{dellaert2006square}
 \abx@aux@segm{0}{0}{dellaert2006square}
 \BKM@entry{id=19,dest={73656374696F6E2E322E38},srcline={902}}{456C656374726F646520646574656374696F6E20616E64206C6F63616C697A6174696F6E}
-\BKM@entry{id=20,dest={73656374696F6E2E322E39},srcline={921}}{436C75737465722063656E74657273}
+\BKM@entry{id=20,dest={73656374696F6E2E322E39},srcline={921}}{436C75737465722070726F63657373696E67}
 \newlabel{eq:non_linear_least_square_problem}{{2.33}{20}{Pose-Graph construction}{equation.2.7.33}{}}
 \newlabel{eq:non_linear_least_square_problem@cref}{{[equation][33][2]2.33}{[1][20][]20}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.7.2}Pose-Graph optimization}{20}{subsection.2.7.2}\protected@file@percent }
@@ -311,173 +311,283 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {2.10}{\ignorespaces Electrode detection and localization.\relax }}{21}{figure.caption.10}\protected@file@percent }
 \newlabel{fig:yolo_detection}{{2.10}{21}{Electrode detection and localization.\relax }{figure.caption.10}{}}
 \newlabel{fig:yolo_detection@cref}{{[figure][10][2]2.10}{[1][20][]21}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.9}Cluster centers}{21}{section.2.9}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {2.9}Cluster processing}{21}{section.2.9}\protected@file@percent }
+\newlabel{eq:cluster_center_inertia}{{2.36}{21}{Cluster processing}{equation.2.9.36}{}}
+\newlabel{eq:cluster_center_inertia@cref}{{[equation][36][2]2.36}{[1][21][]21}}
 \BKM@entry{id=21,dest={636861707465722E33},srcline={57}}{4D6574686F647320616E64206D6174657269616C}
-\BKM@entry{id=22,dest={73656374696F6E2E332E31},srcline={1}}{536F66747761726520617263686974656374757265}
-\BKM@entry{id=23,dest={73756273656374696F6E2E332E312E31},srcline={3}}{524F53}
+\BKM@entry{id=22,dest={73656374696F6E2E332E31},srcline={1}}{416C676F726974686D7320666F7220656C656374726F6465206469676974616C697A6174696F6E}
+\BKM@entry{id=23,dest={73756273656374696F6E2E332E312E31},srcline={14}}{524F53}
 \citation{ROS}
 \abx@aux@cite{ROS}
 \abx@aux@segm{0}{0}{ROS}
-\BKM@entry{id=24,dest={73756273656374696F6E2E332E312E32},srcline={5}}{4F70656E3344}
-\citation{open3d}
-\abx@aux@cite{open3d}
-\abx@aux@segm{0}{0}{open3d}
-\BKM@entry{id=25,dest={73756273656374696F6E2E332E312E33},srcline={8}}{6D696E6953616D}
-\citation{miniSam}
-\abx@aux@cite{miniSam}
-\abx@aux@segm{0}{0}{miniSam}
-\BKM@entry{id=26,dest={73756273656374696F6E2E332E312E34},srcline={11}}{5363696B69742D6C6561726E}
-\citation{scikit-learn}
-\abx@aux@cite{scikit-learn}
-\abx@aux@segm{0}{0}{scikit-learn}
-\BKM@entry{id=27,dest={73656374696F6E2E332E32},srcline={1}}{43616D6572612063616C6962726174696F6E20616E6420706978656C2076616C7565206F75742D70726F6A656374696F6E2077697468206368657373626F617264}
-\BKM@entry{id=28,dest={73756273656374696F6E2E332E322E31},srcline={3}}{43616D6572612063616C6962726174696F6E}
-\citation{OpenCV}
-\abx@aux@cite{OpenCV}
-\abx@aux@segm{0}{0}{OpenCV}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Methods and material}{22}{chapter.3}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {3.1}Software architecture}{22}{section.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.1}Algorithms for electrode digitalization}{22}{section.3.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of algorithms for electrode digitalization.\relax }}{22}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:algorithms_for_electrode_digitalization}{{3.1}{22}{Overview of algorithms for electrode digitalization.\relax }{figure.caption.11}{}}
+\newlabel{fig:algorithms_for_electrode_digitalization@cref}{{[figure][1][3]3.1}{[1][22][]22}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.1}ROS}{22}{subsection.3.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Open3D}{22}{subsection.3.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}miniSam}{22}{subsection.3.1.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Scikit-learn}{22}{subsection.3.1.4}\protected@file@percent }
-\BKM@entry{id=29,dest={73756273656374696F6E2E332E322E32},srcline={31}}{4368657373626F61726420706F736520657374696D6174696F6E}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Camera calibration and pixel value out-projection with chessboard}{23}{section.3.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Camera calibration}{23}{subsection.3.2.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Camera calibration\relax }}{23}{figure.caption.11}\protected@file@percent }
-\newlabel{fig:camera_calibration}{{3.1}{23}{Camera calibration\relax }{figure.caption.11}{}}
-\newlabel{fig:camera_calibration@cref}{{[figure][1][3]3.1}{[1][23][]23}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Chessboard pose estimation}{23}{subsection.3.2.2}\protected@file@percent }
-\BKM@entry{id=30,dest={73756273656374696F6E2E332E322E33},srcline={43}}{506978656C20706F696E7473206F75742D70726F6A656374696F6E}
-\BKM@entry{id=31,dest={73656374696F6E2E332E33},srcline={1}}{44617461206163717569736974696F6E}
-\BKM@entry{id=32,dest={73756273656374696F6E2E332E332E31},srcline={3}}{526F626F7420677569646564207472616A6563746F7279}
-\BKM@entry{id=33,dest={73756273656374696F6E2E332E332E32},srcline={14}}{48616E6420677569646564207472616A6563746F7279}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Pixel points out-projection}{24}{subsection.3.2.3}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Estimated and ground truth values at 600 and 1800mm from the camera.\relax }}{24}{figure.caption.12}\protected@file@percent }
-\newlabel{fig:pixel_value_est_gt}{{3.2}{24}{Estimated and ground truth values at 600 and 1800mm from the camera.\relax }{figure.caption.12}{}}
-\newlabel{fig:pixel_value_est_gt@cref}{{[figure][2][3]3.2}{[1][24][]24}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Data acquisition}{24}{section.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Robot guided trajectory}{24}{subsection.3.3.1}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Overview of mean L2 norm with different distance from the camera.\relax }}{25}{figure.caption.13}\protected@file@percent }
-\newlabel{fig:pixel_value_out_projection}{{3.3}{25}{Overview of mean L2 norm with different distance from the camera.\relax }{figure.caption.13}{}}
-\newlabel{fig:pixel_value_out_projection@cref}{{[figure][3][3]3.3}{[1][24][]25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Camera is guided with the help of a robot.\relax }}{25}{figure.caption.14}\protected@file@percent }
-\newlabel{fig:robotic_data_acquisition}{{3.4}{25}{Camera is guided with the help of a robot.\relax }{figure.caption.14}{}}
-\newlabel{fig:robotic_data_acquisition@cref}{{[figure][4][3]3.4}{[1][24][]25}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Hand guided trajectory}{25}{subsection.3.3.2}\protected@file@percent }
-\BKM@entry{id=34,dest={73756273656374696F6E2E332E332E33},srcline={23}}{48616E642D6579652063616C6962726174696F6E20666F722068616E6420677569646564207472616A6563746F7279}
-\BKM@entry{id=35,dest={73656374696F6E2E332E34},srcline={1}}{506F696E7420636C6F756420666F72207363616E20726567697374726174696F6E}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces Camera is hand guided around the phantom head.\relax }}{26}{figure.caption.15}\protected@file@percent }
-\newlabel{fig:hand_data_acquisition}{{3.5}{26}{Camera is hand guided around the phantom head.\relax }{figure.caption.15}{}}
-\newlabel{fig:hand_data_acquisition@cref}{{[figure][5][3]3.5}{[1][26][]26}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Hand-eye calibration for hand guided trajectory}{26}{subsection.3.3.3}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Point cloud for scan registration}{26}{section.3.4}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Reflective marker is attached to the camera in order to track it\relax }}{27}{figure.caption.16}\protected@file@percent }
-\newlabel{fig:blue_kinect_marker}{{3.6}{27}{Reflective marker is attached to the camera in order to track it\relax }{figure.caption.16}{}}
-\newlabel{fig:blue_kinect_marker@cref}{{[figure][6][3]3.6}{[1][26][]27}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces Hand-eye calibration for hand guided setup\relax }}{27}{figure.caption.17}\protected@file@percent }
-\newlabel{fig:handeye_calibration_hand_data}{{3.7}{27}{Hand-eye calibration for hand guided setup\relax }{figure.caption.17}{}}
-\newlabel{fig:handeye_calibration_hand_data@cref}{{[figure][7][3]3.7}{[1][26][]27}}
-\BKM@entry{id=36,dest={73656374696F6E2E332E35},srcline={1}}{47726F756E642074727574682064617461206163717569736974696F6E}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces 3D point cloud generated from YOLO detection and depth.\relax }}{28}{figure.caption.18}\protected@file@percent }
-\newlabel{fig:yolo_depth_point_cloud}{{3.8}{28}{3D point cloud generated from YOLO detection and depth.\relax }{figure.caption.18}{}}
-\newlabel{fig:yolo_depth_point_cloud@cref}{{[figure][8][3]3.8}{[1][26][]28}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces YOLO bounding box position variation for same electrode from different images.\relax }}{28}{figure.caption.19}\protected@file@percent }
-\newlabel{fig:yolo_performance}{{3.9}{28}{YOLO bounding box position variation for same electrode from different images.\relax }{figure.caption.19}{}}
-\newlabel{fig:yolo_performance@cref}{{[figure][9][3]3.9}{[1][26][]28}}
-\BKM@entry{id=37,dest={73756273656374696F6E2E332E352E31},srcline={17}}{4465707468206F66667365742064657465726D696E6174696F6E}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Fewer camera position is shown for clarity.\relax }}{29}{figure.caption.20}\protected@file@percent }
-\newlabel{fig:camera_scans}{{3.10}{29}{Fewer camera position is shown for clarity.\relax }{figure.caption.20}{}}
-\newlabel{fig:camera_scans@cref}{{[figure][10][3]3.10}{[1][27][]29}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.5}Ground truth data acquisition}{29}{section.3.5}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Depth offset determination}{29}{subsection.3.5.1}\protected@file@percent }
-\BKM@entry{id=38,dest={73656374696F6E2E332E36},srcline={1}}{506F73652D677261706820636F6E737472756374696F6E}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces ground truth data acquisition using a reflective marker.\relax }}{30}{figure.caption.21}\protected@file@percent }
-\newlabel{fig:ground_truth_data_acquisition}{{3.11}{30}{ground truth data acquisition using a reflective marker.\relax }{figure.caption.21}{}}
-\newlabel{fig:ground_truth_data_acquisition@cref}{{[figure][11][3]3.11}{[1][29][]30}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.6}Pose-graph construction}{30}{section.3.6}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Potential error analysis in acquiring ground truth data.\relax }}{31}{figure.caption.22}\protected@file@percent }
-\newlabel{fig:error_analysis}{{3.12}{31}{Potential error analysis in acquiring ground truth data.\relax }{figure.caption.22}{}}
-\newlabel{fig:error_analysis@cref}{{[figure][12][3]3.12}{[1][29][]31}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Depth offset $\beta $ determination process.\relax }}{31}{figure.caption.23}\protected@file@percent }
-\newlabel{fig:depth_offset_determination}{{3.13}{31}{Depth offset $\beta $ determination process.\relax }{figure.caption.23}{}}
-\newlabel{fig:depth_offset_determination@cref}{{[figure][13][3]3.13}{[1][29][]31}}
-\BKM@entry{id=39,dest={73756273656374696F6E2E332E362E31},srcline={12}}{4C6F6F7020636C6F73757265}
-\newlabel{fig:depth_offset_robot_no_yolo}{{3.14a}{32}{mean RMSE vs depth offset $\beta $ for trajectory YOLO has not seen.\relax }{figure.caption.24}{}}
-\newlabel{fig:depth_offset_robot_no_yolo@cref}{{[subfigure][1][3,14]3.14a}{[1][30][]32}}
-\newlabel{sub@fig:depth_offset_robot_no_yolo}{{a}{32}{mean RMSE vs depth offset $\beta $ for trajectory YOLO has not seen.\relax }{figure.caption.24}{}}
-\newlabel{sub@fig:depth_offset_robot_no_yolo@cref}{{[subfigure][1][3,14]3.14a}{[1][30][]32}}
-\newlabel{fig:depth_offset_robot_yolo}{{3.14b}{32}{mean RMSE vs depth offset $\beta $ for trajectory YOLO has seen.\relax }{figure.caption.24}{}}
-\newlabel{fig:depth_offset_robot_yolo@cref}{{[subfigure][2][3,14]3.14b}{[1][30][]32}}
-\newlabel{sub@fig:depth_offset_robot_yolo}{{b}{32}{mean RMSE vs depth offset $\beta $ for trajectory YOLO has seen.\relax }{figure.caption.24}{}}
-\newlabel{sub@fig:depth_offset_robot_yolo@cref}{{[subfigure][2][3,14]3.14b}{[1][30][]32}}
-\newlabel{fig:icp_depth_offset}{{\caption@xref {fig:icp_depth_offset}{ on input line 42}}{32}{Depth offset determination}{figure.caption.24}{}}
-\newlabel{fig:icp_depth_offset@cref}{{[subsection][1][3,5]3.5.1}{[1][30][]32}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Loop closure}{32}{subsection.3.6.1}\protected@file@percent }
-\newlabel{fig:depth_offset_robot_cluster_no_yolo}{{3.15a}{33}{mean L2 norm vs depth offset $\beta $ for trajectory YOLO has not seen.\relax }{figure.caption.25}{}}
-\newlabel{fig:depth_offset_robot_cluster_no_yolo@cref}{{[subfigure][1][3,15]3.15a}{[1][30][]33}}
-\newlabel{sub@fig:depth_offset_robot_cluster_no_yolo}{{a}{33}{mean L2 norm vs depth offset $\beta $ for trajectory YOLO has not seen.\relax }{figure.caption.25}{}}
-\newlabel{sub@fig:depth_offset_robot_cluster_no_yolo@cref}{{[subfigure][1][3,15]3.15a}{[1][30][]33}}
-\newlabel{fig:depth_offset_robot_cluster_yolo}{{3.15b}{33}{mean L2 norm vs depth offset $\beta $ for trajectory YOLO has seen.\relax }{figure.caption.25}{}}
-\newlabel{fig:depth_offset_robot_cluster_yolo@cref}{{[subfigure][2][3,15]3.15b}{[1][30][]33}}
-\newlabel{sub@fig:depth_offset_robot_cluster_yolo}{{b}{33}{mean L2 norm vs depth offset $\beta $ for trajectory YOLO has seen.\relax }{figure.caption.25}{}}
-\newlabel{sub@fig:depth_offset_robot_cluster_yolo@cref}{{[subfigure][2][3,15]3.15b}{[1][30][]33}}
-\newlabel{fig:cluster_depth_offset}{{\caption@xref {fig:cluster_depth_offset}{ on input line 61}}{33}{Depth offset determination}{figure.caption.25}{}}
-\newlabel{fig:cluster_depth_offset@cref}{{[subsection][1][3,5]3.5.1}{[1][30][]33}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces Effect of change in $\beta $ on point cloud.\relax }}{33}{figure.caption.26}\protected@file@percent }
-\newlabel{fig:depth_offset_beta_variations}{{3.16}{33}{Effect of change in $\beta $ on point cloud.\relax }{figure.caption.26}{}}
-\newlabel{fig:depth_offset_beta_variations@cref}{{[figure][16][3]3.16}{[1][30][]33}}
-\BKM@entry{id=40,dest={73656374696F6E2E332E37},srcline={35}}{436C75737465722063656E746572}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces System overview along with pose-graph layer.\relax }}{34}{figure.caption.27}\protected@file@percent }
-\newlabel{fig:pose_graph}{{3.17}{34}{System overview along with pose-graph layer.\relax }{figure.caption.27}{}}
-\newlabel{fig:pose_graph@cref}{{[figure][17][3]3.17}{[1][32][]34}}
-\newlabel{eq:icp_fitness}{{3.1}{34}{Loop closure}{equation.3.6.1}{}}
-\newlabel{eq:icp_fitness@cref}{{[equation][1][3]3.1}{[1][34][]34}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.7}Cluster center}{34}{section.3.7}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces Loop closure candidate selection process.\relax }}{35}{figure.caption.28}\protected@file@percent }
-\newlabel{fig:loop_cloure}{{3.18}{35}{Loop closure candidate selection process.\relax }{figure.caption.28}{}}
-\newlabel{fig:loop_cloure@cref}{{[figure][18][3]3.18}{[1][34][]35}}
-\newlabel{eq:cluster_center_inertia}{{3.2}{35}{Cluster center}{equation.3.7.2}{}}
-\newlabel{eq:cluster_center_inertia@cref}{{[equation][2][3]3.2}{[1][35][]35}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces One to one correspondence (lines) between source(red) and the target(blue) point cloud.\relax }}{36}{figure.caption.29}\protected@file@percent }
-\newlabel{fig:one_to_one_correspondence}{{3.19}{36}{One to one correspondence (lines) between source(red) and the target(blue) point cloud.\relax }{figure.caption.29}{}}
-\newlabel{fig:one_to_one_correspondence@cref}{{[figure][19][3]3.19}{[1][34][]36}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Cluster centers (plus sign) are calculated via K-Means analysis.\relax }}{37}{figure.caption.30}\protected@file@percent }
-\newlabel{fig:cluster_and_its_centers}{{3.20}{37}{Cluster centers (plus sign) are calculated via K-Means analysis.\relax }{figure.caption.30}{}}
-\newlabel{fig:cluster_and_its_centers@cref}{{[figure][20][3]3.20}{[1][35][]37}}
-\BKM@entry{id=41,dest={617070656E6469782E41},srcline={71}}{4C697374696E6773}
-\BKM@entry{id=42,dest={73656374696F6E2E412E31},srcline={1}}{4C65617374207371756172652070726F626C656D}
-\BKM@entry{id=43,dest={73756273656374696F6E2E412E312E31},srcline={2}}{547970652049}
-\BKM@entry{id=44,dest={73756273656374696F6E2E412E312E32},srcline={11}}{54797065204949}
-\BKM@entry{id=45,dest={73656374696F6E2E412E32},srcline={17}}{526F746174696F6E206D6174726978}
+\BKM@entry{id=24,dest={73756273656374696F6E2E332E312E32},srcline={16}}{4F70656E3344}
+\citation{open3d}
+\abx@aux@cite{open3d}
+\abx@aux@segm{0}{0}{open3d}
+\BKM@entry{id=25,dest={73756273656374696F6E2E332E312E33},srcline={19}}{6D696E6953616D}
+\citation{miniSam}
+\abx@aux@cite{miniSam}
+\abx@aux@segm{0}{0}{miniSam}
+\BKM@entry{id=26,dest={73756273656374696F6E2E332E312E34},srcline={22}}{5363696B69742D6C6561726E}
+\citation{scikit-learn}
+\abx@aux@cite{scikit-learn}
+\abx@aux@segm{0}{0}{scikit-learn}
+\BKM@entry{id=27,dest={73656374696F6E2E332E32},srcline={1}}{4578706572696D656E74616C207365747570}
+\BKM@entry{id=28,dest={73756273656374696F6E2E332E322E31},srcline={3}}{4B696E6563742063616D657261}
+\citation{azure_kinect}
+\abx@aux@cite{azure_kinect}
+\abx@aux@segm{0}{0}{azure_kinect}
+\BKM@entry{id=29,dest={73756273656374696F6E2E332E322E32},srcline={21}}{547261636B696E672063616D657261}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.2}Open3D}{23}{subsection.3.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}miniSam}{23}{subsection.3.1.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1.4}Scikit-learn}{23}{subsection.3.1.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Experimental setup}{23}{section.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Kinect camera}{23}{subsection.3.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Tracking camera}{23}{subsection.3.2.2}\protected@file@percent }
+\citation{CamBar}
+\abx@aux@cite{CamBar}
+\abx@aux@segm{0}{0}{CamBar}
+\citation{CamBar}
+\abx@aux@cite{CamBar}
+\abx@aux@segm{0}{0}{CamBar}
+\BKM@entry{id=30,dest={73756273656374696F6E2E332E322E33},srcline={30}}{526F626F742C207068616E746F6D2C204545472063617073}
+\BKM@entry{id=31,dest={73756273656374696F6E2E332E322E34},srcline={48}}{4D61726B657273}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Microsoft azure kinect camera features.\relax }}{24}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:azure_kinect}{{3.2}{24}{Microsoft azure kinect camera features.\relax }{figure.caption.12}{}}
+\newlabel{fig:azure_kinect@cref}{{[figure][2][3]3.2}{[1][23][]24}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Depth modes and associated measurement errors\relax }}{24}{figure.caption.13}\protected@file@percent }
+\newlabel{fig:depth_modes}{{3.3}{24}{Depth modes and associated measurement errors\relax }{figure.caption.13}{}}
+\newlabel{fig:depth_modes@cref}{{[figure][3][3]3.3}{[1][23][]24}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}Robot, phantom, EEG caps}{24}{subsection.3.2.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Markers}{24}{subsection.3.2.4}\protected@file@percent }
+\BKM@entry{id=32,dest={73656374696F6E2E332E33},srcline={1}}{43616D6572612063616C6962726174696F6E20616E6420706978656C2076616C7565206F75742D70726F6A656374696F6E2077697468206368657373626F617264}
+\BKM@entry{id=33,dest={73756273656374696F6E2E332E332E31},srcline={3}}{43616D6572612063616C6962726174696F6E}
+\citation{OpenCV}
+\abx@aux@cite{OpenCV}
+\abx@aux@segm{0}{0}{OpenCV}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Cambar B2 by Axios 3D \cite {CamBar} mounted on the ceiling\relax }}{25}{figure.caption.14}\protected@file@percent }
+\newlabel{fig:tracking_camera}{{3.4}{25}{Cambar B2 by Axios 3D \cite {CamBar} mounted on the ceiling\relax }{figure.caption.14}{}}
+\newlabel{fig:tracking_camera@cref}{{[figure][4][3]3.4}{[1][24][]25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces KUKA robot\relax }}{25}{figure.caption.15}\protected@file@percent }
+\newlabel{fig:kuka}{{3.5}{25}{KUKA robot\relax }{figure.caption.15}{}}
+\newlabel{fig:kuka@cref}{{[figure][5][3]3.5}{[1][24][]25}}
+\BKM@entry{id=34,dest={73756273656374696F6E2E332E332E32},srcline={31}}{4368657373626F61726420706F736520657374696D6174696F6E}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Left to right, 63 electrodes with size M, 23 electrodes size L, 23 electrodes size M\relax }}{26}{figure.caption.16}\protected@file@percent }
+\newlabel{fig:all_caps}{{3.6}{26}{Left to right, 63 electrodes with size M, 23 electrodes size L, 23 electrodes size M\relax }{figure.caption.16}{}}
+\newlabel{fig:all_caps@cref}{{[figure][6][3]3.6}{[1][24][]26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces chessboard along with reflective markers serving specific purpose.\relax }}{26}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:markers}{{3.7}{26}{chessboard along with reflective markers serving specific purpose.\relax }{figure.caption.17}{}}
+\newlabel{fig:markers@cref}{{[figure][7][3]3.7}{[1][25][]26}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Camera calibration and pixel value out-projection with chessboard}{26}{section.3.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}Camera calibration}{26}{subsection.3.3.1}\protected@file@percent }
+\BKM@entry{id=35,dest={73756273656374696F6E2E332E332E33},srcline={60}}{506978656C20706F696E7473206F75742D70726F6A656374696F6E}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Camera calibration\relax }}{27}{figure.caption.18}\protected@file@percent }
+\newlabel{fig:camera_calibration}{{3.8}{27}{Camera calibration\relax }{figure.caption.18}{}}
+\newlabel{fig:camera_calibration@cref}{{[figure][8][3]3.8}{[1][26][]27}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Chessboard pose estimation}{27}{subsection.3.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3.3}Pixel points out-projection}{27}{subsection.3.3.3}\protected@file@percent }
+\BKM@entry{id=36,dest={73656374696F6E2E332E34},srcline={1}}{44617461206163717569736974696F6E}
+\BKM@entry{id=37,dest={73756273656374696F6E2E332E342E31},srcline={3}}{526F626F7420677569646564207472616A6563746F7279}
+\BKM@entry{id=38,dest={73756273656374696F6E2E332E342E32},srcline={14}}{48616E6420677569646564207472616A6563746F7279}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Chessboard visual sanity check on three different depth values.\relax }}{28}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:pose_estimation_sanity_check}{{3.9}{28}{Chessboard visual sanity check on three different depth values.\relax }{figure.caption.19}{}}
+\newlabel{fig:pose_estimation_sanity_check@cref}{{[figure][9][3]3.9}{[1][27][]28}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Data acquisition}{28}{section.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Robot guided trajectory}{28}{subsection.3.4.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces Estimated and ground truth values at 600 and 1800mm from the camera.\relax }}{29}{figure.caption.20}\protected@file@percent }
+\newlabel{fig:pixel_value_est_gt}{{3.10}{29}{Estimated and ground truth values at 600 and 1800mm from the camera.\relax }{figure.caption.20}{}}
+\newlabel{fig:pixel_value_est_gt@cref}{{[figure][10][3]3.10}{[1][28][]29}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.2}Hand guided trajectory}{29}{subsection.3.4.2}\protected@file@percent }
+\BKM@entry{id=39,dest={73756273656374696F6E2E332E342E33},srcline={41}}{48616E642D6579652063616C6962726174696F6E20666F722068616E6420677569646564207472616A6563746F7279}
+\BKM@entry{id=40,dest={73656374696F6E2E332E35},srcline={1}}{506F696E7420636C6F756420666F72207363616E20726567697374726174696F6E}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Camera is guided with the help of a robot.\relax }}{30}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:robotic_data_acquisition}{{3.11}{30}{Camera is guided with the help of a robot.\relax }{figure.caption.21}{}}
+\newlabel{fig:robotic_data_acquisition@cref}{{[figure][11][3]3.11}{[1][28][]30}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4.3}Hand-eye calibration for hand guided trajectory}{30}{subsection.3.4.3}\protected@file@percent }
+\newlabel{eq:hand-eye_hand_data}{{3.1}{30}{Hand-eye calibration for hand guided trajectory}{equation.3.4.1}{}}
+\newlabel{eq:hand-eye_hand_data@cref}{{[equation][1][3]3.1}{[1][30][]30}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.12}{\ignorespaces Camera is hand guided around the phantom head.\relax }}{31}{figure.caption.22}\protected@file@percent }
+\newlabel{fig:hand_data_acquisition}{{3.12}{31}{Camera is hand guided around the phantom head.\relax }{figure.caption.22}{}}
+\newlabel{fig:hand_data_acquisition@cref}{{[figure][12][3]3.12}{[1][29][]31}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Point cloud for scan registration}{31}{section.3.5}\protected@file@percent }
+\BKM@entry{id=41,dest={73656374696F6E2E332E36},srcline={1}}{47726F756E642074727574682064617461206163717569736974696F6E}
+\BKM@entry{id=42,dest={73756273656374696F6E2E332E362E31},srcline={17}}{4465707468206F66667365742064657465726D696E6174696F6E}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.13}{\ignorespaces Hand-guided radius is $>$ 350mm.\relax }}{32}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:fov_tracking_camera}{{3.13}{32}{Hand-guided radius is $>$ 350mm.\relax }{figure.caption.23}{}}
+\newlabel{fig:fov_tracking_camera@cref}{{[figure][13][3]3.13}{[1][30][]32}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.6}Ground truth data acquisition}{32}{section.3.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.6.1}Depth offset determination}{32}{subsection.3.6.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.14}{\ignorespaces An example for ground truth hand guided trajectory (1-6).\relax }}{33}{figure.caption.24}\protected@file@percent }
+\newlabel{fig:cut_trajectory}{{3.14}{33}{An example for ground truth hand guided trajectory (1-6).\relax }{figure.caption.24}{}}
+\newlabel{fig:cut_trajectory@cref}{{[figure][14][3]3.14}{[1][30][]33}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.15}{\ignorespaces Hand-eye calibration for hand guided setup\relax }}{33}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:handeye_calibration_hand_data}{{3.15}{33}{Hand-eye calibration for hand guided setup\relax }{figure.caption.25}{}}
+\newlabel{fig:handeye_calibration_hand_data@cref}{{[figure][15][3]3.15}{[1][30][]33}}
+\BKM@entry{id=43,dest={73656374696F6E2E332E37},srcline={1}}{506F73652D677261706820636F6E737472756374696F6E20616E64206F7074696D697A6174696F6E}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.16}{\ignorespaces 3D point cloud generated from YOLO detection and depth.\relax }}{34}{figure.caption.26}\protected@file@percent }
+\newlabel{fig:yolo_depth_point_cloud}{{3.16}{34}{3D point cloud generated from YOLO detection and depth.\relax }{figure.caption.26}{}}
+\newlabel{fig:yolo_depth_point_cloud@cref}{{[figure][16][3]3.16}{[1][31][]34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.17}{\ignorespaces YOLO bounding box position variation for same electrode from different images.\relax }}{34}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:yolo_performance}{{3.17}{34}{YOLO bounding box position variation for same electrode from different images.\relax }{figure.caption.27}{}}
+\newlabel{fig:yolo_performance@cref}{{[figure][17][3]3.17}{[1][31][]34}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.18}{\ignorespaces Fewer camera position is shown for clarity.\relax }}{35}{figure.caption.28}\protected@file@percent }
+\newlabel{fig:camera_scans}{{3.18}{35}{Fewer camera position is shown for clarity.\relax }{figure.caption.28}{}}
+\newlabel{fig:camera_scans@cref}{{[figure][18][3]3.18}{[1][31][]35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.19}{\ignorespaces ground truth data acquisition using a reflective marker.\relax }}{35}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:ground_truth_data_acquisition}{{3.19}{35}{ground truth data acquisition using a reflective marker.\relax }{figure.caption.29}{}}
+\newlabel{fig:ground_truth_data_acquisition@cref}{{[figure][19][3]3.19}{[1][32][]35}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.20}{\ignorespaces Potential error analysis in acquiring ground truth data.\relax }}{36}{figure.caption.30}\protected@file@percent }
+\newlabel{fig:error_analysis}{{3.20}{36}{Potential error analysis in acquiring ground truth data.\relax }{figure.caption.30}{}}
+\newlabel{fig:error_analysis@cref}{{[figure][20][3]3.20}{[1][32][]36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.21}{\ignorespaces Depth offset $\beta $ determination process.\relax }}{36}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:depth_offset_determination}{{3.21}{36}{Depth offset $\beta $ determination process.\relax }{figure.caption.31}{}}
+\newlabel{fig:depth_offset_determination@cref}{{[figure][21][3]3.21}{[1][33][]36}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.7}Pose-graph construction and optimization}{36}{section.3.7}\protected@file@percent }
+\BKM@entry{id=44,dest={73756273656374696F6E2E332E372E31},srcline={22}}{4C6F6F7020636C6F73757265}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.22}{\ignorespaces Data structure to store and provide easy access to the information.\relax }}{37}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:data_structure}{{3.22}{37}{Data structure to store and provide easy access to the information.\relax }{figure.caption.32}{}}
+\newlabel{fig:data_structure@cref}{{[figure][22][3]3.22}{[1][37][]37}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.1}Loop closure}{37}{subsection.3.7.1}\protected@file@percent }
+\BKM@entry{id=45,dest={73756273656374696F6E2E332E372E32},srcline={45}}{4F7074696D697A6174696F6E}
+\BKM@entry{id=46,dest={73656374696F6E2E332E38},srcline={49}}{436C75737465722063656E746572}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.23}{\ignorespaces System overview along with pose-graph layer. All the layers are shown on a straight line instead of circular trajectory just for the illustration purposes only\relax }}{38}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:pose_graph}{{3.23}{38}{System overview along with pose-graph layer. All the layers are shown on a straight line instead of circular trajectory just for the illustration purposes only\relax }{figure.caption.33}{}}
+\newlabel{fig:pose_graph@cref}{{[figure][23][3]3.23}{[1][37][]38}}
+\newlabel{eq:icp_fitness}{{3.2}{38}{Loop closure}{equation.3.7.2}{}}
+\newlabel{eq:icp_fitness@cref}{{[equation][2][3]3.2}{[1][38][]38}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.7.2}Optimization}{38}{subsection.3.7.2}\protected@file@percent }
+\BKM@entry{id=47,dest={73656374696F6E2E332E39},srcline={1}}{506572666F726D616E6365206D657472696373}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.24}{\ignorespaces Loop closure candidate selection process.\relax }}{39}{figure.caption.34}\protected@file@percent }
+\newlabel{fig:loop_cloure}{{3.24}{39}{Loop closure candidate selection process.\relax }{figure.caption.34}{}}
+\newlabel{fig:loop_cloure@cref}{{[figure][24][3]3.24}{[1][38][]39}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.8}Cluster center}{39}{section.3.8}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3.9}Performance metrics}{39}{section.3.9}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3.25}{\ignorespaces One to one correspondence (lines) between source(red) and the target(blue) point cloud.\relax }}{40}{figure.caption.35}\protected@file@percent }
+\newlabel{fig:one_to_one_correspondence}{{3.25}{40}{One to one correspondence (lines) between source(red) and the target(blue) point cloud.\relax }{figure.caption.35}{}}
+\newlabel{fig:one_to_one_correspondence@cref}{{[figure][25][3]3.25}{[1][38][]40}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.26}{\ignorespaces Cluster centers (plus sign) are calculated via K-Means analysis.\relax }}{41}{figure.caption.36}\protected@file@percent }
+\newlabel{fig:cluster_and_its_centers}{{3.26}{41}{Cluster centers (plus sign) are calculated via K-Means analysis.\relax }{figure.caption.36}{}}
+\newlabel{fig:cluster_and_its_centers@cref}{{[figure][26][3]3.26}{[1][39][]41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.27}{\ignorespaces Trajectory comparison.\relax }}{41}{figure.caption.37}\protected@file@percent }
+\newlabel{fig:metric_absolute_pose}{{3.27}{41}{Trajectory comparison.\relax }{figure.caption.37}{}}
+\newlabel{fig:metric_absolute_pose@cref}{{[figure][27][3]3.27}{[1][39][]41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.28}{\ignorespaces ICP vs ground truth transformation comparison.\relax }}{42}{figure.caption.38}\protected@file@percent }
+\newlabel{fig:metric_icp_pose}{{3.28}{42}{ICP vs ground truth transformation comparison.\relax }{figure.caption.38}{}}
+\newlabel{fig:metric_icp_pose@cref}{{[figure][28][3]3.28}{[1][39][]42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.29}{\ignorespaces Electrode clusters and their estimated centers along with ground truth position on a 2D image.\relax }}{42}{figure.caption.39}\protected@file@percent }
+\newlabel{fig:absolute_3d_poition_error}{{3.29}{42}{Electrode clusters and their estimated centers along with ground truth position on a 2D image.\relax }{figure.caption.39}{}}
+\newlabel{fig:absolute_3d_poition_error@cref}{{[figure][29][3]3.29}{[1][40][]42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.30}{\ignorespaces Figure shows absolute trajectory comparison.\relax }}{43}{figure.caption.40}\protected@file@percent }
+\newlabel{fig:trajectory_comparision}{{3.30}{43}{Figure shows absolute trajectory comparison.\relax }{figure.caption.40}{}}
+\newlabel{fig:trajectory_comparision@cref}{{[figure][30][3]3.30}{[1][41][]43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.31}{\ignorespaces Figure shows ICP vs ground truth pose comparison.\relax }}{43}{figure.caption.41}\protected@file@percent }
+\newlabel{fig:icp_gt}{{3.31}{43}{Figure shows ICP vs ground truth pose comparison.\relax }{figure.caption.41}{}}
+\newlabel{fig:icp_gt@cref}{{[figure][31][3]3.31}{[1][41][]43}}
+\BKM@entry{id=48,dest={636861707465722E34},srcline={66}}{526573756C7473}
+\BKM@entry{id=49,dest={73656374696F6E2E342E31},srcline={3}}{43616D6572612063616C6962726174696F6E}
+\BKM@entry{id=50,dest={73656374696F6E2E342E32},srcline={22}}{48616E642D6579652063616C6962726174696F6E203A2048616E642D677569646564207363656E6172696F}
+\BKM@entry{id=51,dest={73656374696F6E2E342E33},srcline={40}}{506978656C20706F696E7473206F75742D70726F6A656374696F6E}
+\BKM@entry{id=52,dest={73656374696F6E2E342E34},srcline={52}}{4465707468206F66667365742064657465726D696E6174696F6E}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Results}{44}{chapter.4}\protected@file@percent }
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Camera calibration}{44}{section.4.1}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Microsoft azure kinect calibration result\relax }}{44}{table.4.1}\protected@file@percent }
+\newlabel{tab:kinect_camera_calibration_result}{{4.1}{44}{Microsoft azure kinect calibration result\relax }{table.4.1}{}}
+\newlabel{tab:kinect_camera_calibration_result@cref}{{[table][1][4]4.1}{[1][44][]44}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Hand-eye calibration : Hand-guided scenario}{44}{section.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.2}{\ignorespaces Hand-eye calibration results\relax }}{44}{table.4.2}\protected@file@percent }
+\newlabel{tab:kinect__fusionTrac_handeye_result}{{4.2}{44}{Hand-eye calibration results\relax }{table.4.2}{}}
+\newlabel{tab:kinect__fusionTrac_handeye_result@cref}{{[table][2][4]4.2}{[1][44][]44}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}Pixel points out-projection}{44}{section.4.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {4.4}Depth offset determination}{44}{section.4.4}\protected@file@percent }
+\BKM@entry{id=53,dest={73656374696F6E2E342E35},srcline={101}}{526F626F742D677569646564207472616A6563746F7279}
+\BKM@entry{id=54,dest={73656374696F6E2E342E36},srcline={155}}{48616E642D677569646564207472616A6563746F7279}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Overview of mean L2 norm with different distance from the camera.\relax }}{45}{figure.caption.42}\protected@file@percent }
+\newlabel{fig:pixel_value_out_projection}{{4.1}{45}{Overview of mean L2 norm with different distance from the camera.\relax }{figure.caption.42}{}}
+\newlabel{fig:pixel_value_out_projection@cref}{{[figure][1][4]4.1}{[1][44][]45}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.5}Robot-guided trajectory}{45}{section.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.3}{\ignorespaces 3D position error\relax }}{45}{table.4.3}\protected@file@percent }
+\newlabel{tab:3d_position_error_robot}{{4.3}{45}{3D position error\relax }{table.4.3}{}}
+\newlabel{tab:3d_position_error_robot@cref}{{[table][3][4]4.3}{[1][45][]45}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.4}{\ignorespaces Trajectory Comparison\relax }}{45}{table.4.4}\protected@file@percent }
+\newlabel{tab:trajectory_caomparison_robot}{{4.4}{45}{Trajectory Comparison\relax }{table.4.4}{}}
+\newlabel{tab:trajectory_caomparison_robot@cref}{{[table][4][4]4.4}{[1][45][]45}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.5}{\ignorespaces ICP vs ground truth comparison\relax }}{45}{table.4.5}\protected@file@percent }
+\newlabel{tab:icp_gt_robot}{{4.5}{45}{ICP vs ground truth comparison\relax }{table.4.5}{}}
+\newlabel{tab:icp_gt_robot@cref}{{[table][5][4]4.5}{[1][45][]45}}
+\newlabel{fig:depth_offset_robot_no_yolo}{{4.2a}{46}{mean RMSE vs depth offset $\beta $ for trajectory YOLO has not seen.\relax }{figure.caption.43}{}}
+\newlabel{fig:depth_offset_robot_no_yolo@cref}{{[subfigure][1][4,2]4.2a}{[1][45][]46}}
+\newlabel{sub@fig:depth_offset_robot_no_yolo}{{a}{46}{mean RMSE vs depth offset $\beta $ for trajectory YOLO has not seen.\relax }{figure.caption.43}{}}
+\newlabel{sub@fig:depth_offset_robot_no_yolo@cref}{{[subfigure][1][4,2]4.2a}{[1][45][]46}}
+\newlabel{fig:depth_offset_robot_yolo}{{4.2b}{46}{mean RMSE vs depth offset $\beta $ for trajectory YOLO has seen.\relax }{figure.caption.43}{}}
+\newlabel{fig:depth_offset_robot_yolo@cref}{{[subfigure][2][4,2]4.2b}{[1][45][]46}}
+\newlabel{sub@fig:depth_offset_robot_yolo}{{b}{46}{mean RMSE vs depth offset $\beta $ for trajectory YOLO has seen.\relax }{figure.caption.43}{}}
+\newlabel{sub@fig:depth_offset_robot_yolo@cref}{{[subfigure][2][4,2]4.2b}{[1][45][]46}}
+\newlabel{fig:icp_depth_offset}{{\caption@xref {fig:icp_depth_offset}{ on input line 69}}{46}{Depth offset determination}{figure.caption.43}{}}
+\newlabel{fig:icp_depth_offset@cref}{{[section][4][4]4.4}{[1][45][]46}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.6}Hand-guided trajectory}{46}{section.4.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4.6}{\ignorespaces 3D position error\relax }}{46}{table.4.6}\protected@file@percent }
+\newlabel{tab:3d_position_error_hand}{{4.6}{46}{3D position error\relax }{table.4.6}{}}
+\newlabel{tab:3d_position_error_hand@cref}{{[table][6][4]4.6}{[1][45][]46}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.7}{\ignorespaces Trajectory Comparison\relax }}{46}{table.4.7}\protected@file@percent }
+\newlabel{tab:trajectory_caomparison_hand}{{4.7}{46}{Trajectory Comparison\relax }{table.4.7}{}}
+\newlabel{tab:trajectory_caomparison_hand@cref}{{[table][7][4]4.7}{[1][46][]46}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.8}{\ignorespaces ICP vs ground truth comparison\relax }}{46}{table.4.8}\protected@file@percent }
+\newlabel{tab:icp_gt_hand}{{4.8}{46}{ICP vs ground truth comparison\relax }{table.4.8}{}}
+\newlabel{tab:icp_gt_hand@cref}{{[table][8][4]4.8}{[1][46][]46}}
+\newlabel{fig:depth_offset_robot_cluster_no_yolo}{{4.3a}{47}{mean L2 norm vs depth offset $\beta $ for trajectory YOLO has not seen.\relax }{figure.caption.44}{}}
+\newlabel{fig:depth_offset_robot_cluster_no_yolo@cref}{{[subfigure][1][4,3]4.3a}{[1][45][]47}}
+\newlabel{sub@fig:depth_offset_robot_cluster_no_yolo}{{a}{47}{mean L2 norm vs depth offset $\beta $ for trajectory YOLO has not seen.\relax }{figure.caption.44}{}}
+\newlabel{sub@fig:depth_offset_robot_cluster_no_yolo@cref}{{[subfigure][1][4,3]4.3a}{[1][45][]47}}
+\newlabel{fig:depth_offset_robot_cluster_yolo}{{4.3b}{47}{mean L2 norm vs depth offset $\beta $ for trajectory YOLO has seen.\relax }{figure.caption.44}{}}
+\newlabel{fig:depth_offset_robot_cluster_yolo@cref}{{[subfigure][2][4,3]4.3b}{[1][45][]47}}
+\newlabel{sub@fig:depth_offset_robot_cluster_yolo}{{b}{47}{mean L2 norm vs depth offset $\beta $ for trajectory YOLO has seen.\relax }{figure.caption.44}{}}
+\newlabel{sub@fig:depth_offset_robot_cluster_yolo@cref}{{[subfigure][2][4,3]4.3b}{[1][45][]47}}
+\newlabel{fig:cluster_depth_offset}{{\caption@xref {fig:cluster_depth_offset}{ on input line 88}}{47}{Depth offset determination}{figure.caption.44}{}}
+\newlabel{fig:cluster_depth_offset@cref}{{[section][4][4]4.4}{[1][45][]47}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces Effect of change in $\beta $ on point cloud.\relax }}{47}{figure.caption.45}\protected@file@percent }
+\newlabel{fig:depth_offset_beta_variations}{{4.4}{47}{Effect of change in $\beta $ on point cloud.\relax }{figure.caption.45}{}}
+\newlabel{fig:depth_offset_beta_variations@cref}{{[figure][4][4]4.4}{[1][45][]47}}
+\BKM@entry{id=55,dest={617070656E6469782E41},srcline={71}}{4C697374696E6773}
+\BKM@entry{id=56,dest={73656374696F6E2E412E31},srcline={1}}{4C65617374207371756172652070726F626C656D}
+\BKM@entry{id=57,dest={73756273656374696F6E2E412E312E31},srcline={2}}{547970652049}
+\BKM@entry{id=58,dest={73756273656374696F6E2E412E312E32},srcline={11}}{54797065204949}
+\BKM@entry{id=59,dest={73656374696F6E2E412E32},srcline={17}}{526F746174696F6E206D6174726978}
 \citation{Zhang}
 \abx@aux@cite{Zhang}
 \abx@aux@segm{0}{0}{Zhang}
-\BKM@entry{id=46,dest={73656374696F6E2E412E33},srcline={26}}{476175737369616E20646973747269627574696F6E}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Listings}{38}{appendix.A}\protected@file@percent }
+\BKM@entry{id=60,dest={73656374696F6E2E412E33},srcline={26}}{476175737369616E20646973747269627574696F6E}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Listings}{48}{appendix.A}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Least square problem}{38}{section.A.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.1}Type I}{38}{subsection.A.1.1}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.2}Type II}{38}{subsection.A.1.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Rotation matrix}{38}{section.A.2}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {A.3}Gaussian distribution}{39}{section.A.3}\protected@file@percent }
-\newlabel{eq:one_dim_pdf}{{A.3}{39}{Gaussian distribution}{section.A.3}{}}
-\newlabel{eq:one_dim_pdf@cref}{{[subappendix][3][2147483647,1]A.3}{[1][39][]39}}
-\newlabel{eq:multivariate_pdf}{{A.3}{39}{Gaussian distribution}{section.A.3}{}}
-\newlabel{eq:multivariate_pdf@cref}{{[subappendix][3][2147483647,1]A.3}{[1][39][]39}}
-\newlabel{eq:canonical_multivariate}{{A.3}{39}{Gaussian distribution}{section.A.3}{}}
-\newlabel{eq:canonical_multivariate@cref}{{[subappendix][3][2147483647,1]A.3}{[1][39][]39}}
-\newlabel{eq:canonical_multivariate_pdf}{{A.3}{39}{Gaussian distribution}{section.A.3}{}}
-\newlabel{eq:canonical_multivariate_pdf@cref}{{[subappendix][3][2147483647,1]A.3}{[1][39][]39}}
-\BKM@entry{id=47,dest={636861707465722A2E3331},srcline={75}}{4269626C696F677261706879}
-\@writefile{toc}{\contentsline {chapter}{\nonumberline Bibliography}{40}{chapter*.31}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Least square problem}{48}{section.A.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.1}Type I}{48}{subsection.A.1.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {A.1.2}Type II}{48}{subsection.A.1.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Rotation matrix}{48}{section.A.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {A.3}Gaussian distribution}{49}{section.A.3}\protected@file@percent }
+\newlabel{eq:one_dim_pdf}{{A.3}{49}{Gaussian distribution}{section.A.3}{}}
+\newlabel{eq:one_dim_pdf@cref}{{[subappendix][3][2147483647,1]A.3}{[1][49][]49}}
+\newlabel{eq:multivariate_pdf}{{A.3}{49}{Gaussian distribution}{section.A.3}{}}
+\newlabel{eq:multivariate_pdf@cref}{{[subappendix][3][2147483647,1]A.3}{[1][49][]49}}
+\newlabel{eq:canonical_multivariate}{{A.3}{49}{Gaussian distribution}{section.A.3}{}}
+\newlabel{eq:canonical_multivariate@cref}{{[subappendix][3][2147483647,1]A.3}{[1][49][]49}}
+\newlabel{eq:canonical_multivariate_pdf}{{A.3}{49}{Gaussian distribution}{section.A.3}{}}
+\newlabel{eq:canonical_multivariate_pdf@cref}{{[subappendix][3][2147483647,1]A.3}{[1][49][]49}}
+\BKM@entry{id=61,dest={636861707465722A2E3436},srcline={75}}{4269626C696F677261706879}
+\@writefile{toc}{\contentsline {chapter}{\nonumberline Bibliography}{50}{chapter*.46}\protected@file@percent }
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@input{chapters/declaration.aux}
-\BKM@entry{id=48,dest={636861707465722A2E3332},srcline={1}}{4465636C61726174696F6E}
+\BKM@entry{id=62,dest={636861707465722A2E3437},srcline={1}}{4465636C61726174696F6E}
 \abx@aux@refcontextdefaultsdone
 \abx@aux@defaultrefcontext{0}{EEG}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{ASingleCameraPhotogrammetry}{none/global//global/global}
@@ -507,6 +617,8 @@
 \abx@aux@defaultrefcontext{0}{montemerlo2002fastslam}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{lu1997globally}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{dellaert2006square}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{azure_kinect}{none/global//global/global}
+\abx@aux@defaultrefcontext{0}{CamBar}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{ROS}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{open3d}{none/global//global/global}
 \abx@aux@defaultrefcontext{0}{miniSam}{none/global//global/global}
@@ -539,6 +651,8 @@
 \abx@aux@defaultlabelprefix{0}{montemerlo2002fastslam}{}
 \abx@aux@defaultlabelprefix{0}{lu1997globally}{}
 \abx@aux@defaultlabelprefix{0}{dellaert2006square}{}
+\abx@aux@defaultlabelprefix{0}{azure_kinect}{}
+\abx@aux@defaultlabelprefix{0}{CamBar}{}
 \abx@aux@defaultlabelprefix{0}{ROS}{}
 \abx@aux@defaultlabelprefix{0}{open3d}{}
 \abx@aux@defaultlabelprefix{0}{miniSam}{}

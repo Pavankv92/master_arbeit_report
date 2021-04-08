@@ -5,7 +5,7 @@ Camera calibration is carried out using open-source computer vision library Open
 
 \begin{figure}[hbt!]
 	\centering
-	\begin{subfigure}{0.35\textwidth}
+	\begin{subfigure}{0.49\textwidth}
 		\includegraphics[width=\linewidth]{chessboard_corners.png}
 		\caption{Chessboard corners(image points) detection in OpenCV}
 	\end{subfigure}
@@ -26,7 +26,7 @@ cv2.calibrateCamera(object_points, image_points, ...)
 output: rms, camera_matrix, dist_coeffs, rot_vecs, trans_vecs
 \end{verbatim}
 
-The OpenCV function cv2.calibrateCamera takes in these world points (object points), image points and some more arguments then outputs geometric error of reprojection (rms), intrinsic parameters (camera\_matrix) distortion coefficients (dist\_coeffs) and extrinsic parameters $(rot\_vecs, trans\_vecs)$.
+The OpenCV function cv2.calibrateCamera takes in these world points (object points), image points and some more arguments then outputs geometric error of reprojection (rms), intrinsic parameters (camera\_matrix) distortion coefficients (dist\_coeffs) and extrinsic parameters $(rot\_vecs, trans\_vecs)$. Refer results section for camera parameters.
 
 \subsection{Chessboard pose estimation}
 Having completed the camera calibration we can now make use of the intrinsic parameters and the distortion coefficients as an input to the pose estimation algorithm provided by OpenCV. 
@@ -40,15 +40,33 @@ output: rot_vecs, trans_vecs
 
 The OpenCV function cv2.solvePnP takes object points, image points, intrinsic matrix, and distortion coefficients as the arguments and computes rotation and translation vectors. Rotation vector can be converted to 3$\times$3 rotational matrix using cv2.Rodrigues function provided by openCV. By combining rotation matrix and translation vector we can form 4$\times$4 homogenous matrix for further manipulation.
 
-\subsection{Pixel points out-projection}
-As shown in \cref{eq:out_projection} pixel values out-projected to form 3D points directly proportional to depth and indirectly proportional to estimated focal length of the camera($X_c, Y_c$). Depth value obtained from a TOF camera depends on various factors such as, reflectivity of the material, lighting conditions, etc. Having finished the camera calibration, a chessboard can be used to observe the above phenomena. Several images of the chessboard at different depths in steps of 200mm starting  400mm from the camera were captured. At each depth distance, images with different orientation of chessboard at 30fps were captured.  Firstly, for each image, chessboard pose is estimated using OpenCV solvePnP method and ground truth object points are calculated in camera coordinates. Secondly, corresponding image points are out-projected using raw depth value ($\lambda$) from the kinect as shown in \cref{fig:pixel_value_est_gt}. 
+One can perform sanity check on the pose estimation using output of cv2.solvePnP. We pretend that image points for chessboard pose is unknown for which output of the cv2.solvePnP is known. Image points can be calculated back using OpenCV function cv2.ProjectPoints and obtained points can be projected on a image for visual sanity check as shown in \cref{fig:pose_estimation_sanity_check}. 
+
+\begingroup\makeatletter\def\@currenvir{verbatim}
+\verbatim
+cv2.ProjectPoints(object_points,rot_vecs,trans_vecs,intr_mat,dist_coeffs)
+output: image_points 
+\end{verbatim}
+
+
 \begin{figure}[hbt!]
 	\centering
-	\begin{subfigure}{0.49\textwidth}
+	\includegraphics[width=\linewidth]{pose_estimation_sanity_check.png}
+	\caption{Chessboard visual sanity check on three different depth values.}
+	\label{fig:pose_estimation_sanity_check}
+\end{figure}
+
+
+\subsection{Pixel points out-projection}
+As shown in \cref{eq:out_projection} pixel values out-projected to form 3D points directly proportional to depth and indirectly proportional to estimated focal length of the camera($X_c, Y_c$). Depth value obtained from a TOF camera depends on various factors such as, reflectivity of the material, lighting conditions, etc. Having finished the camera calibration, a chessboard can be used to observe the above phenomena. Several images of the chessboard at different depths in steps of 200mm starting  400mm from the camera were captured. At each depth distance, images with different orientation of chessboard at 30fps were captured.  Firstly, for each image, chessboard pose is estimated using OpenCV solvePnP method and ground truth object points are calculated in camera coordinates. Secondly, corresponding image points are out-projected using raw depth value ($\lambda$) from the kinect as shown in \cref{fig:pixel_value_est_gt}. 
+
+\begin{figure}[hbt!]
+	\centering
+	\begin{subfigure}{\textwidth}
 		\includegraphics[width=\linewidth]{out_projection_600.png}
 	\end{subfigure}
-	\hfill
-	\begin{subfigure}{0.49\textwidth}
+	\\
+	\begin{subfigure}{\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{out_projection_1800.png}	
 	\end{subfigure}
@@ -56,11 +74,4 @@ As shown in \cref{eq:out_projection} pixel values out-projected to form 3D point
 	\label{fig:pixel_value_est_gt} 
 \end{figure}  
 
-For each image, out-projected values (estimated object points) are then compared to the ground truth values with L2 norm as the metric. Since there are many images at a particular depth distance, L2 norm will be averaged over all the images as shown in \cref{fig:pixel_value_out_projection}. Out-projected values with raw kinect depth seem to be over estimated and the magnitude grows with depth distance.
-
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[scale=0.8]{pixel_value_out_projection.png}
-	\caption{Overview of mean L2 norm with different distance from the camera.}
-	\label{fig:pixel_value_out_projection}
-\end{figure}
+For each image, out-projected values (estimated object points) are then compared to the ground truth values with L2 norm as the metric. Since there are many images at a particular depth distance, L2 norm will be averaged over all the images. Refer results section for more details. 

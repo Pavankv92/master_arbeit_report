@@ -774,7 +774,7 @@ In simple words, localization is the pose estimation problem. It is the process 
 \\
 
 \subsection{SLAM} 
-Simultaneous localization and mapping (SLAM) is a special case where the camera neither have the pre-build map of the electrodes nor does it know its pose with respect to the map. Camera can however be moved along a trajectory either with a help of a robot or manually with in the environment and also collect RGB and depth images along the way. Finally, task is to build the map of the electrodes and simultaneously localize the camera with this map. Due to the fact that measurements are prone to noise, SLAM problems are modelled probabilistically.
+Simultaneous localization and mapping (SLAM) is a special case where the camera neither have the pre-build map of the electrodes nor does it know its pose with respect to the map. Camera can however be moved along a trajectory either with a help of a robot or manually with in the environment and also collect RGB and depth images along the way. Finally, task is to build the map of the electrodes and simultaneously localize the camera with this map. Due to the fact that measurements are prone to noise, SLAM problems are modeled probabilistically.
 \\
 
 \textbf{Probabilistic formulation of SLAM.} The camera moves with in an unknown environment along a trajectory. Camera poses along the trajectory are described by the random variables $x_{1:t} = \{x_1,......, x_t\}$. A set of odometry can be generated along the trajectory $u_{1:t} = \{u_1,......, u_t\}$ and perceived 3D electrode position can be expressed by $z_{1:t} = \{z_1,......, z_t\}$. SLAM can be broadly classified in to 2 types, online-SLAM and full-SLAM.
@@ -918,5 +918,9 @@ Electrodes captured in sequence of RGB images needs to be detected and simultane
 
   
 
-\section{Cluster centers}
-A single electrode is seen from multiple adjacent camera poses and even after having constructed the electrode map with the best estimates of the camera poses, errors associated with camera calibration, hand-eye calibration, YOLO localization, ICP drift, SLAM etc. will result in as many unlabeled clusters as the number of electrodes. The centroids of these clusters will be treated as the electrode position.
+\section{Cluster processing} Two mainly used cluster processing algorithms in thesis are DBSCAN and K-Means provided by scikit-learn. DBSCAN is a density based clustering algorithm, it differentiates the clusters based on high and low density of points. It labels samples(points) which are in the high density as core samples, A cluster therefore a collection of many core samples. In this thesis, BDSCAN is used to estimate number of clusters in the electrode map. K-Means on the other hand tries to group the samples of equal variance together by minimizing the inertia or within-cluster sum-of-squares. However, K-Means requires number of clusters to be specified before hand. K-Means divides $\mathcal{N}$ samples in to $\mathcal{K}$ disjoint clusters $\mathcal{C}$ where each cluster contains $\mathcal{X}$ samples and described by centroid of the cluster $\mu_j$. K-Means aims to determine the $\mu_j$ that minimizes the inertia defined by  \cref{eq:cluster_center_inertia}. 
+
+\begin{equation}
+	\sum_{i=0}^n \min_{\mu_j \in C}  \|  x_i  -  \mu_j \| ^2
+	\label{eq:cluster_center_inertia}
+\end{equation}

@@ -1037,6 +1037,35 @@
     \field{year}{2006}
   \endentry
 
+  \entry{azure_kinect}{online}{}
+    \name{author}{1}{}{%
+      {{hash=m}{%
+         family={microsoft.com},
+         familyi={m\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{m1}
+    \strng{fullhash}{m1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{MS Windows NT} Kernel Description}
+    \verb{url}
+    \verb https://docs.microsoft.com/en-us/azure/kinect-dk/hardware-specificati
+    \verb on
+    \endverb
+    \field{year}{1999}
+    \field{urlday}{20}
+    \field{urlmonth}{05}
+    \field{urlyear}{2020}
+  \endentry
+
+  \entry{CamBar}{misc}{}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://axios3d.de/optische-messsysteme/cambar-b2-c4-und-cambar-b2-c8/}}
+    \field{note}{(Accessed on 04/07/2021)}
+    \field{title}{CamBar B2 C4 and CamBar B2 C8 - Axios 3D® Services GmbH}
+  \endentry
+
   \entry{ROS}{online}{}
     \name{author}{1}{}{%
       {{hash=w}{%

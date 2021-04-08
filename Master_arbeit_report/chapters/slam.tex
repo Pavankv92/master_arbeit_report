@@ -1,15 +1,25 @@
-\section{Pose-graph construction}  This section provides an overview of pose-graph construction. The system consists of 2 main layers and previously acquired scans as shown in \cref{fig:pose_graph}. As the camera is guided either by a robot or hand, point cloud $PC_1$ is associated with camera position $C_1$ and a node $X_1$ is added to the pose-graph and a prior factor (black square) which represents initial camera position with respect to world frame is also added. A map is simultaneously being built each time a node is added to the pose-graph. Every time a new scan in available, scan registration (ICP) finds the best transformation that aligns it with the previous scan. A new node $X_2$ and a between factor (odometry) i.e. output of ICP is added (gold squares) to the pose-graph. When system detects a loop closure candidate (see section on loop closure) a loop factor between current scan and loop closure candidate is added to the pose-graph and optimization is triggered. The map will be updated with the best estimates of the camera positions resulting from the optimization.   
+\section{Pose-graph construction and optimization}
+
+In this section we first look at the unique data structure used to store and provide easy access to the relevant information through out the electrode digitalization process. We then provides an overview of pose-graph construction and optimization. The \cref{fig:data_structure} shows a dictionary, each camera position has a associated number and stored in $"viewID"$ or $"scanID"$. The $"absTform"$ or Absolute position is relative to the world coordinate frame, in this thesis the very first camera position is treated as world frame. 3D point cloud associated with each camera scan is stored as $"pointCloud"$ in the dictionary. The system consists of 2 main layers and previously acquired scans as shown in \cref{fig:pose_graph}. At very first scan, Pose-graph is initialized with a prior factor (black square) which represents initial camera position with respect to world frame. The node $X_1$ with $ "viewID" = 0$ $ "absTform" = identity(4\times4)$ and point cloud $"pointCloud" = PC_1$ associated with camera position $C_1$ is added to the pose-graph. A map is simultaneously being built each time a node is added to the pose-graph. Every time a new scan in available, scan registration (ICP) finds the best transformation that aligns it with the previous scan. A new node $X_2$, between factor (odometry) i.e. output of ICP (gold squares), and the position of current camera frame relative to very first frame (world) are added to the pose-graph. When system detects a loop closure (see section on loop closure) a loop factor between current scan and loop closure candidate is added to the pose-graph and optimization is triggered. 
 
 TODO: how to calculate covariance matrix ??
 
 \begin{figure}[hbt!]
 	\centering
+	\includegraphics[width=\linewidth]{data_structure.png}
+	\caption{Data structure to store and provide easy access to the information.}
+	\label{fig:data_structure}
+\end{figure}
+
+
+\begin{figure}[hbt!]
+	\centering
 	\includegraphics[width=\linewidth]{pose_graph.png}
-	\caption{System overview along with pose-graph layer.}
+	\caption{System overview along with pose-graph layer. All the layers are shown on a straight line instead of circular trajectory just for the illustration purposes only}
 	\label{fig:pose_graph}
 \end{figure}
 
-\subsection{Loop closure} Every time new node is added to the pose-graph, system evaluates if the loop can be closed by computing the euclidean distance between current node and all other nodes that are already present in the pose-graph. Please note that last m number of scans are not considered as potential loop closure candidates thus avoiding local loops and enabling longer loop creation. These last m number of nodes are called no loop closure window. Hence we always start with the first node on the pose-graph until [ current scan - m ] nodes. The \cref{fig:loop_cloure} illustrates loop closure candidate selection process. We compute the 3D euclidean distance between the nodes as there is high chance of elevation difference when visiting the previously visited places (camera position) especially with hand guided trajectory. All the nodes that are under certain distance threshold (search radius) are considered potential loop closure candidates. Loop closure ICP is performed between current node and all the potential loop closure candidates and node with a highest ICP fitness value is considered as loop closure candidate. After successful loop closure, a loop closure constraint (output of the loop closure ICP) is added to the pose-graph between current node and loop closure candidate before an optimization is triggered.
+\subsection{Loop closure} Every time new node is added to the pose-graph, system evaluates if the loop can be closed by computing the euclidean distance between current node and all other nodes that are already present in the pose-graph. Please note that last m number of scans are not considered as potential loop closure candidates thus avoiding local loops and enabling longer loop creation. These last m number of nodes are called no loop closure window. Hence we always start with the first node on the pose-graph until [ current scan - m ] nodes. The \cref{fig:loop_cloure} illustrates loop closure candidate selection process. We compute the 3D euclidean distance between the nodes as there is high chance of elevation difference when visiting the previously visited places (camera position) especially with hand guided trajectory. All the nodes that are under certain distance threshold (search radius) are considered potential loop closure candidates. Loop closure ICP is performed between current node and all the potential loop closure candidates and node with a highest ICP fitness value is considered as loop closure candidate. After successful loop closure, a loop closure constraint (output of the loop closure ICP) is added to the pose-graph between current node and loop closure candidate before an optimization is triggered. The map will be updated with the best estimates of the camera positions resulting from the optimization. Thanks to the data structure, updating the map is achieved by just replacing the absolute position with the optimized result.
 
 Open3D defines ICP (source cloud, target cloud) fitness as \cref{eq:icp_fitness}. Number of inlier correspondences usually one to many i.e. one point in source point cloud can have multiple correspondence in the target point cloud. However, in this case it is one to one due to the sparsity of point cloud as shown in \cref{fig:one_to_one_correspondence}. Therefore ICP fitness value for example 0.8 means 8 out of 10 points in the target point cloud have one to one correspondences with source point cloud.
 
@@ -32,12 +42,14 @@ Open3D defines ICP (source cloud, target cloud) fitness as \cref{eq:icp_fitness}
 	\label{fig:one_to_one_correspondence}
 \end{figure}
 
-\section{Cluster center} Two mainly used cluster processing algorithms in thesis are DBSCAN and K-Means provided by scikit-learn. DBSCAN is a density based clustering algorithm, it differentiates the clusters based on high and low density of points. It labels samples(points) which are in the high density as core samples, A cluster therefore a collection of many core samples. In this thesis, BDSCAN is used to estimate number of clusters in the electrode map. K-Means on the other hand tries to group the samples of equal variance together by minimizing the inertia or within-cluster sum-of-squares. However, K-Means requires number of clusters to be specified before hand. K-Means divides $\mathcal{N}$ samples in to $\mathcal{K}$ disjoint clusters $\mathcal{C}$ where each cluster contains $\mathcal{X}$ samples and described by centroid of the cluster $\mu_j$. K-Means aims to determine the $\mu_j$ that minimizes the inertia defined by  \cref{eq:cluster_center_inertia}. Number of clusters estimated by DBSCAN is fed to K-Means in order to find the cluster centers as shown in \cref{fig:cluster_and_its_centers}.
+\subsection{Optimization}
 
-\begin{equation}
-		\sum_{i=0}^n \min_{\mu_j \in C}  \|  x_i  -  \mu_j \| ^2
-	\label{eq:cluster_center_inertia}
-\end{equation}
+Popular non-linear optimization algorithm Lavenberg-Marquardt offered by MiniSam is used for pose-graph optimization. By using optimized camera trajectory, the electrode positions from each frame can be transformed into a common coordinate system. For this purpose, the coordinate system of the very first frame is used. After the transformation of all electrodes detected over the duration of trajectory into the initial coordinate system, individual electrodes which were detected in several frames do not lie exactly on top of each other. This is due to small errors in the detection and the estimation of camera trajectory. As a result, clusters of electrodes appear in the 3D space.
+
+\section{Cluster center} 
+The last step of electrode digitalization is calculating cluster centers. First, the number of clusters is determined by the algorithm DBSCAN. Then, the k-Nearest Neighbor (kNN) algorithm is applied to determine the membership of each electrode in a cluster and to determine the centroid of each cluster as shown in \cref{fig:cluster_and_its_centers}.
+
+TODO : add more details about clustering implementation.
 
 \begin{figure}[hbt!]
 	\centering

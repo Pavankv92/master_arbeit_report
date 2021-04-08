@@ -1,6 +1,6 @@
 \section{Data acquisition}
 
-\subsection{Robot guided trajectory} As shown in the \cref{fig:robotic_data_acquisition}  setup consists of 2 cameras (RGB-D and a tracking camera), a robot, phantom head with EEG cap. Position of both cameras from robot base is determined using two hand-eye calibrations respectively. The robot is precisely guided around the phantom head on a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with different circular trajectory each time and recorded as ROS .bag files for later processing.
+\subsection{Robot guided trajectory} Although robot-guided data set is available as a part of the pipeline, we will briefly look at the important aspects of it. As shown in the \cref{fig:robotic_data_acquisition}  setup consists of 2 cameras (RGB-D and a tracking camera), a robot, phantom head with EEG cap. Kinect is mounted directly on end-effector of the robot while tracking camera is firmly mounted to the ceiling. The position of tracking camera from robot base is determined using hand-eye calibration. Since kinect is mounted directly on the end-effector, a variant form of hand-eye calibration knows as eye-in-hand calibration is performed. The robot is precisely guided around the phantom head on a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with same circular trajectory each time with re-positioned phantom head. Nine trajectories/cap has been recorded.
 
 \begin{figure}[hbt!]
 	\centering
@@ -11,7 +11,8 @@
 
 TODO : add details about the number of camera poses in the trajectory.
 
-\subsection{Hand guided trajectory} As shown in the \cref{fig:hand_data_acquisition}  setup consists of tracking camera and a  RGB-D camera as in the robot guided setup. However, a reflective marker is attached to RGB camera in order to be tracked from tracking camera in the absence of a robot.  RGB camera is hand guided around the phantom head trying to maintain a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with different trajectory each time and recorded as ROS .bag files for later processing.
+\subsection{Hand guided trajectory} As shown in the \cref{fig:hand_data_acquisition}  setup consists of tracking camera and a  RGB-D camera as in the robot guided setup. However, a reflective marker is attached to RGB camera in order to be tracked from tracking camera in the absence of a robot.  RGB camera is hand guided around the phantom head trying to maintain a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with different trajectory each time and recorded as ROS .bag files for later processing. 
+
 
 \begin{figure}[hbt!]
 	\centering
@@ -20,17 +21,30 @@ TODO : add details about the number of camera poses in the trajectory.
 	\label{fig:hand_data_acquisition}
 \end{figure}
 
-\subsection{Hand-eye calibration for hand guided trajectory}
-A reflective marker is firmly attached to the camera as shown in the \cref{fig:blue_kinect_marker}. In the absence of a robot,  \cref{eq:hand-eye} is still holds with  $\tfMat{tCam}{T}{marker}$ as M,  $\tfMat{marker}{T}{kCam}$ as X,  $\tfMat{tCam}{T}{CB}$ as Y and  $\tfMat{CB}{T}{kCam}$ as N as shown in \cref{fig:handeye_calibration_hand_data}
+One of the limitation during hand guided data acquisition was limited field of view (FOV) of the tracking camera. The \cref{fig:fov_tracking_camera} shows approximate radius of the phantom head is $\approx$ 70mm and recommended distance for depth is 250 - 2210 mm for azure kinect in $WFOV\ 2x2\ binned$ mode. Hence we maintained the hand guided radius $>$ 350mm. However, due to the limited FOV of the tracking camera full trajectory of the Azure Kinect was not been able to capture. A top view of an example trajectory is shown in \cref{fig:cut_trajectory} where it starts form 1 and ends at 6. The segments 1-2, 3-4 and 5-6 are seen while 2-3, 4-5, 6-1 are not, $nav\_msgs/Path$ message type from ROS automatically fills these gaps with straight lines. One of the consequences is that full trajectory is not available for comparison. Therefore, only visible segments are compared.
 
-
-TODO : add trajectroy details, camera filed of view issue. add an image of cut trajectory, hand eye results.
 \begin{figure}[hbt!]
 	\centering
-	\includegraphics[scale=0.5]{blue_kinect_marker.png}
-	\caption{Reflective marker is attached to the camera in order to track it}
-	\label{fig:blue_kinect_marker}
+	\includegraphics[width=\linewidth]{fov_tracking_camera.png}
+	\caption{Hand-guided radius is $>$ 350mm.}
+	\label{fig:fov_tracking_camera}
 \end{figure}
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[scale=0.6]{cut_trajectory.png}
+	\caption{An example for ground truth hand guided trajectory (1-6).}
+	\label{fig:cut_trajectory}
+\end{figure}
+
+
+\subsection{Hand-eye calibration for hand guided trajectory}
+In this section we provide details to estimate the transformation between reflective maker and the kinect coordinate system. The only difference between setup presented in the general hand-eye calibration and hand-guided system is absence of a robot. however, the \cref{eq:hand-eye_hand_data} is still holds with  $\tfMat{tCam}{T}{marker}$ as M,  $\tfMat{marker}{T}{kCam}$ as X,  $\tfMat{tCam}{T}{CB}$ as Y and  $\tfMat{CB}{T}{kCam}$ as N as shown in \cref{fig:handeye_calibration_hand_data}. We can think of it as an imaginary rigid body (robot body) is connected between tracking camera and the marker attached to Kinect where marker pose acts as robot end-effector pose. 
+
+\begin{equation}
+	\matr{M}_i\matr{X} - \matr{Y}\matr{N}_i = 0 
+	\label{eq:hand-eye_hand_data}
+\end{equation}
 
 \begin{figure}[hbt!]
 	\centering
@@ -38,4 +52,6 @@ TODO : add trajectroy details, camera filed of view issue. add an image of cut t
 	\caption{Hand-eye calibration for hand guided setup}
 	\label{fig:handeye_calibration_hand_data}
 \end{figure}
+
+The tracking camera and chessboard were static while kinect moved to different position $M_i$ (60 positions) and corresponding chessboard pose is estimated $N_i$. The collected data set is divided as training and evaluation sets. Refer the results section for errors.
 
