@@ -1,4 +1,4 @@
-\section{Least square problem} There are 2 types of least square problems, non-homogenious \( \matr{A} \vect{x} = \vect{b}\)  (type I) and homogenious  \( \matr{A} \vect{x} = \vect{0}\) (type II).
+\section{Least square problem} There are 2 types of least square problems, non-homogeneous \( \matr{A} \vect{x} = \vect{b}\)  (type I) and homogeneous  \( \matr{A} \vect{x} = \vect{0}\) (type II).
 \subsection{Type I} Consider A system of equations \( \matr{A} \vect{x} = \vect{b}\) where $\matr{A}$ is m $\times$ n matrix. 
 \begin{enumerate}
 	\item if m < n then, there are more unknowns than the number of equations. In this case, there are infinitely many solutions.
@@ -11,7 +11,7 @@
 \subsection{Type II} Consider A system of equations \( \matr{A} \vect{x} = \vect{0}\) where $\matr{A}$ is m $\times$ n matrix. we will see what is the solution to case m > n where there are more equations (data points) than the number of unknowns.
 \begin{enumerate}
 	\item As there is no exact solution, we can minimize the geometric error by solving \( \displaystyle \min_{x \in \mathtt{R}^n} \|Ax\|^2 = 0 \  \textrm{s.t.}\ \|x\| = 1\).
-	\item the solution $\vect{x}$ is the right nullspace of matrix $\matr{A}$ and is obtained from unit sigular value of A corresponding to the smallest singular value i.e if SVD of $ \matr{A} = \matr{U}\matr{D}\matr{V}^T $, then $\vect{x}$ is the last coulmn of $\matr{V}$.
+	\item the solution $\vect{x}$ is the right null space of matrix $\matr{A}$ and is obtained from unit sigular value of A corresponding to the smallest singular value i.e if SVD of $ \matr{A} = \matr{U}\matr{D}\matr{V}^T $, then $\vect{x}$ is the last column of $\matr{V}$.
 \end{enumerate}
 
 \section{Rotation matrix}  Task is to find the rotation matrix $\matr{R}$ which is closest approximation to the given matrix $\matr{Q}$. The "best" here means that the Frobenius norm of the $[\matr{R} -  \matr{Q}]$ is minimized. 
@@ -24,14 +24,14 @@
 \noindent if SVD of $ \matr{Q} = \matr{U}\matr{D}\matr{V}^T $ , then Matrix $\matr{R}$ which satisfies above condition is  $\matr{R} = \matr{U}\matr{V}^T$ per \cite{Zhang}.
 
 \section{Gaussian distribution}
-A random variable possess probability density fucntions (PDF's) like one dimensional normal distribution fucntion with mean $\mu$ and variance $\sigma^2$. PDF of the normal distribution function is given by,
+A random variable possess probability density functions (PDF's) like one dimensional normal distribution function with mean $\mu$ and variance $\sigma^2$. PDF of the normal distribution function is given by,
 
 \begin{equation*}
 		p(x) = (2\pi\sigma^2)^{-\frac{1}{2}} \exp\{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2}\}	
 	\label{eq:one_dim_pdf}
 \end{equation*} 
 
-PDF of a vector valued variable is called multivariate normal distribution with mean $\mu$ and a postive semidefinite and symmetric matrix called cavariance matrix $\Sigma$. PDF of a multivariate is given by
+PDF of a vector valued variable is called multivariate normal distribution with mean $\mu$ and a positive semi-definite and symmetric matrix called covariance matrix $\Sigma$. PDF of a multivariate is given by
 
 \begin{equation*}
 	p(x) =  det(2\pi \Sigma)^{-\frac{1}{2}} \exp\{-\frac{1}{2} (x-\mu)^T \invMat{\Sigma} (x-\mu)\} 
@@ -49,12 +49,31 @@ Canonical representation of the a multivariate is given by a information matrix 
 \label{eq:canonical_multivariate}
 \end{equation*} 
 
-With few rearrangement cannocical form of PDF for multivariate normal distribution can be given by
+With few rearrangement canonical form of PDF for multivariate normal distribution can be given by
 
 \begin{equation*}
 	p(x) =  \eta \exp\{-\frac{1}{2} x^T \Omega x + x^T \xi \} 
 	\label{eq:canonical_multivariate_pdf}
 \end{equation*}
+
+\section{Pose comparison}
+Let $\matr{P}$ be source and $\matr{Q}$ target poses which are 4$\times$4 homogeneous matrices with $ [{R|t}] $. \textit{R} is rotation and \textit{t} is translational part. Task is to compare them and form a metric.   
+Let ($k_P$,$\theta_p$) and ($k_q$,$\theta_q$) be axis angle representation \cite{axis-angle} of rotational part $\mathtt{R}[\matr{P}]$ and $\mathtt{R}[\matr{P}]$ respectively. Then the metric for the rotational part is \cref{eq:rotational_metric}, the axis part is neglected. 
+
+\begin{equation}
+	|\theta_p| - |\theta_q|
+	\label{eq:rotational_metric}
+\end{equation} 
+
+Axis part is neglected
+Let $t_p$ and $t_q$ be the translational part of $\matr{P}$ and $\matr{Q}$ respectively. Then the metric for translational part is \cref{eq:translational_metric}.
+
+\begin{equation}
+	||t_p||_2 - ||t_q ||_2
+	\label{eq:translational_metric}
+\end{equation} 
+
+
  
 
 

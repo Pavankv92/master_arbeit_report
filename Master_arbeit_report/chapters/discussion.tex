@@ -1,0 +1,43 @@
+In this section, we will discuss the results provided in the last section also provide additional details regarding loop closure especially for hand-guided trajectory. 
+
+\section{Calibrations}
+
+Experience has shown that Hand-eye calibrations done with a robot results in positional error < 2 millimeters and rotational error < 0.3 degrees. However, in this case with the absence of a robot, errors are slightly higher. Pixel points out-projected values with raw kinect depth seem to be over estimated and the magnitude grows with depth distance as shown in \cref{fig:pixel_value_out_projection}.
+
+\section{Depth offset determination}
+
+\section{Loop closure}
+
+In the robot-guided case, very controlled motion is achieved and we can command the robot to visit the previously visited place with exact position and orientation. The \cref{tab:loop_closure_threshold} shows criteria used for detecting the loop closure candidate. These numbers are arrived at based on heuristics. The search radius and ICP fitness threshold for robot-guided case is 50mm and 0.8 respectively. Recall that while constructing pose-graph, all the camera position is expressed relative to the very first camera frame including the current frame from which loop closure is being attempted. This enables one to calculate the 3D position of the coordinate frame of all the previously acquired scans. Note that we compute 3D euclidean distance between current frame and potential loop closure candidate as there is a high of elevation change. This means that, candidate has to be with in euclidean distance of 50mm and has to have at least ICP fitness of 80 $\%$ for it to be considered as potential loop closure candidate. 
+
+However, in the hand-guided case, where controlled motion is unlikely to achieve and in most of the cases, it is not guaranteed to revisit the same place at exact position and orientation as before. One can also expect elevation changes while revisiting the places. These practical issues makes loop closure hard in hand-guided case. As one can see for hand-guided case, search radius has been increased to 75 from 50mm and fitness threshold is reduced to 0.6 from 0.8 in comparison with robot-guided case. Even with reduced thresholds, loop cold not be closed. Each ICP registration results in large drift and this drift is accumulated over entire trajectory which is beyond correction. The \cref{fig:ca_124_7_trajectory_summary} and \cref{fig:cs_301_8_trajectory_summary} shows summary of ground truth and ICP estimated trajectories for cap with 63 and 23 electrodes respectively. For both images, top-left section shows front and side view of ground truth trajectory (green) recorded by attaching a marker. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 and 6-1 are not. Top-right section shows front and side view of ICP estimated trajectory (red) which starts from 1 and ends at 2. The bottom-left section shows front and side view of both ground truth and ICP estimated trajectory on top of each other for easy visualization. Bottom-right section on the other hand shows a closer look at starting and ending portion of each trajectories. In both the cases, ICP drift can eb visually seen and drift is higher in case of cap with 23 electrodes as one would expect. Please note, experiments have shown that further reduction of loop closure thresholds will results in point cloud distortion and clusters will be overlapped to an extent that different clusters cannot be differentiated. Therefore, all the results for hand-guided case is presented without loop closure.
+
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		use case & Search radius & ICP fitness threshold \\ 
+		\hline
+		robot-guided & 50 (mm) & 0.8\\
+		\hline
+		hand-guided & 75 (mm) & 0.6\\
+		\hline
+	\end{tabular}
+	\caption{Loop closure thresholds for hand-guided scenario}
+	\label{tab:loop_closure_threshold}
+\end{table}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{ca_124_7_trajectory_summary.png}
+	\caption{Overview of trajectories for cap with 63 electrodes}
+	\label{fig:ca_124_7_trajectory_summary}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{cs_301_8_trajectory_summary.png}
+	\caption{Overview of trajectories for cap with 23 electrodes}
+	\label{fig:cs_301_8_trajectory_summary}
+\end{figure}

@@ -1,6 +1,7 @@
-In this section, we provide the detailed results for both robot and hand guided trajectory. 
+In this section, we provide detailed results on various aspects of the thesis.
 
-\section{Camera calibration} Camera calibration results along with values in the robot-guided data set has been provided. Image size 1280$\times$720. 
+\section{Camera calibration} 
+Several images at different depth in steps on 200mm starting 400mm from the camera were used for calibration. The calibration results along with values in the robot-guided data set has been provided in \cref{tab:kinect_camera_calibration_result}. Image size 1280$\times$720. 
 
 \begin{table}[hbt]
 	\centering
@@ -20,8 +21,7 @@ In this section, we provide the detailed results for both robot and hand guided 
 \end{table}
 
 \section{Hand-eye calibration : Hand-guided scenario}
-
-We have achieved a high degree of accuracy in estimating 2 unknowns in the hand-eye calibration equation i.e camera position and marker position. Both Microsoft Kinect and Atracsys fusionTrac 500 hand-eye calibration resulted in positional error < 1.5 millimeters and rotational error < 0.3 degrees on a hold-out validation set as shown in the \cref{tab:kinect__fusionTrac_handeye_result}.
+For hand-eye calibration the kinect along with firmly attached marker were moved to $>$60 different position making sure that tracking camera can detect the marker and estimate the pose correctly. The collected data set is divided as training and validation set. Hand-eye calibration resulted in positional error < 6 millimeters and rotational error < 0.6 degrees on a hold-out validation set as shown in the \cref{tab:handeye_result}.
 
 \begin{table}[hbt!]
 	\centering
@@ -29,17 +29,16 @@ We have achieved a high degree of accuracy in estimating 2 unknowns in the hand-
 		\hline
 		Camera & Translation error (m) & Rotational error ($\deg$)\\ 
 		\hline
-		Kinect & 0.0088$\pm$ 0.0002  & 0.7682 $\pm$ 0.0204\\
+		Kinect & 0.0055$\pm$ 0.0002  & 0.5682 $\pm$ 0.0204\\
 		\hline
 	\end{tabular}
 	\caption{Hand-eye calibration results}
-	\label{tab:kinect__fusionTrac_handeye_result}
+	\label{tab:handeye_result}
 \end{table}
-
 
 \section{Pixel points out-projection}
 
-Out-projected values with raw kinect depth seem to be over estimated and the magnitude grows with depth distance as shown in \cref{fig:pixel_value_out_projection}.
+For pixel points out-projection experiment, several images of the chessboard at different depths in steps of 200mm starting  400mm from the camera and at each depth, different orientation were captured. Firstly, ground truth object points are calculated in camera coordinates and corresponding image points are out-projected using raw depth provided by kinect. For each image, out-projected values are then compared to the ground truth values with L2 norm as the metric. Since there are many images at a particular depth distance, L2 norm will be averaged over all the images. The \cref{fig:pixel_value_out_projection} shows the results.
 
 \begin{figure}[hbt!]
 	\centering
@@ -50,7 +49,24 @@ Out-projected values with raw kinect depth seem to be over estimated and the mag
 
 
 \section{Depth offset determination}
-For the ICP scan registration, $\beta$ is varied from 10 to 30 mm (i.e. out-projected points will be raw kinect depth -  $\beta$) brute forcing with the step of 1 mm. The \cref{fig:depth_offset_robot_no_yolo} shows result for 6 robot guided trajectories (2/cap, for 3 caps) which YOLO has never seen and \cref{fig:depth_offset_robot_yolo} shows for the trajectories on which YOLO has been trained. It is evident that mean RMSE is lower at depth offset $\beta$ between 24-26 mm.
+
+For the inertia calculation, clusters are well separated at $\beta > 20$ especially for the cap with 63 electrodes. The \cref{fig:cluster_inertia_vs_beta} shows inertia at different $\beta > 20$ values. Effect of $\beta$ on the point cloud can be visualized in \cref{fig:depth_offset_beta_variations}. At $\beta = 10$ clusters are overlapped with each other, at $\beta = 24$ clusters are well separated and tightly bound, where at $\beta > 24$ starts to spread again.  
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{cluster_inertia_vs_beta.png}
+	\caption{Average cluster Inertia for each trajectory is calculated, note that, inertia is not a normalized metric. Lower the better and zero is optimum }
+	\label{fig:cluster_inertia_vs_beta}
+\end{figure}
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{depth_offset_beta_variations.png}
+	\caption{Effect of change in $\beta$ on point cloud.}
+	\label{fig:depth_offset_beta_variations}
+\end{figure}
+
+For the ICP scan registration, $\beta$ is varied from 10 to 29 mm (i.e. out-projected points will be raw kinect depth -  $\beta$) brute forcing with the step of 1 mm. The \cref{fig:depth_offset_robot_no_yolo} shows result for 6 robot guided trajectories (2/cap, for 3 caps) which YOLO has never seen and \cref{fig:depth_offset_robot_yolo} shows for the trajectories on which YOLO has been trained. It is evident that mean RMSE is lower at depth offset $\beta$ between 24-26 mm.
 
 \begin{figure}[hbt!]
 	\centering
@@ -69,7 +85,7 @@ For the ICP scan registration, $\beta$ is varied from 10 to 30 mm (i.e. out-proj
 	\label{fig:icp_depth_offset} 
 \end{figure} 
 
-Similarly, with same $\beta$ variation for cluster center comparison, \cref{fig:cluster_depth_offset} shows the results. Mean L2 norm is lower at depth offset $\beta$ between 24-26 mm. Effect of $\beta$ on the point cloud can be visualized in \cref{fig:depth_offset_beta_variations}. At $\beta = 10$ clusters are overlapped with each other, at $\beta = 25$ clusters are well separated tightly bound and At $\beta = 30$ it starts to deteriorate again. 
+Similarly, with same $\beta$ variation for cluster center comparison, \cref{fig:cluster_depth_offset} shows the results. Mean L2 norm is lower at depth offset $\beta$ between 24-26 mm. 
 
 \begin{figure}[hbt!]
 	\centering
@@ -88,17 +104,10 @@ Similarly, with same $\beta$ variation for cluster center comparison, \cref{fig:
 	\label{fig:cluster_depth_offset} 
 \end{figure} 
 
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[width=\linewidth]{depth_offset_beta_variations.png}
-	\caption{Effect of change in $\beta$ on point cloud.}
-	\label{fig:depth_offset_beta_variations}
-\end{figure}
-
-
-
 
 \section{Robot-guided trajectory}
+
+TODO : add beta details, number of trajectory included
 
 \begin{table}[hbt!]
 	\begin{adjustbox}{width=\columnwidth,center}
@@ -153,6 +162,8 @@ Similarly, with same $\beta$ variation for cluster center comparison, \cref{fig:
 
 
 \section{Hand-guided trajectory}
+
+TODO : add beta details, number of trajectory included, Add loops could not be closed in this case.
 
 \begin{table}[hbt!]
 	\begin{adjustbox}{width=\columnwidth,center}

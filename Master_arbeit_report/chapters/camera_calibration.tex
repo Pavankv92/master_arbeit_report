@@ -9,7 +9,7 @@ Camera calibration is carried out using open-source computer vision library Open
 		\includegraphics[width=\linewidth]{chessboard_corners.png}
 		\caption{Chessboard corners(image points) detection in OpenCV}
 	\end{subfigure}
-	\hfill
+	\\
 	\begin{subfigure}{0.49\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{camera_calib_matlab.PNG}	
@@ -38,7 +38,7 @@ output: rot_vecs, trans_vecs
 \end{verbatim}
 
 
-The OpenCV function cv2.solvePnP takes object points, image points, intrinsic matrix, and distortion coefficients as the arguments and computes rotation and translation vectors. Rotation vector can be converted to 3$\times$3 rotational matrix using cv2.Rodrigues function provided by openCV. By combining rotation matrix and translation vector we can form 4$\times$4 homogenous matrix for further manipulation.
+The OpenCV function cv2.solvePnP takes object points, image points, intrinsic matrix, and distortion coefficients as the arguments and computes rotation and translation vectors. Rotation vector can be converted to 3$\times$3 rotational matrix using cv2.Rodrigues function provided by openCV. By combining rotation matrix and translation vector we can form 4$\times$4 homogeneous matrix for further manipulation.
 
 One can perform sanity check on the pose estimation using output of cv2.solvePnP. We pretend that image points for chessboard pose is unknown for which output of the cv2.solvePnP is known. Image points can be calculated back using OpenCV function cv2.ProjectPoints and obtained points can be projected on a image for visual sanity check as shown in \cref{fig:pose_estimation_sanity_check}. 
 

@@ -37,7 +37,7 @@ The linear mapping can be expressed in a compact form $ \vect{x} = \matr{P} \vec
 	\label{fig:mm_to_pixel}
 \end{figure}
 
-The equation \ref{eq:mm_to_pixel} depicts mapping image to pixel coordinates. wehere $(S_x)$ is size of pixel width and  $(S_y)$ is size of pixel height. \\
+The equation \ref{eq:mm_to_pixel} depicts mapping image to pixel coordinates. where $(S_x)$ is size of pixel width and  $(S_y)$ is size of pixel height. \\
 \begin{equation}
 	\begin{split}
 		(u-C_x) = \frac{x}{S_x}\\
@@ -99,7 +99,7 @@ Therefore a 3D world point \((X_c, Y_c, Z_C)^T\) is mapped to \( ( \textit{f}\fr
 	\label{eq:_mat_camera_instrinsic}
 \end{equation}
 
-In summary, the equation \ref{eq:mat_image_t_camera} maps the world point measured in camera coordinates to image coordinates while equation \ref{eq:mat_pixel_t_image} converts these image coordinates to pixel coordinates. Overall mapping from camera coordinates to the pixel coordinates is depicted in the equation \ref{eq:mat_pixel_t_camera}. K in equation \ref{eq:_mat_camera_instrinsic} is known as the camera intrinsic matrix and depends only on the internals of the camera. In general, a 3D world point \( (X, Y, Z)^T \) may not be known in the camera coordinate system however it can be mapped using 4$\times$4 homogeneous transformation matrix. equation \ref{eq:mat_pixel_t_world} is a mapping from a 3D world point to pixel coordinates. The 4$\times$4 homogeneous transformation matrix is known as an extrinsic matrix and describes the position and orientation of the 3D world point in the camera coordinate system.
+In summary, the equation \ref{eq:mat_image_t_camera} maps the world point measured in camera coordinates to image coordinates while equation \ref{eq:mat_pixel_t_image} converts these image coordinates to pixel coordinates. Overall mapping from camera coordinates to the pixel coordinates is depicted in the equation \cref{eq:mat_pixel_t_camera}. K in equation \ref{eq:_mat_camera_instrinsic} is known as the camera intrinsic matrix and depends only on the internals of the camera. In general, a 3D world point \( (X, Y, Z)^T \) may not be known in the camera coordinate system however it can be mapped using 4$\times$4 homogeneous transformation matrix. equation \ref{eq:mat_pixel_t_world} is a mapping from a 3D world point to pixel coordinates. The 4$\times$4 homogeneous transformation matrix is known as an extrinsic matrix and describes the position and orientation of the 3D world point in the camera coordinate system.
 
 \begin{equation}
 	Z_c \left[ 
@@ -352,7 +352,7 @@ Given a set of N corresponding 2D/2D points (\textbf{$u_i$},\textbf{$X_i$}), a h
 \end{equation*}
 Problem set up in 2D/2D case is very similar to 2D/3D problem except that the homography matrix has 9 non-trivial elements thus 8 degrees of freedom (ignoring scaling) therefore 8 independent equations are necessary to estimate H, hence 4 2D/2D point correspondences are required. At this point, the same estimating procedure used previously can be employed.\\
 
-\textbf{Exact solution.} With a minimum of 4 correspondences, the solution to $Ah = 0 $ will be exact which means 2D world points will be exactly gets projected to their measured image points correspondingly. The exact solution h, to Ah = 0 is the right nullspace of matrix A.\\
+\textbf{Exact solution.} With a minimum of 4 correspondences, the solution to $Ah = 0 $ will be exact which means 2D world points will be exactly gets projected to their measured image points correspondingly. The exact solution h, to Ah = 0 is the right null space of matrix A.\\
 
 \textbf{Over-determined solution.} In this case solution to Ah = 0 will be obtained by minimizing the algebraic or geometric error of projection, subjected to some valid constraints.\\ 
 
@@ -372,14 +372,14 @@ The solution to \cref{eq:min_2D_algebraic} is obtained from unit singular value 
 		\displaystyle \sum_{i=1}^{n} d (u_i, \hat{u}_i)^2 
 	\end{matrix}
 \end{equation*}
-where $u_i$ is measured point in image and $\hat{u}_i$ is H \textbf{$X_i$} which is the exact projrction of \textbf{$X_i$} on to the image under H. If the measurement errors are Gaussian then the solution to 
+where $u_i$ is measured point in image and $\hat{u}_i$ is H \textbf{$X_i$} which is the exact projection of \textbf{$X_i$} on to the image under H. If the measurement errors are Gaussian then the solution to 
 \begin{equation}
 	\begin{matrix}
 		\displaystyle \min_{P} \sum_{i=1}^{n} d (u_i, H\textbf{$X_i$})^2 
 	\end{matrix}
-	\label{eq:min_geometric}
+	\label{eq:min_2D_geometric}
 \end{equation}
-is the maximum likelihood of H. Minimizing geometric error requires non-linear iterative methods such as Levenberg-Marquardt (LM) algorithms. Local minima can be found via LM, in order to find the global minima, initial starting point can be linear solution obtained from \ref{eq:min_algebraic}.\\
+is the maximum likelihood of H. Minimizing geometric error requires non-linear iterative methods such as Levenberg-Marquardt (LM) algorithms. Local minima can be found via LM, in order to find the global minima, initial starting point can be linear solution obtained from \ref{eq:min_2D_algebraic}.\\
 
 The disadvantage of 2D/2D homography is that with a single homography, not all the parameters of a projection matrix can be determined as Z coordinate of the world point is eliminated.  
 \begin{equation*}
@@ -421,7 +421,7 @@ defining $\textbf{$\omega$}$ = $K^{-T} K^{-1}$ as a symmetric matrix, above equa
 	\label{eq:intrinsic}
 \end{equation}
 
-$\textbf{p}_1$ and $\textbf{p}_2$ are known from homography matrix and $\vect{\omega}$ has to be calculated. $\vect{\omega}$  can be estimated with techniques that we employed earlier with DLT and SVD by defining $ \textbf{b} = (\omega_{11}\ \omega_{12}\ \omega_{13}\  \omega_{22}\ \omega_{23}\ \omega_{33})^T $ and solving $ \textbf{A} \textbf{b} = 0.$ Each homography provides 2 independent rows therfore 3 such homographies are required to estimate $\vect{\omega}$ . Once the $\vect{\omega}$  is computed it can be decomposed in to $K^{-T} K^{-1}$ using Cholesky decomposition.\\
+$\textbf{p}_1$ and $\textbf{p}_2$ are known from homography matrix and $\vect{\omega}$ has to be calculated. $\vect{\omega}$  can be estimated with techniques that we employed earlier with DLT and SVD by defining $ \textbf{b} = (\omega_{11}\ \omega_{12}\ \omega_{13}\  \omega_{22}\ \omega_{23}\ \omega_{33})^T $ and solving $ \textbf{A} \textbf{b} = 0.$ Each homography provides 2 independent rows therefore 3 such homographies are required to estimate $\vect{\omega}$ . Once the $\vect{\omega}$  is computed it can be decomposed in to $K^{-T} K^{-1}$ using Cholesky decomposition.\\
 
 \textbf{Extrinsics.} Computing extrinsics post intrinsics is very straight forward as given by \cite{Zhang} we will first calculate rotation matrix followed by translation vector. $H = K\ [\textbf{r}_1\  \textbf{r}_2\  \textbf{t}] $ having known K we can rearrange as $\inv{K}\ H = H^{'} =  [\textbf{h}_1^{'}\  \textbf{h}_2^{'}\  \textbf{h}_3^{'}] $ which is theoretically equal to $[\textbf{r}_1\  \textbf{r}_2\  \textbf{t}] $. Since the rotational matrix is a orthogonal matrix, third column is orthogonal to first 2 and therefore can be calculated by vector cross product $ [\textbf{h}_1^{'} \times \textbf{h}_2^{'} ] $ hence, the complete rotational matrix is  $ Q = [\textbf{h}_1^{'}\ \textbf{h}_2^{'}\ \textbf{h}_1^{'} \times\ \textbf{h}_2^{'} ] $ again which is theoretically equal to $ R = [\textbf{r}_1\ \textbf{r}_2\ \textbf{r}_1\ \times\ \textbf{r}_2\ ] $ which may not be true due to the noisy data. Therefore,  it necessary to find a best 3x3 rotation matrix  R from a given 3x3 matrix Q, here "best" in the sense of smallest Frobenius norm of the difference $[R-Q]$ (see appendix). If the SVD of given matrix is $ Q = UDV^T $, then the best rotation matrix is given by $UV^T$. The translation vector can be calculated as  $ \textbf{t} = \textbf{h}_3^{'}$ but the vector $\textbf{t} $ has to be normalized therefore $\textbf{t} = \textbf{h}_3^{'} / \|\textbf{h}_1^{'}\|$.
 
@@ -463,7 +463,7 @@ Camera calibration is the process of determining, intrinsic, extrinsic parameter
 
 
 \section{Pixel to 3D points} 
-Having obtained RGB and corresponding depth images of the scene (assuming depth to RGB calibrated), any specific pixel coordinates can be out-projected to obtain 3D locations expressed in the camera coordinates. Recall \cref{eq:mat_image_t_camera}
+Having obtained RGB and corresponding depth images of the scene (assuming depth to RGB calibrated), any specific pixel coordinates can be out-projected to obtain 3D locations expressed in the camera coordinates. Recall \cref{eq:mat_pixel_t_camera}
 a 3D world point \((X_c, Y_c, Z_C)^T\) is mapped to the pixel coordinates and can be expressed as a matrix multiplication. $\lambda$ is the scaling factor.
 
 \begin{equation*}
@@ -483,10 +483,10 @@ a 3D world point \((X_c, Y_c, Z_C)^T\) is mapped to the pixel coordinates and ca
 \left[ 
 \begin{array}{c} X_c\\ Y_c\\ Z_c\\ 1 \end{array} 
 \right]
-\label{eq:mat_pixel_t_camera}
+\label{eq:mat_pixel_t_camera_p}
 \end{equation*}
 
-By rearanging the above equation \((X_c, Y_c, Z_C)^T\) can be expressed as below.
+By rearranging the above equation \((X_c, Y_c, Z_C)^T\) can be expressed as below.
 
 \begin{equation}
 \begin{split}
@@ -507,20 +507,20 @@ Having finished camera calibration, the calibrated cameras can be used for hand-
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[scale=0.5]{handeye_calibration.png}
-	\caption{Generic hand-eye calibration setup} 
+	\caption{Generic hand-eye calibration setup \cite{Handeyec96:online} (Modified)} 
 	\label{fig:handeye_calibration_setup}
 \end{figure}
 
-Figure \cref{fig:handeye_calibration_setup} depicts the robot and camera set up required for hand-eye calibration. There are four transformations, namely end-effector  to base  $\tfMat{Base}{T}{EE}$, chessboard to end-effector  $\tfMat{EE}{T}{CB}$, chessboard to camera  $\tfMat{Cam}{T}{CB}$ and camera to base  $\tfMat{Base}{T}{Cam}$. Defining new variables  $\tfMat{Base}{T}{EE}$ as M,  $\tfMat{EE}{T}{CB}$ as X,  $\tfMat{Base}{T}{Cam}$ as Y and  $\tfMat{Cam}{T}{CB}$ as N we can write the transformation equation as 
+The \cref{fig:handeye_calibration_setup} depicts the robot and camera set up required for hand-eye calibration. There are four transformations, namely end-effector  to base  $\tfMat{Base}{T}{EE}$, chessboard to end-effector  $\tfMat{EE}{T}{CB}$, chessboard to camera  $\tfMat{Cam}{T}{CB}$ and camera to base  $\tfMat{Base}{T}{Cam}$. Defining new variables  $\tfMat{Base}{T}{EE}$ as M,  $\tfMat{EE}{T}{CB}$ as X,  $\tfMat{Base}{T}{Cam}$ as Y and  $\tfMat{Cam}{T}{CB}$ as N we can write the transformation equation as \noindent per \cite{ernst}.
 
 \begin{equation}
 	\matr{M}_i\matr{X} - \matr{Y}\matr{N}_i = 0 
 	\label{eq:hand-eye}
 \end{equation}
 
-\noindent per \cite{ernst} where $\matr{M}$ is obtained through forward kinematics, $\matr{N}$ is obtained by calculating the pose of the calibration pattern from the camera image. Hand-eye calibration aims to solve the two unknowns in \cref{eq:hand-eye} i.e the chessboard position with respect to the robot's end-effector $\matr{X}$ and the camera position with respect to the robot's base $\matr{Y}$.
+where $\matr{M}$ is obtained through forward kinematics, $\matr{N}$ is obtained by calculating the pose of the calibration pattern from the camera image. Hand-eye calibration aims to solve the two unknowns in \cref{eq:hand-eye} i.e the chessboard position with respect to the robot's end-effector $\matr{X}$ and the camera position with respect to the robot base $\matr{Y}$.
 
-The equation \ref{eq:hand-eye} is transformed to A system of linear equations as  
+The equation \ref{eq:hand-eye} is transformed to a system of linear equations as  
 
 \begin{equation}
 	\centering
@@ -573,16 +573,16 @@ where, $\vect{w} = [x_{11}, x_{21},.....,x_{34},y_{11},y_{21},..........,y_{34}]
 
 \noindent Here, $ \mathtt{R}[\matr{M}]_i \in \mathbb{R}^{3\times3} $ is rotational part of $ \matr{M}_i $ and $ \mathtt{T}[\matr{M}_i] \in \mathbb{R}^{3} $ is translational part of $ \matr{M}_i $. $ \matr{Z}_{m \times n} $ is a m $\times$ n zero matrix and $\matr{E}_{k} $ is a k $ \times $ k identity matrix.
 \\
-\noindent \textbf{Over-determined solution} The system of equation \ref{eq:hand-eye} is a form of least square of type I (see appendix) and can be solved using QR factorisation \cite{QRdecomposition} by minimizing quadratic error.
+\noindent \textbf{Over-determined solution} The system of equation \ref{eq:hand-eye} is a form of least square of type I (see appendix) and can be solved using QR factorization \cite{QRdecomposition} by minimizing quadratic error.
 
 \begin{equation*}
 	\sum_{i=1}^n \|\matr{M}_i\matr{X} - \matr{Y}\matr{N}_i\|_{F}\
 \end{equation*}
 
-\noindent Where, $\|.\|_{f}$ is frobenoius norm. The above algorithm is called QR-24 according to \cite{ernst}.\\
+\noindent Where, $\|.\|_{f}$ is Frobenoius norm. The above algorithm is called QR-24 according to \cite{ernst}.\\
 
 
-\noindent \textbf{Orthonormalization} Note that matrices computed not necessarily orthogonal therefore we need to orthonormalise using singular value decomposition (SVD)\\
+\noindent \textbf{Orthonormalization} Note that matrices computed not necessarily orthogonal therefore we need to orthonormalize using singular value decomposition (SVD)\\
 
 
 \noindent \textbf{Calibration error} Having finished the hand-eye calibration, It is necessary to investigate the accuracy of the obtained results. Accuracy can be obtained by rearranging the equation \ref{eq:hand-eye} as,
@@ -608,7 +608,7 @@ The above equation will not hold in reality due to noisy data, camera calibratio
 	\vect{e}_{trans}[\matr{A}] = \sqrt{\matr{A}_{4\times1}^{2} + \matr{A}_{4\times2}^{2} + \matr{A}_{4\times3}^{2}}
 \end{equation*} 
 
-\noindent let (k,$\theta$) be axis angle represention \cite{axis-angle} of $\mathtt{R}[\matr{A}]$ then the rotarional error metric is,
+\noindent let (k,$\theta$) be axis angle representation \cite{axis-angle} of $\mathtt{R}[\matr{A}]$ then the rotational error metric is,
 
 \begin{equation*}
 	\vect{e}_{rot}[\matr{A}] = |\theta|
@@ -617,7 +617,7 @@ The above equation will not hold in reality due to noisy data, camera calibratio
 \noindent in the rotation metric the axis of rotation is neglected.
 
 \section{Point cloud registration}
-The objective of any point cloud registration algorithm is to find the best transformation that aligns 2 point clouds (source and target). The main point cloud registration technique is iterative closest point (ICP) algorithm introduced in \cite{besl1992method}. A brief introduction to ICP is provided in this section. 
+The objective of any point cloud registration algorithm is to find the best transformation that aligns 2 point clouds (source and target). The main point cloud registration technique used is iterative closest point (ICP) algorithm introduced in \cite{besl1992method}. A brief introduction to ICP is provided in this section. 
 
 Let \( \displaystyle P = \{p_1, p_2,...,p_m\} \) be the source point cloud set that needs to be aligned with the target point cloud set  \( \displaystyle Q = \{q_1, q_2,...,q_n\} \)  with correspondences  \( \displaystyle C = \{ (i,j) \} \).
 
@@ -692,7 +692,6 @@ In conclusion, a point cloud matching algorithm estimates the 3X3 rotation matri
 \begin{split}
 (T[R|t], MSE) = PointCloudRegistration(P,Q) \\
 \end{split}
-\label{eq:solution_orthogonal_procrustes_problem}
 \end{equation*}
 where, T[R|t] is the 4X4 homogeneous transformation between source and target point cloud and MSE is the mean square error of matching as in \cref{eq:mean_square_objective_function}.\\
 
@@ -726,13 +725,13 @@ C = ComputeClosestPoint(P,Q)
 \label{eq:compute_closest_point}
 \end{equation}
 
-where \( \displaystyle C = \{ (i,j) \} \) is the computed correspondence set for each point in the source point cloud. Having computed the corresponce set, one can proceed with point cloud registration. Each point the source point cloud is updated via $ P_{k+1} = T[R|t] P_k $ 
+where \( \displaystyle C = \{ (i,j) \} \) is the computed correspondence set for each point in the source point cloud. Having computed the correspondence set, one can proceed with point cloud registration. Each point the source point cloud is updated via $ P_{k+1} = T[R|t] P_k $ 
 
 \begin{equation}
 \begin{split}
 P_{k+1} = ApplyRegistration(T[R|t],P_k)
 \end{split}
-\label{eq:compute_closest_point}
+\label{eq:apply_registration}
 \end{equation}
 
 where, $P_{k+1}$ are the points after applying the registration (homogeneous represetation is used here to enable matrix multiplication).
@@ -789,7 +788,7 @@ Simultaneous localization and mapping (SLAM) is a special case where the camera 
 	\label{eq:online_slam}
 \end{equation*} 
 
-where $x_t$ is the camera pose at current time t, m is map, $z_{1:t}$ and $u_{1:t}$ are measurement and control inputs untill the current time t respectively. Online-SLAM is essentially a online state estimation problem where state is the current camera pose and the map. The pose and the map is estimated and refined as and when the new measurements are available. Online-SLAM problem is is modelled and solved using filtering techniques such as Kalman and information filters \cite{smith1990estimating} \cite{castellanos1999spmap} and particle filters \cite{montemerlo2002fastslam}.
+where $x_t$ is the camera pose at current time t, m is map, $z_{1:t}$ and $u_{1:t}$ are measurement and control inputs until the current time t respectively. Online-SLAM is essentially a online state estimation problem where state is the current camera pose and the map. The pose and the map is estimated and refined as and when the new measurements are available. Online-SLAM problem is is modelled and solved using filtering techniques such as Kalman and information filters \cite{smith1990estimating} \cite{castellanos1999spmap} and particle filters \cite{montemerlo2002fastslam}.
 \\
 
 \textbf{Full-SLAM.} Estimating the entire camera trajectory and the map instead of just momentary pose.
@@ -804,7 +803,7 @@ where $x_t$ is the camera pose at current time t, m is map, $z_{1:t}$ and $u_{1:
 Full-SLAM estimates $x_{1:t}$ the entire trajectory of the camera and simultaneously mapping the electrodes by incorporating full set of measurements and control inputs $z_{1:t}$ and $u_{1:t}$. Smoothing techniques like \cite{lu1997globally} \cite{dellaert2006square} are employed to solve the full-SLAM problems. The modern and intuitive approach for solving full-SLAM problem is to use graph-based formulation. Due to the improvements in the areas of computational power and efficient linear algebra solvers, graph-based formulations have gained popularity over the years \cite{lu1997globally}.  
 
 \section{Graph-Based SLAM (Pose-Graph SLAM)}
-Graph-based approach uses an intuitive graph which consists of nodes and edges to represent the full-SLAM problem. Each node corresponds to the camera pose along the trajectory and an edge between two nodes corresponds to the spatial constraints (odometry/loop closure constraints) between them. These constraints are inherently uncertain in nature. The idea of graph-based approach is to first construct the pose-graph and determine an optimised node configuration (camera poses) that minimizes the error introduced by spatial constraints. Finally, render a map based on these optimized poses as shown in \cref{fig:graph_based_slam}.
+Graph-based approach uses an intuitive graph which consists of nodes and edges to represent the full-SLAM problem. Each node corresponds to the camera pose along the trajectory and an edge between two nodes corresponds to the spatial constraints (odometry/loop closure constraints) between them. These constraints are inherently uncertain in nature. The idea of graph-based approach is to first construct the pose-graph and determine an optimized node configuration (camera poses) that minimizes the error introduced by spatial constraints. Finally, render a map based on these optimized poses as shown in \cref{fig:graph_based_slam}.
 
 \begin{figure}[hbt!]
 	\centering
@@ -820,7 +819,7 @@ Graph consists of n nodes $x_{1:t}$ which corresponds to the camera pose at time
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[scale=0.45]{graph_construction.png}
-	\caption{Pose-Graph consits of nodes and edges.}
+	\caption{Pose-Graph consists of nodes and edges.}
 	\label{fig:graph_construction}
 \end{figure}
 
@@ -852,7 +851,7 @@ Let $e_{ij}(x_i, x_j)$ be the function that computes difference between real and
 	\label{eq:error_function}
 \end{equation}
 
-Let $\mathcal{C}$ be the set with many nodes for which observation $Z_{ij}$ exists then, the objective of maximum likelihood approach is to find the configuation $X^*$ that minimizes the negative log likelihood of the function $F(x)$ of all observations.
+Let $\mathcal{C}$ be the set with many nodes for which observation $Z_{ij}$ exists then, the objective of maximum likelihood approach is to find the configuration $X^*$ that minimizes the negative log likelihood of the function $F(x)$ of all observations.
   
 \begin{equation*}
 	\begin{split}
@@ -871,7 +870,7 @@ which can be rewritten as,
 
 \subsection{Pose-Graph optimization}
 
-The \cref{eq:non_linear_least_square_problem} is non-linear least square problem and solution can be obtained using Gauss-Newton or Lavenberg-Marquardt algorithms \cite{grisetti2010tutorial}. Dellaert and Kaess \cite{dellaert2006square} have shown connection between factor graphs and non-linear least square problems. A Factor graphs easily encodes probabilistic nature of SLAM and the sparsity of a SLAM problem can be easily visualised. A factor graph represents joint probabilities of all the factors with factor nodes $f_i \in \mathcal{F}$ variable nodes $x_i \in \mathcal{X}$.  
+The \cref{eq:non_linear_least_square_problem} is non-linear least square problem and solution can be obtained using Gauss-Newton or Lavenberg-Marquardt algorithms \cite{grisetti2010tutorial}. Dellaert and Kaess \cite{dellaert2006square} have shown connection between factor graphs and non-linear least square problems. A Factor graphs easily encodes probabilistic nature of SLAM and the sparsity of a SLAM problem can be easily visualized. A factor graph represents joint probabilities of all the factors with factor nodes $f_i \in \mathcal{F}$ variable nodes $x_i \in \mathcal{X}$.  
 
 \begin{equation}
 	\begin{split}
@@ -880,7 +879,7 @@ The \cref{eq:non_linear_least_square_problem} is non-linear least square problem
 \label{eq:factor_graph}
 \end{equation}
 
-each factor $f_i$ consists of measurement fuction $h_i(\mathcal{X}_i$ and a measurement $z_i$. Assuming Gaussian measurement models $f_i$ can be given as 
+each factor $f_i$ consists of measurement function $h_i(\mathcal{X}_i$ and a measurement $z_i$. Assuming Gaussian measurement models $f_i$ can be given as 
 
 \begin{equation*}
 	\begin{split}
@@ -900,7 +899,7 @@ with $\| e \|_\Sigma^2 = e^T\invMat{\Sigma}e$ being the Mahalanobis distance wit
 
 
 \section{Electrode detection and localization}
-Electrodes captured in sequence of RGB images needs to be detected and simultaneously localized as shown in \cref{fig:yolo_detection} in order to create 3D point clouds for sequential ICP registration and SLAM. YOLO(You Only Look Once) being one of most popular convolutional neural network based object detection and localization algorithm has been employed for this very purpose. YOLO has been trained on a large dataset of EEG cap and trained weights are available as a part of the pipeline.
+Electrodes captured in sequence of RGB images needs to be detected and simultaneously localized as shown in \cref{fig:yolo_detection} in order to create 3D point clouds for sequential ICP registration and SLAM. YOLO(You Only Look Once) being one of most popular convolutional neural network based object detection and localization algorithm has been employed for this very purpose. YOLO has been trained on a large data-set of EEG cap and trained weights are available as a part of the pipeline.
 
 \begin{figure}[hbt!]
 	\centering
@@ -918,9 +917,13 @@ Electrodes captured in sequence of RGB images needs to be detected and simultane
 
   
 
-\section{Cluster processing} Two mainly used cluster processing algorithms in thesis are DBSCAN and K-Means provided by scikit-learn. DBSCAN is a density based clustering algorithm, it differentiates the clusters based on high and low density of points. It labels samples(points) which are in the high density as core samples, A cluster therefore a collection of many core samples. In this thesis, BDSCAN is used to estimate number of clusters in the electrode map. K-Means on the other hand tries to group the samples of equal variance together by minimizing the inertia or within-cluster sum-of-squares. However, K-Means requires number of clusters to be specified before hand. K-Means divides $\mathcal{N}$ samples in to $\mathcal{K}$ disjoint clusters $\mathcal{C}$ where each cluster contains $\mathcal{X}$ samples and described by centroid of the cluster $\mu_j$. K-Means aims to determine the $\mu_j$ that minimizes the inertia defined by  \cref{eq:cluster_center_inertia}. 
+\section{Cluster processing} Two mainly used cluster processing algorithms in thesis are DBSCAN and K-Means provided by scikit-learn. DBSCAN is a density based clustering algorithm, it differentiates the clusters based on high and low density of points. It labels samples(points) which are in the high density as core samples, A cluster therefore a collection of many core samples. In this thesis, DBSCAN is used to estimate number of clusters in the electrode map. K-Means on the other hand tries to group the samples of equal variance together by minimizing the inertia or within-cluster sum-of-squares. However, K-Means requires number of clusters to be specified before hand. K-Means divides $\mathcal{N}$ samples in to $\mathcal{K}$ disjoint clusters $\mathcal{C}$ where each cluster contains $\mathcal{X}$ samples and described by centroids of the cluster $\mu_j$. K-Means aims to determine the $\mu_j$ that minimizes the inertia defined by  \cref{eq:cluster_center_inertia}. 
 
 \begin{equation}
 	\sum_{i=0}^n \min_{\mu_j \in C}  \|  x_i  -  \mu_j \| ^2
 	\label{eq:cluster_center_inertia}
 \end{equation}
+
+
+TODO: add more details about the algorithms. especially the parameters of DBSCAN.
+
