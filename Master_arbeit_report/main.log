@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  18 APR 2021 15:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  26 APR 2021 07:18
 entering extended mode
 **./main.tex
 (main.tex
@@ -1789,40 +1789,43 @@ File: ./figures/cluster_and_its_centers.png Graphic file (type png)
 Package pdftex.def Info: ./figures/cluster_and_its_centers.png  used on input l
 ine 56.
 (pdftex.def)             Requested size: 415.84805pt x 238.79498pt.
-) (chapters/metrics.tex [40 <./figures/one_to_one_correspondence.png>]
-<./figures/metric_absolute_pose.png, id=583, 424.9476pt x 267.399pt>
+) (chapters/metrics.tex
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40 <./figures/one_to_one_correspondence.png>]
+<./figures/metric_absolute_pose.png, id=582, 424.9476pt x 267.399pt>
 File: ./figures/metric_absolute_pose.png Graphic file (type png)
 <use ./figures/metric_absolute_pose.png>
 Package pdftex.def Info: ./figures/metric_absolute_pose.png  used on input line
  5.
 (pdftex.def)             Requested size: 415.84805pt x 261.67793pt.
-<./figures/metric_icp_pose.png, id=584, 481.8pt x 312.2064pt>
+<./figures/metric_icp_pose.png, id=583, 481.8pt x 312.2064pt>
 File: ./figures/metric_icp_pose.png Graphic file (type png)
 <use ./figures/metric_icp_pose.png>
 Package pdftex.def Info: ./figures/metric_icp_pose.png  used on input line 12.
 (pdftex.def)             Requested size: 415.84805pt x 269.4784pt.
- [41 <./figures/cluster_and_its_centers.png> <./figures/metric_absolute_pose.pn
-g>]
-<./figures/absolute_3d_poition_error.png, id=596, 1104.2856pt x 600.5637pt>
+ [41 <./figures/cluster_and_its_centers.png>] [42 <./figures/metric_absolute_po
+se.png> <./figures/metric_icp_pose.png>]
+<./figures/absolute_3d_poition_error.png, id=610, 1104.2856pt x 600.5637pt>
 File: ./figures/absolute_3d_poition_error.png Graphic file (type png)
 <use ./figures/absolute_3d_poition_error.png>
 Package pdftex.def Info: ./figures/absolute_3d_poition_error.png  used on input
  line 47.
 (pdftex.def)             Requested size: 415.84805pt x 226.15471pt.
-<./figures/trajectory_comparison.png, id=597, 1097.7813pt x 591.1686pt>
+<./figures/trajectory_comparison.png, id=611, 1097.7813pt x 591.1686pt>
 File: ./figures/trajectory_comparison.png Graphic file (type png)
 <use ./figures/trajectory_comparison.png>
 Package pdftex.def Info: ./figures/trajectory_comparison.png  used on input lin
 e 54.
 (pdftex.def)             Requested size: 415.84805pt x 223.9428pt.
-<./figures/icp_gt.png, id=598, 1136.0844pt x 582.4962pt>
+<./figures/icp_gt.png, id=612, 1136.0844pt x 582.4962pt>
 File: ./figures/icp_gt.png Graphic file (type png)
 <use ./figures/icp_gt.png>
 Package pdftex.def Info: ./figures/icp_gt.png  used on input line 61.
 (pdftex.def)             Requested size: 415.84805pt x 213.21819pt.
-) [42 <./figures/metric_icp_pose.png>]
-[43 <./figures/absolute_3d_poition_error.png> <./figures/trajectory_comparison.
-png>] [44 <./figures/icp_gt.png>]
+)
+[43 <./figures/absolute_3d_poition_error.png>] [44 <./figures/trajectory_compar
+ison.png> <./figures/icp_gt.png>]
 chapter 4.
 (chapters/results.tex
 <./figures/pixel_value_out_projection.png, id=634, 435.5472pt x 237.5274pt>
@@ -1944,11 +1947,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
  ) 
 Here is how much of TeX's memory you used:
- 30271 strings out of 480930
- 618456 string characters out of 2899761
+ 30275 strings out of 480930
+ 618502 string characters out of 2899761
  1390004 words of memory out of 3000000
  45100 multiletter control sequences out of 15000+200000
- 687161 words of font info for 221 fonts, out of 3000000 for 9000
+ 687421 words of font info for 223 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  64i,20n,106p,10123b,3079s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
@@ -1982,7 +1985,7 @@ sers/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C
 tt8.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
 sfonts/symbols/msam10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fon
 ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (63 pages, 13551179 bytes).
+Output written on main.pdf (63 pages, 13552203 bytes).
 PDF statistics:
  1145 PDF objects out of 1200 (max. 8388607)
  296 named destinations out of 1000 (max. 500000)
