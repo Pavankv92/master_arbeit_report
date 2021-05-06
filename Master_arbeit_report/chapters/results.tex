@@ -1,46 +1,52 @@
 In this section, we provide detailed results on various aspects of the thesis.
 
 \section{Camera calibration} 
-Several images at different depth in steps on 200mm starting 400mm from the camera were used for calibration. The calibration results along with values in the robot-guided data set has been provided in \cref{tab:kinect_camera_calibration_result}. Image size 1280$\times$720. 
+The calibration results along with values in the robot-guided data set has been provided in \cref{tab:kinect_camera_calibration_result}. Image size 1280$\times$720. 
 
-\begin{table}[hbt]
+\begin{table}[hbt!]
 	\centering
-	\begin{tabular}{|c|c|c|}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		Parameters & calibrated values & value in robot-guided data set\\ 
+		Parameters & Calibrated values (OpenCV) & Calibrated values (Matlab) & Value in robot-guided data set\\ 
 		\hline
-		$\alpha_x$  & \num{604.58}  & \num{607.49}\\
-		$\alpha_y$ & \num{604.48} & \num{607.44}\\
-		S & 0.0 & 0.0\\
-		$C_x$  & \num{639.25}  & \num{638.92}\\
-		$C_y$  & \num{358.54}  & \num{364.35}\\
+		$\alpha_x$  & \num{601.06} & \num{604.58}  & \num{607.49}\\
+		$\alpha_y$ & \num{601.33} & \num{604.48} & \num{607.44}\\
+		S & 0.0 & 0.0 & 0.0\\
+		$C_x$  & \num{636.54} & \num{639.25}  & \num{638.92}\\
+		$C_y$  & \num{360.29} & \num{358.54}  & \num{364.35}\\
 		\hline
-	\end{tabular}
+	\end{tabular}}
 	\caption{Microsoft azure kinect calibration result}
 	\label{tab:kinect_camera_calibration_result}
 \end{table}
 
-\section{Hand-eye calibration : Hand-guided scenario}
-For hand-eye calibration the kinect along with firmly attached marker were moved to $>$60 different position making sure that tracking camera can detect the marker and estimate the pose correctly. The collected data set is divided as training and validation set. Hand-eye calibration resulted in positional error < 6 millimeters and rotational error < 0.6 degrees on a hold-out validation set as shown in the \cref{tab:handeye_result}.
+\section{Hand-eye calibration}
+For hand-eye calibration the kinect along with firmly attached marker were moved to $>$60 different position making sure that tracking camera can detect the marker and estimate the pose correctly. The collected data set is divided as training and validation set. The estimated parameters are evaluated on hold-out validation set as shown in the \cref{tab:handeye_result}.
 
-\begin{table}[hbt!]
+\begin{table}[hbt]
 	\centering
-	\begin{tabular}{|c|c|c|}
+	\resizebox{\textwidth}{!}{
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		Camera & Translation error (m) & Rotational error ($\deg$)\\ 
+		Camera & Translation error (mm) & Rotational error ($\deg$) & Between\\ 
 		\hline
-		Kinect & 0.0088$\pm$ 0.0002  & 0.7682 $\pm$ 0.0204\\
+		Kinect & 8.8$\pm$ 0.2  & 0.7682 $\pm$ 0.0204 & Marker-Kinect\\
+		
+		Tracking camera & 0.18$\pm$ \num{4.5e-06 } & 0.093 $\pm$ \num{5.4e-05 } & Robot-Tracking Camera\\
+		
+		Kinect & 1.28$\pm$ \num{2.1e-04 }  & 0.211 $\pm$ \num{2.1e-04} & Robot-Kinect\\
 		\hline
-	\end{tabular}
+	\end{tabular}}
 	\caption{Hand-eye calibration results}
 	\label{tab:handeye_result}
 \end{table}
 
 \section{Pixel points out-projection}
 
-For pixel points out-projection experiment, several images of the chessboard at different depths in steps of 200mm starting  400mm from the camera and at each depth, different orientation were captured. Firstly, ground truth object points are calculated in camera coordinates and corresponding image points are out-projected using raw depth provided by kinect. For each image, out-projected values are then compared to the ground truth values with L2 norm as the metric. Since there are many images at a particular depth distance, L2 norm will be averaged over all the images. The \cref{fig:pixel_value_out_projection} shows the results.
+For pixel points out-projection experiment, several images of the chessboard at different depths in steps of $\approx$ 200mm starting $\approx$ 400mm from the camera and at each depth, different orientation were captured. Note that person holding the chessboard will be standing at marked distances and there will be an offset of $\approx$ 60-80 mm from the body to chess board. Firstly, ground truth object points are calculated in camera coordinates and corresponding image points are out-projected using raw depth provided by kinect. For each image, out-projected values are then compared to the ground truth values with L2 norm as the metric. Since there are many images at a particular depth distance, L2 norm will be averaged over all the images. The \cref{fig:pixel_value_out_projection} shows the results.
 
-\begin{figure}[hbt!]
+\begin{figure}[hbt]
 	\centering
 	\includegraphics[scale=0.8]{pixel_value_out_projection.png}
 	\caption{Overview of mean L2 norm with different distance from the camera.}
@@ -52,169 +58,37 @@ For pixel points out-projection experiment, several images of the chessboard at 
 
 For the inertia calculation, clusters are well separated at $\beta > 20$ especially for the cap with 63 electrodes. The \cref{fig:cluster_inertia_vs_beta} shows inertia at different $\beta > 20$ values. Effect of $\beta$ on the point cloud can be visualized in \cref{fig:depth_offset_beta_variations}. At $\beta = 10$ clusters are overlapped with each other, at $\beta = 24$ clusters are well separated and tightly bound, where at $\beta > 24$ starts to spread again.  
 
-\begin{figure}[hbt!]
+\begin{figure}[hbt]
 	\centering
 	\includegraphics[width=\linewidth]{cluster_inertia_vs_beta.png}
-	\caption{Average cluster Inertia for each trajectory is calculated, note that, inertia is not a normalized metric. Lower the better and zero is optimum }
+	\caption{Average cluster Inertia for each trajectory is calculated, note that, inertia is not a normalized metric. Lower the better and zero is optimum}
 	\label{fig:cluster_inertia_vs_beta}
 \end{figure}
 
-\begin{figure}[hbt!]
+\begin{figure}[hbt]
 	\centering
 	\includegraphics[width=\linewidth]{depth_offset_beta_variations.png}
 	\caption{Effect of change in $\beta$ on point cloud.}
 	\label{fig:depth_offset_beta_variations}
 \end{figure}
 
-For the ICP scan registration, $\beta$ is varied from 10 to 29 mm (i.e. out-projected points will be raw kinect depth -  $\beta$) brute forcing with the step of 1 mm. The \cref{fig:depth_offset_robot_no_yolo} shows result for 6 robot guided trajectories (2/cap, for 3 caps) which YOLO has never seen and \cref{fig:depth_offset_robot_yolo} shows for the trajectories on which YOLO has been trained. It is evident that mean RMSE is lower at depth offset $\beta$ between 24-26 mm.
+For the ICP scan registration, $\beta$ is varied from 10 to 29 mm (i.e. out-projected points will be raw kinect depth -  $\beta$) brute forcing with the step of 1 mm. The \cref{fig:icp_depth_offset} shows result for 6 robot guided trajectories (2/cap, for 3 caps). It is evident that mean RMSE is lower at depth offset $\beta$ between 24-26 mm.
 
-\begin{figure}[hbt!]
+\begin{figure}[hbt]
 	\centering
-	\begin{subfigure}{0.80\textwidth}
 		\includegraphics[width=\linewidth]{depth_offset_robot_no_yolo.png}	
-		\caption{mean RMSE vs depth offset $\beta$ for trajectory YOLO has not seen.}
-		\label{fig:depth_offset_robot_no_yolo} 
-	\end{subfigure}
-	\\
-	\begin{subfigure}{0.80\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{depth_offset_robot_yolo.png}	
-		\caption{mean RMSE vs depth offset $\beta$ for trajectory YOLO has seen.}
-		\label{fig:depth_offset_robot_yolo} 
-	\end{subfigure}
+		\caption{mean RMSE vs depth offset $\beta$.}
 	\label{fig:icp_depth_offset} 
 \end{figure} 
 
 Similarly, with same $\beta$ variation for cluster center comparison, \cref{fig:cluster_depth_offset} shows the results. Mean L2 norm is lower at depth offset $\beta$ between 24-26 mm. 
 
-\begin{figure}[hbt!]
+\begin{figure}[hbt]
 	\centering
-	\begin{subfigure}{\textwidth}
 		\includegraphics[width=\linewidth]{depth_offset_robot_cluster_no_yolo.png}	
-		\caption{mean L2 norm vs depth offset $\beta$ for trajectory YOLO has not seen.}
-		\label{fig:depth_offset_robot_cluster_no_yolo} 
-	\end{subfigure}
-	\\
-	\begin{subfigure}{\textwidth}
-		\centering
-		\includegraphics[width=\linewidth]{depth_offset_robot_cluster_yolo.png}	
-		\caption{mean L2 norm vs depth offset $\beta$ for trajectory YOLO has seen.}
-		\label{fig:depth_offset_robot_cluster_yolo} 
-	\end{subfigure}
+		\caption{mean L2 norm vs depth offset $\beta$.}
 	\label{fig:cluster_depth_offset} 
 \end{figure} 
-
-
-\section{Robot-guided trajectory}
-
-TODO : add beta details, number of trajectory included
-
-\begin{table}[hbt!]
-	\begin{adjustbox}{width=\columnwidth,center}
-		\centering
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
-			\hline
-			Absolute L2 norm   & 11.5 mm $\pm$ 5 mm  & 11.7 mm $\pm$ 4.0 mm & 12.6 mm $\pm$ 5.5 mm \\
-			\hline
-			Post registration RMSE & 3.7 mm $\pm$ 0.3  & 6.8 mm$\pm$ 2.0 mm  & 5.6 mm $\pm$ 1.2 mm \\
-			\hline
-		\end{tabular}
-	\end{adjustbox}
-	\caption{3D position error}
-	\label{tab:3d_position_error_robot}
-\end{table}
-
-\begin{table}[hbt!]
-	\begin{adjustbox}{width=\columnwidth,center}
-		\centering
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
-			\hline
-			Translation error   & -1.4 mm $\pm$ 9.3 mm  & 16.3 mm $\pm$ 10.1 mm & 12.1 mm $\pm$ 14.5 mm \\
-			\hline
- 			Rotational error & 4.1\textdegree $\pm$ 1.7\textdegree  & 4.6\textdegree $\pm$ 1.7\textdegree  & 6.7\textdegree $\pm$ 3.4\textdegree \\
- 			\hline
-		\end{tabular}
-	\end{adjustbox}
-	\caption{Trajectory Comparison}
-	\label{tab:trajectory_caomparison_robot}
-\end{table}
-
-\begin{table}[hbt!]
-	\begin{adjustbox}{width=\columnwidth,center}
-		\centering
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
-			\hline
-			Translation error   & 0.5 mm $\pm$ 2.1 mm  & 0.8 mm $\pm$ 2.9 mm & 0.9 mm $\pm$ 3.3 mm \\
-			\hline
-			Rotational error & 0.5\textdegree $\pm$ 0.3\textdegree  & 0.7\textdegree $\pm$ 0.4\textdegree  & 0.9\textdegree $\pm$ 0.6\textdegree \\
-			\hline
-		\end{tabular}
-	\end{adjustbox}
-	\caption{ICP vs ground truth comparison}
-	\label{tab:icp_gt_robot}
-\end{table}
-
-
-\section{Hand-guided trajectory}
-
-TODO : add beta details, number of trajectory included, Add loops could not be closed in this case.
-
-\begin{table}[hbt!]
-	\begin{adjustbox}{width=\columnwidth,center}
-		\centering
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
-			\hline
-			Absloute L2 norm   & 16.8 mm $\pm$ 7 mm  & 17.8 mm $\pm$ 14.7 mm & 22.7 mm $\pm$ 15.3 mm \\
-			\hline
-			Post registration RMSE & 13.1 mm $\pm$ 2.6  & 14.7 mm$\pm$ 2.4 mm  & 16.3 mm $\pm$ 0.2 mm \\
-			\hline
-		\end{tabular}
-	\end{adjustbox}
-	\caption{3D position error}
-	\label{tab:3d_position_error_hand}
-\end{table}
-
-\begin{table}[hbt!]
-	\begin{adjustbox}{width=\columnwidth,center}
-		\centering
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
-			\hline
-			Translation error   & -36.3 mm $\pm$ 81.1 mm  & -24.3 mm $\pm$ 111.2 mm & 12.5 mm $\pm$ 95.7 mm \\
-			\hline
-			Rotational error & 18.5\textdegree $\pm$ 12.6\textdegree  & 24.7\textdegree $\pm$ 14.5\textdegree  & 18.9\textdegree $\pm$ 11.6\textdegree \\
-			\hline
-		\end{tabular}
-	\end{adjustbox}
-	\caption{Trajectory Comparison}
-	\label{tab:trajectory_caomparison_hand}
-\end{table}
-
-\begin{table}[hbt!]
-	\begin{adjustbox}{width=\columnwidth,center}
-		\centering
-		\begin{tabular}{|c|c|c|c|}
-			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
-			\hline
-			Translation error   & 8.6 mm $\pm$ 5.6 mm  & 11.2 mm $\pm$ 6.7 mm & 10.1 mm $\pm$ 7.3 mm \\
-			\hline
-			Rotational error & 1.2\textdegree $\pm$ 0.6\textdegree  & 1.5\textdegree $\pm$ 0.8\textdegree  & 1.5\textdegree $\pm$ 0.8\textdegree \\
-			\hline
-		\end{tabular}
-	\end{adjustbox}
-	\caption{ICP vs ground truth comparison}
-	\label{tab:icp_gt_hand}
-\end{table}
 
 
 

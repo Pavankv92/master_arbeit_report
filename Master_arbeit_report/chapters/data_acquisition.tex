@@ -1,15 +1,13 @@
 \section{Data acquisition}
 
-\subsection{Robot guided trajectory} Although robot-guided data set is available as a part of the pipeline, we will briefly look at the important aspects of it. As shown in the \cref{fig:robotic_data_acquisition}  setup consists of 2 cameras (RGB-D and a tracking camera), a robot, phantom head with EEG cap. Kinect is mounted directly on end-effector of the robot while tracking camera is firmly mounted to the ceiling. The position of tracking camera from robot base is determined using hand-eye calibration. Since kinect is mounted directly on the end-effector, a variant form of hand-eye calibration knows as eye-in-hand calibration is performed. The robot is precisely guided around the phantom head on a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with same circular trajectory each time with re-positioned phantom head. Nine trajectories/cap has been recorded.
+\subsection{Robot guided trajectory} Although robot-guided data set is available as a part of the pipeline, we will briefly look at the important aspects of it. As shown in the \cref{fig:robotic_data_acquisition}  setup consists of 2 cameras (RGB-D and a tracking camera), a robot, phantom head with EEG cap. Kinect is mounted directly on end-effector of the robot while tracking camera is firmly mounted to the ceiling. The position of tracking camera from robot base $\tfMat{Base}{T}{tCam}$ is determined using hand-eye calibration. Since kinect is mounted directly on the end-effector, a variant form of hand-eye calibration knows as eye-in-hand calibration is performed to calculate the position of Kinect from robot base $\tfMat{Base}{T}{kCam}$. The robot is precisely guided around the phantom head on a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with same circular trajectory each time with re-positioned phantom head. Nine trajectories/cap has been recorded.
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=\linewidth]{robotic_data_acquisition.png}
-	\caption{Camera is guided with the help of a robot.}
+	\caption{Robot-guided data acquisition system.}
 	\label{fig:robotic_data_acquisition}
 \end{figure}
-
-TODO : add details about the number of camera poses in the trajectory.
 
 \subsection{Hand guided trajectory} As shown in the \cref{fig:hand_data_acquisition}  setup consists of tracking camera and a  RGB-D camera as in the robot guided setup. However, a reflective marker is attached to RGB camera in order to be tracked from tracking camera in the absence of a robot.  RGB camera is hand guided around the phantom head trying to maintain a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with different trajectory each time and recorded as ROS .bag files for later processing. 
 
@@ -53,5 +51,5 @@ In this section we provide details to estimate the transformation between reflec
 	\label{fig:handeye_calibration_hand_data}
 \end{figure}
 
-The tracking camera and chessboard were static while kinect moved to different position $M_i$ (60 positions) and corresponding chessboard pose is estimated $N_i$. The collected data set is divided as training and evaluation sets. Refer the results section for errors.
+The tracking camera and chessboard were static while kinect moved to different position $M_i$ (60 positions) and corresponding chessboard pose is estimated $N_i$. The collected data set is divided as training (60\%) and evaluation sets (40\%). We randomly choose training data and calculate errors based on evaluation data set and report (Mean$\pm$STD.Dev) separately for translation and rotation. 
 

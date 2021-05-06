@@ -1,11 +1,74 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
-\contentsline {chapter}{\nonumberline Abstract}{vii}{chapter*.3}%
-\contentsline {chapter}{\numberline {1}Background}{1}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Camera fundamenals}{1}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Camera calibration}{3}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}2D/3D correspondence}{4}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}2D/2D correspondence}{6}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Lens distortions}{9}{subsection.1.2.3}%
-\contentsline {chapter}{\nonumberline Bibliography}{11}{chapter*.9}%
-\contentsline {chapter}{\nonumberline Declaration}{13}{chapter*.10}%
+\contentsline {chapter}{\nonumberline Abstract}{ix}{chapter*.4}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Background}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Camera fundamentals}{3}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Camera calibration}{5}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}2D/3D correspondence}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}2D/2D correspondence}{8}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Lens distortions}{11}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Pixel to 3D points}{12}{section.2.3}%
+\contentsline {section}{\numberline {2.4}Hand-eye calibration}{12}{section.2.4}%
+\contentsline {section}{\numberline {2.5}Point cloud registration}{14}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Iterative closest point algorithm}{16}{subsection.2.5.1}%
+\contentsline {section}{\numberline {2.6}Simultaneous Localization and Mapping}{17}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Map}{17}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Localization}{17}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.3}SLAM}{17}{subsection.2.6.3}%
+\contentsline {section}{\numberline {2.7}Graph-Based SLAM (Pose-Graph SLAM)}{18}{section.2.7}%
+\contentsline {subsection}{\numberline {2.7.1}Pose-Graph construction}{19}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.2}Pose-Graph optimization}{20}{subsection.2.7.2}%
+\contentsline {section}{\numberline {2.8}Electrode detection and localization}{21}{section.2.8}%
+\contentsline {section}{\numberline {2.9}Cluster processing}{21}{section.2.9}%
+\contentsline {subsection}{\numberline {2.9.1}DBSCAN}{21}{subsection.2.9.1}%
+\contentsline {subsection}{\numberline {2.9.2}K-means}{22}{subsection.2.9.2}%
+\contentsline {chapter}{\numberline {3}Methods and material}{23}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Algorithms for electrode digitalization}{23}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}ROS}{23}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}OpenCV}{24}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Matlab}{24}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Open3D}{24}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}miniSam}{24}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Scikit-learn}{24}{subsection.3.1.6}%
+\contentsline {section}{\numberline {3.2}Experimental setup}{25}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Kinect camera}{25}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Tracking camera}{25}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Robot, phantom, EEG caps}{25}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Markers}{26}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Camera calibration and pixel value out-projection with chessboard}{27}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Camera calibration}{27}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Chessboard pose estimation}{28}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Pixel points out-projection}{29}{subsection.3.3.3}%
+\contentsline {section}{\numberline {3.4}Data acquisition}{29}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Robot guided trajectory}{29}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Hand guided trajectory}{30}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Hand-eye calibration for hand guided trajectory}{31}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Point cloud for scan registration}{32}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Ground truth data acquisition}{33}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Out-projection error determination}{33}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}Pose-graph construction and optimization}{35}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Loop closure}{37}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Optimization}{38}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}Performance metrics}{39}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Results}{42}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Camera calibration}{42}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Hand-eye calibration}{42}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Pixel points out-projection}{42}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Depth offset determination}{43}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Robot-guided trajectory}{43}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Hand-guided trajectory}{44}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Discussion}{51}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Calibrations}{51}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Depth offset determination}{51}{section.5.2}%
+\contentsline {section}{\numberline {5.3}SLAM}{51}{section.5.3}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{53}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Listings}{54}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Least square problem}{54}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Type I}{54}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Type II}{54}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Rotation matrix}{54}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Gaussian distribution}{55}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Pose comparison}{55}{section.A.4}%
+\contentsline {chapter}{\nonumberline Bibliography}{56}{chapter*.50}%
+\contentsline {chapter}{\nonumberline Declaration}{59}{chapter*.51}%

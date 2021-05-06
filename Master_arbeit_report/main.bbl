@@ -1044,6 +1044,13 @@
     \field{year}{2006}
   \endentry
 
+  \entry{sklearnc38:online}{misc}{}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://scikit-learn.org/stable/modules/generated/sklearn.cluster.DBSCAN.html}}
+    \field{note}{(Accessed on 04/28/2021)}
+    \field{title}{sklearn.cluster.DBSCAN — scikit-learn 0.24.2 documentation}
+  \endentry
+
   \entry{ROS}{online}{}
     \name{author}{1}{}{%
       {{hash=w}{%
@@ -1063,6 +1070,13 @@
     \field{urlday}{20}
     \field{urlmonth}{05}
     \field{urlyear}{2020}
+  \endentry
+
+  \entry{WhatIsMA85:online}{misc}{}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://de.mathworks.com/discovery/what-is-matlab.html}}
+    \field{note}{(Accessed on 05/01/2021)}
+    \field{title}{What Is MATLAB? - MATLAB \& Simulink}
   \endentry
 
   \entry{open3d}{article}{}

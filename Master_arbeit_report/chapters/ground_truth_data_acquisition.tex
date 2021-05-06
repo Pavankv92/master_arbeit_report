@@ -1,20 +1,14 @@
-\section{Ground truth data acquisition} As shown in the \cref{fig:ground_truth_data_acquisition}  a reflective marker is used to acquire 3D position of all the electrodes. Marker tip is carefully placed on each electrode and the 3D position is recorded in the tracking camera.  As kinect frame is chosen to be the single frame of reference for entire project, points recorded in tracking camera are then transferred to kinect frame via series of transformation and associated errors can be visualized in \cref{fig:error_analysis}. When out-projected points are compared with ground truth values, there will be an additional out-projection error. 
-
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[width=\linewidth]{ground_truth_data_acquisition.png}
-	\caption{ground truth data acquisition using a reflective marker.}
-	\label{fig:ground_truth_data_acquisition}
-\end{figure}
+\section{Ground truth data acquisition} 
+A reflective marker is used to acquire 3D position of all the electrodes. Marker tip is carefully placed on each electrode and the 3D position is recorded in the tracking camera.  As kinect frame is chosen to be the single frame of reference for entire project, points recorded in tracking camera are then transferred to kinect frame via series of transformations. The  associated systematic errors can be visualized in \cref{fig:error_analysis}. In robot-guided case, these systematic error consists of two hand eye calibration errors i.e between tracking camera-robot base and Kinect-robot base. For hand guided case one hand-eye calibration error between kinect-marker. When out-projected points are compared with ground truth values, there will be an additional out-projection error. 
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=\linewidth]{error_analysis.png}
-	\caption{Potential error analysis in acquiring ground truth data.}
+	\caption{Systematic error in acquiring ground truth data.}
 	\label{fig:error_analysis}
 \end{figure}
 
-\subsection{Depth offset determination}  It is already known that chessboard out-projection using raw depth value led to over estimation of the object points. We aim to reduce this over estimation while creating point clouds for scan registration. The electrode positions from each frame can be transformed into a common coordinate system. For this purpose, the coordinate system of the very first frame (time $t = 0$) is used. After the transformation of all electrodes detected over the duration of trajectory into the initial coordinate system, individual electrodes which were detected in several frames do not lie exactly on top of each other. This is due to small errors in the detection and error in out-projection etc. As a result, clusters of electrodes appear in the 3D space. This is same as mapping the electrodes after slam optimization but in this case we will use the ground truth trajectory. After having obtained the clusters, we will find their centroids using cluster processing as explained previously. In order to understand the out-projection error, we compare inertia \cref{eq:cluster_center_inertia} associated with centroids against different raw depth values. We intend to find the parameter $\beta$ that when out-projected with [ raw depth -  $\beta$ ] minimizes the inertia. Another way to understand the effect of out-projection is to directly compare the out-projected and ground truth values and by measuring the difference in them. This can be addressed in two ways, as shown in  \cref{fig:depth_offset_determination}.  First, at each camera position $x_{1:t} $ both ground truth and out-projected point clouds are known (only those electrodes that are visible from a particular camera pose) and an iterative closest point registration can be performed and output RMSE (root mean square error) can be used as a metric and averaged over all camera poses. Second, one can stitch the point clouds and find the cluster centers as we did before and compare them to the ground truth values and measure L2 norm. Refer result section for more details.
+\subsection{Out-projection error determination}  One way to understand out-projection error is to directly compare the out-projected and ground truth values and by measuring the difference in them. It is already known that chessboard out-projection using raw depth value led to over estimation of the object points. Therefore, we intend to find the parameter $\beta$ that minimizes the error between ground truth and out-projected values with [ raw depth -  $\beta$ ]. This can be addressed in two ways, as shown in  \cref{fig:depth_offset_determination}.  First, at each camera position $x_{1:t} $ both ground truth and out-projected point clouds are known (only those electrodes that are visible from a particular camera pose) and an iterative closest point registration can be performed and output RMSE (root mean square error) can be used as a metric and averaged over all camera poses. Second, one can stitch the point clouds and find the cluster centers as we did before and compare them to the ground truth values and measure L2 norm. 
 
 \begin{figure}[hbt!]
 	\centering
@@ -22,5 +16,3 @@
 	\caption{Depth offset $\beta$ determination process.}
 	\label{fig:depth_offset_determination}
 \end{figure}
-
-TODO : add hand trajectory details

@@ -184,7 +184,7 @@ since the scaling factor $\lambda$ is unknown and has to be estimated while esti
 	\right]
 \end{equation*} 
 
-extracting the bottom row, equation for $\lambda$ and substituting $\lambda$ in other 2 rows yileds
+extracting the bottom row, equation for $\lambda$ and substituting $\lambda$ in other 2 rows yields
 \begin{equation*}
 	\lambda = p_{31}\textbf{$X_i$} + p_{32}\textbf{$Y_i$} + p_{33}\textbf{$Z_i$} + p_{34}
 \end{equation*}
@@ -259,10 +259,10 @@ Having estimated projection matrix task at the hand is to decompose $P = K[R\ |\
 	\centering
 	\includegraphics[width=\linewidth]{2D_2D.png}
 	\caption{Mapping 2D planar world points (Z = 0) on to a 2D image plane.}
-	\label{fig:2D_3D}
+	\label{fig:2D_2D}
 \end{figure}
 
-The disadvantage of 2D/3D correspondence way of estimating the projection matrix is that complete knowledge of the 3D location has to be known and it has to be precise as well. There is a flexible and computationally easy method to estimate the projection matrix thereby intrinsic and extrinsic camera parameters, developed by Zhang \cite{Zhang} using a 2D planar object in 3D space as shown in \cref{fig:2D_3D} along with its 2D image. Let us recall the equation \ref{eq:mat_pixel_t_world} 
+The disadvantage of 2D/3D correspondence way of estimating the projection matrix is that complete knowledge of the 3D location has to be known and it has to be precise as well. There is a flexible and computationally easy method to estimate the projection matrix thereby intrinsic and extrinsic camera parameters, developed by Zhang \cite{Zhang} using a 2D planar object in 3D space as shown in \cref{fig:2D_2D} along with its 2D image. Let us recall the equation \ref{eq:mat_pixel_t_world} 
 
 \begin{equation*}
 	Z_c \left[ 
@@ -490,12 +490,9 @@ By rearranging the above equation \((X_c, Y_c, Z_C)^T\) can be expressed as belo
 
 \begin{equation}
 \begin{split}
-X_c = \frac{u - C_x}{\alpha_x} * \lambda \\
-\\
-Y_c = \frac{v - C_y}{\alpha_y} * \lambda \\
-\\
-Z_c = \lambda \\
-TODO : space out correctly
+X_c &= \frac{u - C_x}{\alpha_x} * \lambda \\
+Y_c &= \frac{v - C_y}{\alpha_y} * \lambda \\
+Z_c &= \lambda 
 \end{split}
 \label{eq:out_projection}
 \end{equation}
@@ -734,10 +731,9 @@ P_{k+1} = ApplyRegistration(T[R|t],P_k)
 \label{eq:apply_registration}
 \end{equation}
 
-where, $P_{k+1}$ are the points after applying the registration (homogeneous represetation is used here to enable matrix multiplication).
+where, $P_{k+1}$ are the points after applying the registration (homogeneous representation is used here to enable matrix multiplication).
 
 \subsection{Iterative closest point algorithm}
-
 
 \begin{enumerate}
 	\item Given \( \displaystyle P = \{p_1, p_2,...,p_m\} \) be the source point cloud set that needs to be aligned with the target point cloud set  \( \displaystyle Q = \{q_1, q_2,...,q_n\} \) with unknown data association.
@@ -757,7 +753,7 @@ where, $P_{k+1}$ are the points after applying the registration (homogeneous rep
 \section{Simultaneous Localization and Mapping}
 
 \subsection{Map}
-Formally, a map m is a list of objects in the environment along with their properties \cite{10.5555/1121596}. Especially in this case, map is a collection of electrodes and their locations on the EEG cap. 
+Formally, a map \textit{m} is a list of objects in the environment along with their properties \cite{10.5555/1121596}. Especially in this case, map is a collection of electrodes and their locations on the EEG cap. 
 
 \begin{equation*}
 	\begin{split}
@@ -769,7 +765,7 @@ Formally, a map m is a list of objects in the environment along with their prope
 where, N is the total number of electrodes on the cap and $m_n$  where $1 \le n \le N$ represents the 3D location of the $n^{th}$ electrode. 
 
 \subsection{Localization}
-In simple words, localization is the pose estimation problem. It is the process of determining the pose of a camera with respect to the given map of the electrodes using wide variety of sensor data i.e RGB-D images and odometry etc. Localization is also the problem of establishing the correspondence between coordinate system based on which the map is defined (often, global coordinate system) and the camera's local coordinate system. This correspondence enables the camera to express the electrodes in the map in it's local coordinate system to be able to successfully navigate through the environment. Unfortunately, sensor measurements are noisy therefore pose has to be inferred from the noisy data which makes localization a difficult problem to solve. There are many probabilistic approaches to solve localization problems, the reader is encouraged to refer \cite{10.5555/1121596} for more details.
+In simple words, localization is the pose estimation problem. It is the process of determining the pose of a camera with respect to the given map of the electrodes using wide variety of sensor data i.e RGB-D images and odometry etc. Localization is also the problem of establishing the correspondence between coordinate system based on which the map is defined (often, global coordinate system) and the camera's local coordinate system. This correspondence enables the camera to express the electrodes in the map in it's local coordinate system. Unfortunately, sensor measurements are noisy therefore pose has to be inferred from the noisy data which makes localization a difficult problem to solve. There are many probabilistic approaches to solve localization problems, the reader is encouraged to refer \cite{10.5555/1121596} for more details.
 \\
 
 \subsection{SLAM} 
@@ -788,7 +784,7 @@ Simultaneous localization and mapping (SLAM) is a special case where the camera 
 	\label{eq:online_slam}
 \end{equation*} 
 
-where $x_t$ is the camera pose at current time t, m is map, $z_{1:t}$ and $u_{1:t}$ are measurement and control inputs until the current time t respectively. Online-SLAM is essentially a online state estimation problem where state is the current camera pose and the map. The pose and the map is estimated and refined as and when the new measurements are available. Online-SLAM problem is is modelled and solved using filtering techniques such as Kalman and information filters \cite{smith1990estimating} \cite{castellanos1999spmap} and particle filters \cite{montemerlo2002fastslam}.
+where $x_t$ is the camera pose at current time t, m is map, $z_{1:t}$ and $u_{1:t}$ are measurement and control inputs until the current time t respectively. Online-SLAM is essentially a online state estimation problem where state is the current camera pose and the map. The pose and the map is estimated and refined as and when the new measurements are available. Online-SLAM problem is modeled and solved using filtering techniques such as Kalman and information filters \cite{smith1990estimating} \cite{castellanos1999spmap} and particle filters \cite{montemerlo2002fastslam}.
 \\
 
 \textbf{Full-SLAM.} Estimating the entire camera trajectory and the map instead of just momentary pose.
@@ -814,11 +810,11 @@ Graph-based approach uses an intuitive graph which consists of nodes and edges t
 
 
 \subsection{Pose-Graph construction}
-Graph consists of n nodes $x_{1:t}$ which corresponds to the camera pose at time t. Every time camera moves from $x_i$ to $x_{i+1}$ position an edge(odometry) constraint is added to the graph connecting nodes $x_i$ and $x_{i+1}$. If camera revisits the previously visited position, for example $x_j$, an loop closure constraint is added to the graph connecting the current node $x_t$ and $x_j$ as shown in \cref{fig:graph_construction}. 
+Graph consists of n nodes $x_{1:t}$ which corresponds to the camera pose at time t. Every time camera moves from $x_i$ to $x_{i+1}$ position an edge(odometry) constraint is added to the graph connecting nodes $x_i$ and $x_{i+1}$. If camera revisits the previously visited position, for example $x_4$, an loop closure constraint is added to the graph connecting the current node $x_t$ and $x_j$ as shown in \cref{fig:graph_construction}.
 
 \begin{figure}[hbt!]
 	\centering
-	\includegraphics[scale=0.45]{graph_construction.png}
+	\includegraphics[width=\linewidth]{graph_construction.png}
 	\caption{Pose-Graph consists of nodes and edges.}
 	\label{fig:graph_construction}
 \end{figure}
@@ -829,7 +825,7 @@ Since spatial constraints associated with edges (sensor measurement of some sort
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[scale=0.5]{error_function.png}
-	\caption{Probabilistic model of measurements.}
+	\caption{Probabilistic model of measurements \cite{grisetti2010tutorial}.}
 	\label{fig:error_function}
 \end{figure}
 
@@ -870,7 +866,7 @@ which can be rewritten as,
 
 \subsection{Pose-Graph optimization}
 
-The \cref{eq:non_linear_least_square_problem} is non-linear least square problem and solution can be obtained using Gauss-Newton or Lavenberg-Marquardt algorithms \cite{grisetti2010tutorial}. Dellaert and Kaess \cite{dellaert2006square} have shown connection between factor graphs and non-linear least square problems. A Factor graphs easily encodes probabilistic nature of SLAM and the sparsity of a SLAM problem can be easily visualized. A factor graph represents joint probabilities of all the factors with factor nodes $f_i \in \mathcal{F}$ variable nodes $x_i \in \mathcal{X}$.  
+The \cref{eq:non_linear_least_square_problem} is non-linear least square problem and solution can be obtained using Gauss-Newton or Lavenberg-Marquardt algorithms \cite{grisetti2010tutorial}. Dellaert and Kaess \cite{dellaert2006square} have shown connection between factor graphs and non-linear least square problems. A Factor graphs easily encodes probabilistic nature of SLAM. A factor graph represents joint probabilities of all the factors with factor nodes $f_i \in \mathcal{F}$ variable nodes $x_i \in \mathcal{X}$.  
 
 \begin{equation}
 	\begin{split}
@@ -879,7 +875,7 @@ The \cref{eq:non_linear_least_square_problem} is non-linear least square problem
 \label{eq:factor_graph}
 \end{equation}
 
-each factor $f_i$ consists of measurement function $h_i(\mathcal{X}_i$ and a measurement $z_i$. Assuming Gaussian measurement models $f_i$ can be given as 
+each factor $f_i$ consists of measurement function $h_i(\mathcal{X}_i)$ and a measurement $z_i$. Assuming Gaussian measurement models $f_i$ can be given as 
 
 \begin{equation*}
 	\begin{split}
@@ -897,9 +893,18 @@ with $\| e \|_\Sigma^2 = e^T\invMat{\Sigma}e$ being the Mahalanobis distance wit
 	\label{eq:factor_graph_as_non_linear_least_square_problem}
 \end{equation}
 
+The \cref{fig:graph_construction} describes simple scenario where there are four camera positions $x_{1:4}$ corresponding to the time stamps $t_{1:4}$. A factor graph models the pose-graph as \cref{fig:factor_graph_example}. Prior factor describes prior distribution on the very first pose $x_1$ and encodes the relation with world coordinate frame. Odometry factors encodes the spatial constraint between subsequent nodes  $x_{i}$ with $x_{i+1}$ and loop factor encodes the relative spatial constraint between $x_{4}$ and $x_{1}$.
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[scale=0.5]{factor_graph_example.png}
+	\caption{Pose-Graph as a factor graph model.}
+	\label{fig:factor_graph_example}
+\end{figure}
+
 
 \section{Electrode detection and localization}
-Electrodes captured in sequence of RGB images needs to be detected and simultaneously localized as shown in \cref{fig:yolo_detection} in order to create 3D point clouds for sequential ICP registration and SLAM. YOLO(You Only Look Once) being one of most popular convolutional neural network based object detection and localization algorithm has been employed for this very purpose. YOLO has been trained on a large data-set of EEG cap and trained weights are available as a part of the pipeline.
+Electrodes captured in sequence of RGB images needs to be detected and simultaneously localized as shown in \cref{fig:yolo_detection} in order to create 3D point clouds for sequential ICP registration and SLAM. YOLO(You Only Look Once) being one of most popular convolutional neural network based object detection and localization algorithm has been employed for this very purpose. YOLO has been trained on a large data-set of EEG cap and trained weights are available as a part of the pipeline. Center point of YOLO bounding box is considered as 2D electrode position.
 
 \begin{figure}[hbt!]
 	\centering
@@ -911,19 +916,33 @@ Electrodes captured in sequence of RGB images needs to be detected and simultane
 		\centering
 		\includegraphics[width=\linewidth]{yolo_detection_2.jpg}	
 	\end{subfigure}
-	\caption{Electrode detection and localization.}
+	\caption{Electrode detection and localization using YOLO.}
 	\label{fig:yolo_detection} 
 \end{figure}  
 
-  
+\section{Cluster processing} Two mainly used cluster processing algorithms in thesis are DBSCAN and K-Means provided by Scikit-learn. 
 
-\section{Cluster processing} Two mainly used cluster processing algorithms in thesis are DBSCAN and K-Means provided by scikit-learn. DBSCAN is a density based clustering algorithm, it differentiates the clusters based on high and low density of points. It labels samples(points) which are in the high density as core samples, A cluster therefore a collection of many core samples. In this thesis, DBSCAN is used to estimate number of clusters in the electrode map. K-Means on the other hand tries to group the samples of equal variance together by minimizing the inertia or within-cluster sum-of-squares. However, K-Means requires number of clusters to be specified before hand. K-Means divides $\mathcal{N}$ samples in to $\mathcal{K}$ disjoint clusters $\mathcal{C}$ where each cluster contains $\mathcal{X}$ samples and described by centroids of the cluster $\mu_j$. K-Means aims to determine the $\mu_j$ that minimizes the inertia defined by  \cref{eq:cluster_center_inertia}. 
+\subsection{DBSCAN}
+DBSCAN is a density based clustering algorithm, it differentiates the clusters based on high and low density of points. It labels samples(points) which are in the high density as core samples, A cluster therefore a collection of many core samples. In this thesis, DBSCAN is used to estimate number of clusters in the electrode map. \textit{eps} and \textit{min\_samples} are the main arguments required by DBSCAN. \textit{eps} is maximum distance between two samples to be considered as in the neighborhood of each other and \textit{min\_samples} is number of samples to be considered as a core point \cite{sklearnc38:online}.
+
+\begingroup\makeatletter\def\@currenvir{verbatim}
+\verbatim
+DBSCAN(eps, min_samples, ...)
+output: labels, n_clusters
+\end{verbatim}
+
+
+\subsection{K-means}
+K-Means on the other hand tries to group the samples of equal variance together by minimizing the inertia or within-cluster sum-of-squares. However, K-Means requires number of clusters to be specified before hand. K-Means divides $\mathcal{N}$ samples in to $\mathcal{K}$ disjoint clusters $\mathcal{C}$ where each cluster contains $\mathcal{X}$ samples and described by centroids of the cluster $\mu_j$. K-Means aims to determine the $\mu_j$ that minimizes the inertia defined by  \cref{eq:cluster_center_inertia}. The argument \textit{n\_clusters} is number of clusters to form as well as number of centroids to generate \cite{sklearnc38:online}.
 
 \begin{equation}
 	\sum_{i=0}^n \min_{\mu_j \in C}  \|  x_i  -  \mu_j \| ^2
 	\label{eq:cluster_center_inertia}
 \end{equation}
 
-
-TODO: add more details about the algorithms. especially the parameters of DBSCAN.
+\begingroup\makeatletter\def\@currenvir{verbatim}
+\verbatim
+KMeans(n_clusters,...)
+output: labels, cluster_centers
+\end{verbatim}
 

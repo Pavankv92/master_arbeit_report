@@ -1,4 +1,4 @@
-\section{Performance metrics}  This section provides an overview of metrics used to evaluate the performance of algorithms. Firstly, we compute absolute 3D position error between estimated and ground truth electrodes. As we saw earlier that there are series of error involved in gathering ground truth data and transferring it to kinect for frame error computation. Therefore, we also perform an ICP registration between estimated and ground truth electrodes. Quite an insight can be obtained by comparing the estimated and ground truth trajectory (see appendix : pose comparison ). As previously mentioned, all the camera poses are expressed with respect to the first camera pose (which is also global reference frame) before we compare the trajectory as shown in \cref{fig:metric_absolute_pose}. Lastly, we compute the difference between ICP estimated transformation for subsequent camera poses and ground truth poses. As shown in \cref{fig:metric_icp_pose}, we skip one pose in order to have sufficient distance between 2 camera pose ($>$6mm @ 30fps). 
+\section{Performance metrics}  This section provides an overview of metrics used to evaluate the performance of algorithms. Firstly, we compute absolute 3D position error between estimated and ground truth electrodes. As we saw earlier that there are series of error involved in gathering ground truth data and transferring it to kinect for frame error computation. Therefore, we also perform an ICP registration between estimated and ground truth electrodes. Quite an insight can be obtained by comparing the estimated and ground truth trajectory (see appendix : pose comparison ). As previously mentioned, all the camera poses are expressed with respect to the first camera pose (which is also global reference frame) before we compare the trajectory as shown in \cref{fig:metric_absolute_pose}. Lastly, we compute the difference between ICP estimated transformation for subsequent camera poses and ground truth poses. As shown in \cref{fig:metric_icp_pose}, we skip one pose in order to have sufficient distance between 2 camera pose ($>$4mm @ 30fps). 
 
 \begin{figure}[hbt!]
 	\centering
@@ -40,30 +40,8 @@ Summary of all metrics.
 		\end{enumerate}
 \end{enumerate}
 
-The \cref{fig:absolute_3d_poition_error} , \cref{fig:trajectory_comparision} and \cref{fig:icp_gt} are some of the examples of absolute 3D Position error, trajectory comparison and ICP vs ground truth respectively.
 
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[width=\linewidth]{absolute_3d_poition_error.png}
-	\caption{Electrode clusters and their estimated centers along with ground truth position on a 2D image.}
-	\label{fig:absolute_3d_poition_error}
-\end{figure}
 
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[width=\linewidth]{trajectory_comparison.png}
-	\caption{Figure shows absolute trajectory comparison.}
-	\label{fig:trajectory_comparision}
-\end{figure}
-
-\begin{figure}[hbt!]
-	\centering
-	\includegraphics[width=\linewidth]{icp_gt.png}
-	\caption{Figure shows ICP vs ground truth pose comparison.}
-	\label{fig:icp_gt}
-\end{figure}
-
-TODO: change the ICP figure with one pose skip. label the axes.
 
 
 

@@ -1,0 +1,95 @@
+\section{Robot-guided trajectory}
+
+TODO : add beta details, number of trajectory included
+
+\begin{table}
+	\centering
+	\begin{tabular}{|c|c|c|}
+		\hline
+		use case & Euclidean Norm & ICP fitness threshold \\ 
+		\hline
+		robot-guided & 100 (mm) & 0.8\\
+		\hline
+	\end{tabular}
+	\caption{Loop closure thresholds for robot-guided scenario}
+	\label{tab:loop_closure_threshold_robot}
+\end{table}
+
+\begin{table}[hbt]
+	\begin{adjustbox}{width=\columnwidth,center}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			\hline
+			Absolute L2 norm   & 11.5 mm $\pm$ 5 mm  & 11.7 mm $\pm$ 4.0 mm & 12.6 mm $\pm$ 5.5 mm \\
+			
+			Post registration RMSE & 3.7 mm $\pm$ 0.3  & 6.8 mm$\pm$ 2.0 mm  & 5.6 mm $\pm$ 1.2 mm \\
+			\hline
+		\end{tabular}
+	\end{adjustbox}
+	\caption{3D position error}
+	\label{tab:3d_position_error_robot}
+\end{table}
+
+\begin{table}[hbt]
+	\begin{adjustbox}{width=\columnwidth,center}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			\hline
+			Translation error   & -1.4 mm $\pm$ 9.3 mm  & 16.3 mm $\pm$ 10.1 mm & 12.1 mm $\pm$ 14.5 mm \\
+			
+ 			Rotational error & 4.1\textdegree $\pm$ 1.7\textdegree  & 4.6\textdegree $\pm$ 1.7\textdegree  & 6.7\textdegree $\pm$ 3.4\textdegree \\
+ 			\hline
+		\end{tabular}
+	\end{adjustbox}
+	\caption{Trajectory Comparison}
+	\label{tab:trajectory_caomparison_robot}
+\end{table}
+
+\begin{table}[hbt]
+	\begin{adjustbox}{width=\columnwidth,center}
+		\centering
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			\hline
+			Translation error   & 0.5 mm $\pm$ 2.1 mm  & 0.8 mm $\pm$ 2.9 mm & 0.9 mm $\pm$ 3.3 mm \\
+			
+			Rotational error & 0.5\textdegree $\pm$ 0.3\textdegree  & 0.7\textdegree $\pm$ 0.4\textdegree  & 0.9\textdegree $\pm$ 0.6\textdegree \\
+			\hline
+		\end{tabular}
+	\end{adjustbox}
+	\caption{ICP vs ground truth comparison}
+	\label{tab:icp_gt_robot}
+\end{table}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{ca_124_7_robot_trajectory_summary.png}
+	\caption{Front and side view of trajectories for one of the cap with 63 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure}
+	\label{fig:ca_124_7_robot_trajectory_summary}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{ca_124_7_robot_cluster_metrics.png}
+	\caption{Post registration results, Mean L2 norm : 3.06 (mm)}
+	\label{fig:ca_124_7_robot_cluster_metrics}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{cs_301_8_robot_trajectory_summary.png}
+	\caption{Front and side view of trajectories for one of the cap with 23 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure}
+	\label{fig:cs_301_8_robot_trajectory_summary}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{cs_301_8_robot_cluster_metrics.png}
+	\caption{Post registration results, Mean L2 norm : 8.6 (mm)}
+	\label{fig:cs_301_8_robot_cluster_metrics}
+\end{figure}
