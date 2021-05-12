@@ -1,6 +1,6 @@
 \section{Hand-guided trajectory}
 
-TODO : add beta details, number of trajectory included, Add loops could not be closed in this case.
+The euclidean norm and ICP fitness threshold used to select loop closure candidate is shown in \cref{tab:loop_closure_threshold_hand}. Forthcoming results are for 2 trajectories for each cap (2/cap, for 3 caps) at $\beta = 25mm$. High eye-in-hand calibration errors, which means estimated static transformation between marker attached to kinect is not so accurate therefore only relative 3D position error are shown in \cref{tab:3d_position_error_hand}. Trajectory comparison and ICP performance is shown in \cref{tab:trajectory_comparison_hand} and \cref{tab:icp_gt_hand} respectively. The \cref{fig:ca_124_7_hand_trajectory_summary_beta_10} and \cref{fig:cs_301_7_hand_trajectory_summary_beta_10} shows summary of ground truth and ICP estimated trajectories for cap with 63 and 23 electrodes respectively. For both images, top-left section shows front and side view of ground truth trajectory (green) recorded by attaching a marker. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 are not. Top-right section shows front and side view of ICP estimated trajectory (red) which starts from 1 and ends at 2. The bottom-left section shows front and side view of both ground truth and ICP estimated trajectory on top of each other for easy visualization. Bottom-right section on the other hand shows a closer look at starting and ending portion of each trajectories.
 
 \begin{table}
 	\centering
@@ -20,11 +20,9 @@ TODO : add beta details, number of trajectory included, Add loops could not be c
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			Metric & CAP\_63 (49/63) & CAP\_23\_1 (21/23) & CAP\_23\_2 (22/23) \\
 			\hline
-			Absloute L2 norm   & 16.8 mm $\pm$ 7 mm  & 17.8 mm $\pm$ 14.7 mm & 22.7 mm $\pm$ 15.3 mm \\
-			\hline
-			Post registration RMSE & 13.1 mm $\pm$ 2.6  & 14.7 mm$\pm$ 2.4 mm  & 16.3 mm $\pm$ 0.2 mm \\
+			Post registration RMSE & 13.3 mm $\pm$ 0.4  & 15 mm$\pm$ 2.0 mm  & 16.3 mm $\pm$ 0.3 mm \\
 			\hline
 		\end{tabular}
 	\end{adjustbox}
@@ -37,16 +35,16 @@ TODO : add beta details, number of trajectory included, Add loops could not be c
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			Metric & CAP\_63 & CAP\_23\_1  & CAP\_23\_2 \\ 
 			\hline
-			Translation error   & -36.3 mm $\pm$ 81.1 mm  & -24.3 mm $\pm$ 111.2 mm & 12.5 mm $\pm$ 95.7 mm \\
-			\hline
-			Rotational error & 18.5\textdegree $\pm$ 12.6\textdegree  & 24.7\textdegree $\pm$ 14.5\textdegree  & 18.9\textdegree $\pm$ 11.6\textdegree \\
+			Translation error   & -43.9 mm $\pm$ 50.7 mm  & -22.3 mm $\pm$ 90.9 mm & -18.8 mm $\pm$ 59.9 mm \\
+			
+			Rotational error & 12.5\textdegree $\pm$ 6.2\textdegree  & 19.8\textdegree $\pm$ 8.3\textdegree  & 15.3\textdegree $\pm$ 4.1\textdegree \\
 			\hline
 		\end{tabular}
 	\end{adjustbox}
 	\caption{Trajectory Comparison}
-	\label{tab:trajectory_caomparison_hand}
+	\label{tab:trajectory_comparison_hand}
 \end{table}
 
 \begin{table}[hbt]
@@ -54,11 +52,11 @@ TODO : add beta details, number of trajectory included, Add loops could not be c
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			Metric & CAP\_63 & CAP\_23\_1  & CAP\_23\_2 \\ 
 			\hline
-			Translation error   & 8.6 mm $\pm$ 5.6 mm  & 11.2 mm $\pm$ 6.7 mm & 10.1 mm $\pm$ 7.3 mm \\
-			\hline
-			Rotational error & 1.2\textdegree $\pm$ 0.6\textdegree  & 1.5\textdegree $\pm$ 0.8\textdegree  & 1.5\textdegree $\pm$ 0.8\textdegree \\
+			Translation error   & 7.6 mm $\pm$ 5.6 mm  & 10.2 mm $\pm$ 6.9 mm & 9.0 mm $\pm$ 6.7 mm \\
+		
+			Rotational error & 1.1\textdegree $\pm$ 0.6\textdegree  & 1.5\textdegree $\pm$ 0.8\textdegree  & 1.4\textdegree $\pm$ 0.8\textdegree \\
 			\hline
 		\end{tabular}
 	\end{adjustbox}
@@ -66,19 +64,19 @@ TODO : add beta details, number of trajectory included, Add loops could not be c
 	\label{tab:icp_gt_hand}
 \end{table}
 
-The \cref{fig:ca_124_7_trajectory_summary} and \cref{fig:cs_301_8_trajectory_summary} shows summary of ground truth and ICP estimated trajectories for cap with 63 and 23 electrodes respectively. For both images, top-left section shows front and side view of ground truth trajectory (green) recorded by attaching a marker. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 and 6-1 are not. Top-right section shows front and side view of ICP estimated trajectory (red) which starts from 1 and ends at 2. The bottom-left section shows front and side view of both ground truth and ICP estimated trajectory on top of each other for easy visualization. Bottom-right section on the other hand shows a closer look at starting and ending portion of each trajectories. In both the cases.
+
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth]{ca_124_7_trajectory_summary.png}
-	\caption{Front and side view of trajectories for one of the cap with 63 electrodes. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 and 6-1 are not.}
-	\label{fig:ca_124_7_trajectory_summary}
+	\includegraphics[width=\linewidth]{ca_124_7_hand_trajectory_summary_beta_10.png}
+	\caption{Front and side view of trajectories for one of the cap with 63 electrodes. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 are not. Hand trajectory radius is $\approx$ 500mm.}
+	\label{fig:ca_124_7_hand_trajectory_summary_beta_10}
 \end{figure}
 
 \begin{figure}
 	\centering
-	\includegraphics[width=\linewidth]{cs_301_8_trajectory_summary.png}
-	\caption{Front and side view of trajectories for one of the cap with 63 electrodes. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 and 6-1 are not.}
-	\label{fig:cs_301_8_trajectory_summary}
+	\includegraphics[width=\linewidth]{cs_301_7_hand_trajectory_summary_beta_10.png}
+	\caption{Front and side view of trajectories for one of the cap with 63 electrodes. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 are not. Hand trajectory radius is $\approx$ 500mm.}
+	\label{fig:cs_301_7_hand_trajectory_summary_beta_10}
 \end{figure}
 
 

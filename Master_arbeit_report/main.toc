@@ -36,39 +36,41 @@
 \contentsline {subsection}{\numberline {3.2.2}Tracking camera}{25}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}Robot, phantom, EEG caps}{25}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}Markers}{26}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Camera calibration and pixel value out-projection with chessboard}{27}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Camera calibration}{27}{subsection.3.3.1}%
+\contentsline {section}{\numberline {3.3}Camera calibration and pixel value out-projection with chessboard}{28}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Camera calibration}{28}{subsection.3.3.1}%
 \contentsline {subsection}{\numberline {3.3.2}Chessboard pose estimation}{28}{subsection.3.3.2}%
 \contentsline {subsection}{\numberline {3.3.3}Pixel points out-projection}{29}{subsection.3.3.3}%
 \contentsline {section}{\numberline {3.4}Data acquisition}{29}{section.3.4}%
 \contentsline {subsection}{\numberline {3.4.1}Robot guided trajectory}{29}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Hand guided trajectory}{30}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Hand-eye calibration for hand guided trajectory}{31}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Point cloud for scan registration}{32}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Ground truth data acquisition}{33}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Out-projection error determination}{33}{subsection.3.6.1}%
-\contentsline {section}{\numberline {3.7}Pose-graph construction and optimization}{35}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Loop closure}{37}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Optimization}{38}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}Performance metrics}{39}{section.3.8}%
-\contentsline {chapter}{\numberline {4}Results}{42}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Camera calibration}{42}{section.4.1}%
-\contentsline {section}{\numberline {4.2}Hand-eye calibration}{42}{section.4.2}%
-\contentsline {section}{\numberline {4.3}Pixel points out-projection}{42}{section.4.3}%
-\contentsline {section}{\numberline {4.4}Depth offset determination}{43}{section.4.4}%
-\contentsline {section}{\numberline {4.5}Robot-guided trajectory}{43}{section.4.5}%
-\contentsline {section}{\numberline {4.6}Hand-guided trajectory}{44}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Discussion}{51}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Calibrations}{51}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Depth offset determination}{51}{section.5.2}%
-\contentsline {section}{\numberline {5.3}SLAM}{51}{section.5.3}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{53}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Listings}{54}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Least square problem}{54}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Type I}{54}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Type II}{54}{subsection.A.1.2}%
-\contentsline {section}{\numberline {A.2}Rotation matrix}{54}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Gaussian distribution}{55}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Pose comparison}{55}{section.A.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{56}{chapter*.50}%
-\contentsline {chapter}{\nonumberline Declaration}{59}{chapter*.51}%
+\contentsline {subsection}{\numberline {3.4.2}Hand guided trajectory}{31}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Eye-in-hand calibration for hand guided trajectory}{31}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Time synchronization}{32}{subsection.3.4.4}%
+\contentsline {section}{\numberline {3.5}Point cloud for scan registration}{33}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Ground truth data acquisition}{34}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Out-projection error determination}{35}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.7}Pose-graph construction and optimization}{37}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Loop closure}{38}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Optimization}{39}{subsection.3.7.2}%
+\contentsline {section}{\numberline {3.8}Performance metrics}{40}{section.3.8}%
+\contentsline {chapter}{\numberline {4}Results}{43}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Camera calibration}{43}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Hand-eye and Eye-in-hand calibration}{43}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Pixel points out-projection}{43}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Depth offset determination}{44}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Robot-guided trajectory}{45}{section.4.5}%
+\contentsline {section}{\numberline {4.6}Hand-guided trajectory}{46}{section.4.6}%
+\contentsline {chapter}{\numberline {5}Discussion}{54}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Calibrations}{54}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Depth offset determination}{54}{section.5.2}%
+\contentsline {section}{\numberline {5.3}SLAM}{55}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Electrode Digitalization}{55}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{57}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Listings}{58}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Least square problem}{58}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Type I}{58}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Type II}{58}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Rotation matrix}{58}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Gaussian distribution}{59}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Pose comparison}{59}{section.A.4}%
+\contentsline {chapter}{\nonumberline Bibliography}{60}{chapter*.54}%
+\contentsline {chapter}{\nonumberline Declaration}{63}{chapter*.55}%

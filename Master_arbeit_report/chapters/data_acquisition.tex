@@ -1,6 +1,6 @@
 \section{Data acquisition}
 
-\subsection{Robot guided trajectory} Although robot-guided data set is available as a part of the pipeline, we will briefly look at the important aspects of it. As shown in the \cref{fig:robotic_data_acquisition}  setup consists of 2 cameras (RGB-D and a tracking camera), a robot, phantom head with EEG cap. Kinect is mounted directly on end-effector of the robot while tracking camera is firmly mounted to the ceiling. The position of tracking camera from robot base $\tfMat{Base}{T}{tCam}$ is determined using hand-eye calibration. Since kinect is mounted directly on the end-effector, a variant form of hand-eye calibration knows as eye-in-hand calibration is performed to calculate the position of Kinect from robot base $\tfMat{Base}{T}{kCam}$. The robot is precisely guided around the phantom head on a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with same circular trajectory each time with re-positioned phantom head. Nine trajectories/cap has been recorded.
+\subsection{Robot guided trajectory} Although robot-guided data set is available as a part of the pipeline, we will briefly look at the important aspects of it. As shown in the \cref{fig:robotic_data_acquisition}  setup consists of 2 cameras (RGB-D and a tracking camera), a robot, phantom head with EEG cap. Kinect is mounted directly on end-effector of the robot while tracking camera is firmly mounted to the ceiling (Cambar B2 is shown in the graphic instead of fusionTrac 500). The position of tracking camera from robot base $\tfMat{Base}{T}{tCam}$ is determined using hand-eye calibration. Since kinect is mounted directly on the end-effector, a variant form of hand-eye calibration known as eye-in-hand calibration is performed to calculate the position of Kinect from robot base $\tfMat{Base}{T}{kCam}$. First, all the electrodes are digitized using a reflective marker and fusionTrac. Then the robot is precisely guided around the phantom head on a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with same circular trajectory each time with re-positioned phantom head. 
 
 \begin{figure}[hbt!]
 	\centering
@@ -9,7 +9,7 @@
 	\label{fig:robotic_data_acquisition}
 \end{figure}
 
-\subsection{Hand guided trajectory} As shown in the \cref{fig:hand_data_acquisition}  setup consists of tracking camera and a  RGB-D camera as in the robot guided setup. However, a reflective marker is attached to RGB camera in order to be tracked from tracking camera in the absence of a robot.  RGB camera is hand guided around the phantom head trying to maintain a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with different trajectory each time and recorded as ROS .bag files for later processing. 
+\subsection{Hand guided trajectory} As shown in the \cref{fig:hand_data_acquisition}  setup consists of tracking camera and a  RGB-D camera as in the robot guided setup. However, a reflective marker is attached to Kinect in order to be tracked from tracking camera in the absence of a robot.  Kinect is hand guided around the phantom head trying to maintain a circular trajectory while continuously capturing RGB and depth images at 30fps. The process is repeated several times with different trajectory each time and recorded as ROS .bag files for later processing. 
 
 
 \begin{figure}[hbt!]
@@ -19,7 +19,7 @@
 	\label{fig:hand_data_acquisition}
 \end{figure}
 
-One of the limitation during hand guided data acquisition was limited field of view (FOV) of the tracking camera. The \cref{fig:fov_tracking_camera} shows approximate radius of the phantom head is $\approx$ 70mm and recommended distance for depth is 250 - 2210 mm for azure kinect in $WFOV\ 2x2\ binned$ mode. Hence we maintained the hand guided radius $>$ 350mm. However, due to the limited FOV of the tracking camera full trajectory of the Azure Kinect was not been able to capture. A top view of an example trajectory is shown in \cref{fig:cut_trajectory} where it starts form 1 and ends at 6. The segments 1-2, 3-4 and 5-6 are seen while 2-3, 4-5, 6-1 are not, $nav\_msgs/Path$ message type from ROS automatically fills these gaps with straight lines. One of the consequences is that full trajectory is not available for comparison. Therefore, only visible segments are compared.
+One of the limitation during hand guided data acquisition was limited field of view (FOV) of the tracking camera. The \cref{fig:fov_tracking_camera} shows approximate radius of the phantom head is $\approx$ 70mm and recommended distance for depth is 250 - 2210 mm for azure kinect in $WFOV\ 2x2\ binned$ mode. Hence we maintained the hand guided radius $>$ 350mm. However, due to the limited FOV of the tracking camera full trajectory of the Azure Kinect was not been able to capture. A top view of an example trajectory is shown in \cref{fig:cut_trajectory} where it starts form 1 and ends at 6. The segments 1-2, 3-4 and 5-6 are seen while 2-3, 4-5, 6-1 are not, $nav\_msgs/Path$ message type from ROS automatically fills these gaps with straight lines. One of the consequences is that full trajectory is not available for comparison. Therefore, only visible segments are used for trajectory comparison and other metrics.
 
 \begin{figure}[hbt!]
 	\centering
@@ -36,8 +36,8 @@ One of the limitation during hand guided data acquisition was limited field of v
 \end{figure}
 
 
-\subsection{Hand-eye calibration for hand guided trajectory}
-In this section we provide details to estimate the transformation between reflective maker and the kinect coordinate system. The only difference between setup presented in the general hand-eye calibration and hand-guided system is absence of a robot. however, the \cref{eq:hand-eye_hand_data} is still holds with  $\tfMat{tCam}{T}{marker}$ as M,  $\tfMat{marker}{T}{kCam}$ as X,  $\tfMat{tCam}{T}{CB}$ as Y and  $\tfMat{CB}{T}{kCam}$ as N as shown in \cref{fig:handeye_calibration_hand_data}. We can think of it as an imaginary rigid body (robot body) is connected between tracking camera and the marker attached to Kinect where marker pose acts as robot end-effector pose. 
+\subsection{Eye-in-hand calibration for hand guided trajectory}
+In this section we provide details to estimate the transformation between reflective maker and the kinect coordinate system. The only difference between setup presented in the general hand-eye calibration and hand-guided system is absence of a robot. however, the \cref{eq:hand-eye_hand_data} is still holds with  $\tfMat{tCam}{T}{marker}$ as M,  $\tfMat{marker}{T}{kCam}$ as X,  $\tfMat{tCam}{T}{CB}$ as Y and  $\tfMat{CB}{T}{kCam}$ as N as shown in \cref{fig:handeye_calibration_hand_data}. 
 
 \begin{equation}
 	\matr{M}_i\matr{X} - \matr{Y}\matr{N}_i = 0 
@@ -47,9 +47,31 @@ In this section we provide details to estimate the transformation between reflec
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=\linewidth]{handeye_calibration_hand_data.png}
-	\caption{Hand-eye calibration for hand guided setup}
+	\caption{Eye-in-hand calibration for hand guided setup. Coordinate frames are arbitrarily shown for illustration purposes only.}
 	\label{fig:handeye_calibration_hand_data}
 \end{figure}
 
-The tracking camera and chessboard were static while kinect moved to different position $M_i$ (60 positions) and corresponding chessboard pose is estimated $N_i$. The collected data set is divided as training (60\%) and evaluation sets (40\%). We randomly choose training data and calculate errors based on evaluation data set and report (Mean$\pm$STD.Dev) separately for translation and rotation. 
+The tracking camera and chessboard were static while kinect moved to different position $M_i$ and corresponding chessboard pose is estimated $N_i$. 
+
+\subsection{Time synchronization}
+
+The Cambar B2 communication server,  pose tracking software and ROS, kinect software were on two separate computers. Cambar B2 software provides a time stamp in milliseconds relative to starting time of the camera (doesn't use system time as basis) with alternating 62.5 and 66.66 fps while kinect data is recorded at 30 fps with ROS timestamps as shown in \cref{fig:time_sync}. Although data acquisition on both computers were manually started together, we expect time delay from pressing start button to actual starting. As both cameras doesn't have a common  time as reference, we cannot assume first entry of both cameras be corresponds to each other. Therefore, time synchronization is inevitable. First task is to determine which Cambar entry corresponds to first entry of Kinect. This may prompt to skip first few entries from the Cambar data. Once we found the correct entry, we express all the other time stamps in relation to just found entry. Then, at time \textit{t}, we match the Kinect time stamps with Cambar. If Kinect pose recorded in Cambar at exact time is not available, we pick the pose closest to time \textit{t}. In order to choose the correct first entry in Cambar data, we first map the point clouds using kinect poses and iterate over first 60 frames (assuming time delay is not more than 1 second), at each frame, we measure the cluster inertia \cref{eq:cluster_center_inertia} and pick the entry corresponds to least inertia. Since change in kinect raw depth value also has an effect on cluster inertia, later we perform two optimization together (details to follow). The \cref{fig:cs_301_red_14_time_sync} shows an extreme case where first 48 frames had to be skipped to achieve desired goal.
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{time_sync.png}
+	\caption{left: Kinect data consists of time stamp and point cloud, center : Cambar data consists of time stamp and pose of a marker attached to Kinect (hence pose of Kinect), right: Cambar time stamps relative to first entry.}
+	\label{fig:time_sync}
+\end{figure}
+
+\begin{figure}[hbt!]
+	\centering
+	\includegraphics[width=\linewidth]{cs_301_red_14_time_sync.png}
+	\caption{Time synchronization using raw Kinect depth value.}
+	\label{fig:cs_301_red_14_time_sync}
+\end{figure}
+
+
+
+
 

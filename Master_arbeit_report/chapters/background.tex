@@ -499,16 +499,16 @@ Z_c &= \lambda
 
 \section{Hand-eye calibration}
 
-Having finished camera calibration, the calibrated cameras can be used for hand-eye calibration.
+In general, robotic systems make use of many sensors and often requires a knowledge of static transformation between them. The \cref{fig:handeye_calibration_setup} depicts one such situation. These transformations can be estimated using hand-eye calibration. 
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[scale=0.5]{handeye_calibration.png}
-	\caption{Generic hand-eye calibration setup \cite{Handeyec96:online} (Modified)} 
+	\caption{Generic hand-eye calibration setup \cite{Handeyec96:online} (Modified). setup consists of a robot, a chessboard mounted to robot end-effector, and a RGB-D camera} 
 	\label{fig:handeye_calibration_setup}
 \end{figure}
 
-The \cref{fig:handeye_calibration_setup} depicts the robot and camera set up required for hand-eye calibration. There are four transformations, namely end-effector  to base  $\tfMat{Base}{T}{EE}$, chessboard to end-effector  $\tfMat{EE}{T}{CB}$, chessboard to camera  $\tfMat{Cam}{T}{CB}$ and camera to base  $\tfMat{Base}{T}{Cam}$. Defining new variables  $\tfMat{Base}{T}{EE}$ as M,  $\tfMat{EE}{T}{CB}$ as X,  $\tfMat{Base}{T}{Cam}$ as Y and  $\tfMat{Cam}{T}{CB}$ as N we can write the transformation equation as \noindent per \cite{ernst}.
+There are four transformations, namely end-effector  to base  $\tfMat{Base}{T}{EE}$, chessboard to end-effector  $\tfMat{EE}{T}{CB}$, chessboard to camera  $\tfMat{Cam}{T}{CB}$ and camera to base  $\tfMat{Base}{T}{Cam}$. Defining new variables  $\tfMat{Base}{T}{EE}$ as M,  $\tfMat{EE}{T}{CB}$ as X,  $\tfMat{Base}{T}{Cam}$ as Y and  $\tfMat{Cam}{T}{CB}$ as N we can write the transformation equation as \noindent per \cite{ernst}.
 
 \begin{equation}
 	\matr{M}_i\matr{X} - \matr{Y}\matr{N}_i = 0 

@@ -1,12 +1,12 @@
 \section{Robot-guided trajectory}
 
-TODO : add beta details, number of trajectory included
+The euclidean norm and ICP fitness threshold used to select loop closure candidate is shown in \cref{tab:loop_closure_threshold_robot}. Forthcoming results are for 2 trajectories for each cap (2/cap, for 3 caps) at $\beta = 25mm$. Absolute and relative 3D position error are calculated only for visible electrodes as some are not seen/detected in any of the frame, for example (55/63) means (average electrodes visible / total number of electrodes in the cap) as shown in \cref{tab:3d_position_error_robot}. Trajectory comparison and ICP performance is shown in \cref{tab:trajectory_comparison_robot} and \cref{tab:icp_gt_robot} respectively. The \cref{fig:ca_124_7_robot_trajectory_summary} and \cref{fig:cs_301_8_robot_trajectory_summary} summarizes the ICP and ICP + loop closure performance for one of the caps with 63 and 23 electrodes respectively. Clusters along with 3D position of estimated cluster centers and ground truth after post registration are shown in \cref{fig:ca_124_7_robot_cluster_metrics} and \cref{fig:cs_301_8_robot_cluster_metrics} for one of the cap with 63 and 23 electrodes respectively. 
 
 \begin{table}
 	\centering
 	\begin{tabular}{|c|c|c|}
 		\hline
-		use case & Euclidean Norm & ICP fitness threshold \\ 
+		Use case & Euclidean Norm & ICP fitness threshold \\ 
 		\hline
 		robot-guided & 100 (mm) & 0.8\\
 		\hline
@@ -20,7 +20,7 @@ TODO : add beta details, number of trajectory included
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			Metric & CAP\_63 (55/63) & CAP\_23\_1 (20/23) & CAP\_23\_2 (19/23) \\ 
 			\hline
 			Absolute L2 norm   & 11.5 mm $\pm$ 5 mm  & 11.7 mm $\pm$ 4.0 mm & 12.6 mm $\pm$ 5.5 mm \\
 			
@@ -37,7 +37,7 @@ TODO : add beta details, number of trajectory included
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			Metric & CAP\_63 & CAP\_23\_1  & CAP\_23\_2 \\ 
 			\hline
 			Translation error   & -1.4 mm $\pm$ 9.3 mm  & 16.3 mm $\pm$ 10.1 mm & 12.1 mm $\pm$ 14.5 mm \\
 			
@@ -46,7 +46,7 @@ TODO : add beta details, number of trajectory included
 		\end{tabular}
 	\end{adjustbox}
 	\caption{Trajectory Comparison}
-	\label{tab:trajectory_caomparison_robot}
+	\label{tab:trajectory_comparison_robot}
 \end{table}
 
 \begin{table}[hbt]
@@ -54,7 +54,7 @@ TODO : add beta details, number of trajectory included
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			Metric & CAP\_RED (63 electrodes) & CAP\_BLUE\_1 (23 electrodes) & CAP\_BLUE\_2 (23 electrodes) \\ 
+			Metric & CAP\_63 & CAP\_23\_1  & CAP\_23\_2 \\ 
 			\hline
 			Translation error   & 0.5 mm $\pm$ 2.1 mm  & 0.8 mm $\pm$ 2.9 mm & 0.9 mm $\pm$ 3.3 mm \\
 			
@@ -69,27 +69,27 @@ TODO : add beta details, number of trajectory included
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{ca_124_7_robot_trajectory_summary.png}
-	\caption{Front and side view of trajectories for one of the cap with 63 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure}
+	\caption{Front and side view of trajectories for one of the cap with 63 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure,robot trajectory radius is 300mm.}
 	\label{fig:ca_124_7_robot_trajectory_summary}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{ca_124_7_robot_cluster_metrics.png}
-	\caption{Post registration results, Mean L2 norm : 3.06 (mm)}
+	\caption{Post registration results, Mean L2 norm : 3.06 (mm), Plus sign : ground truth , $tri\_down$ sign :  estimated}
 	\label{fig:ca_124_7_robot_cluster_metrics}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{cs_301_8_robot_trajectory_summary.png}
-	\caption{Front and side view of trajectories for one of the cap with 23 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure}
+	\caption{Front and side view of trajectories for one of the cap with 23 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure, robot trajectory radius is 300mm.}
 	\label{fig:cs_301_8_robot_trajectory_summary}
 \end{figure}
 
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{cs_301_8_robot_cluster_metrics.png}
-	\caption{Post registration results, Mean L2 norm : 8.6 (mm)}
+	\caption{Post registration results, Mean L2 norm : 8.6 (mm), Plus sign : ground truth , $tri\_down$ sign :  estimated}
 	\label{fig:cs_301_8_robot_cluster_metrics}
 \end{figure}

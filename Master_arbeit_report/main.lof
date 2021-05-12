@@ -8,7 +8,7 @@
 \contentsline {figure}{\numberline {2.3}{\ignorespaces Mapping 3D world points on to a 2D image plane.\relax }}{6}{figure.caption.7}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Mapping 2D planar world points (Z = 0) on to a 2D image plane.\relax }}{8}{figure.caption.8}%
 \contentsline {figure}{\numberline {2.5}{\ignorespaces Barrel distortion $(typically \ k_1 > 0 )$ and pincushion distortion $(typically k_1 < 0)$ \cite {OpenCV}\relax }}{11}{figure.caption.9}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Generic hand-eye calibration setup \cite {Handeyec96:online} (Modified)\relax }}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces Generic hand-eye calibration setup \cite {Handeyec96:online} (Modified). setup consists of a robot, a chessboard mounted to robot end-effector, and a RGB-D camera\relax }}{13}{figure.caption.10}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Graph based SLAM in a nutshell.\relax }}{18}{figure.caption.11}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Pose-Graph consists of nodes and edges.\relax }}{19}{figure.caption.12}%
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Probabilistic model of measurements \cite {grisetti2010tutorial}.\relax }}{19}{figure.caption.13}%
@@ -16,40 +16,44 @@
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Electrode detection and localization using YOLO.\relax }}{21}{figure.caption.15}%
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Overview of algorithms for electrode digitalization.\relax }}{23}{figure.caption.16}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Microsoft azure kinect camera features.\relax }}{25}{figure.caption.17}%
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Figure highlights the different modes offered by Kinect. The random error standard deviation $\le $ 17mm, typical systematic error < 11mm + 0.1\% of distance without multi-path interference.\relax }}{26}{figure.caption.18}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Cambar B2 by Axios 3D \cite {CamBar} mounted on the ceiling\relax }}{26}{figure.caption.19}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Microsoft azure kinect camera features \cite {azure_kinect_data:online}.\relax }}{25}{figure.caption.17}%
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Figure highlights the different modes offered by Kinect. The random error standard deviation $\le $ 17mm, typical systematic error < 11mm + 0.1\% of distance without multi-path interference. \cite {azure_kinect_data:online}.\relax }}{26}{figure.caption.18}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Left: fusionTrac 500 by Atarcsys \cite {fustionTrac}, Right: Cambar B2 by Axios 3D \cite {CamBar} mounted on the ceiling\relax }}{26}{figure.caption.19}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces KUKA robot\relax }}{27}{figure.caption.20}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Left to right, 63 electrodes with size M, 23 electrodes size L, 23 electrodes size M\relax }}{27}{figure.caption.21}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces chessboard along with reflective markers serving specific purpose.\relax }}{28}{figure.caption.22}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Left to right, 63 electrodes with size M $(Cap\_63)$, 23 electrodes size L $(Cap\_23\_1)$, 23 electrodes size M $(Cap\_23\_2)$\relax }}{27}{figure.caption.21}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces chessboard along with reflective markers serving specific purpose.\relax }}{27}{figure.caption.22}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Chessboard visual sanity check on three different depth values.\relax }}{29}{figure.caption.23}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Out-projection error between ground truth chessboard corners and estimated using raw kinect depth at 600 and 1600mm from the camera. Vertical axis the distance from the camera.\relax }}{30}{figure.caption.24}%
 \contentsline {figure}{\numberline {3.10}{\ignorespaces Robot-guided data acquisition system.\relax }}{31}{figure.caption.25}%
 \contentsline {figure}{\numberline {3.11}{\ignorespaces Camera is hand guided around the phantom head.\relax }}{32}{figure.caption.26}%
 \contentsline {figure}{\numberline {3.12}{\ignorespaces Hand-guided radius is $>$ 350mm.\relax }}{33}{figure.caption.27}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces An example for ground truth hand guided trajectory (1-6).\relax }}{34}{figure.caption.28}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Hand-eye calibration for hand guided setup\relax }}{34}{figure.caption.29}%
-\contentsline {figure}{\numberline {3.15}{\ignorespaces Examples of undetected, false positives and bounding box off position.\relax }}{35}{figure.caption.30}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Systematic error in acquiring ground truth data.\relax }}{35}{figure.caption.31}%
-\contentsline {figure}{\numberline {3.17}{\ignorespaces Depth offset $\beta $ determination process.\relax }}{36}{figure.caption.32}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Data structure to store and provide easy access to the information.\relax }}{36}{figure.caption.33}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces System overview along with pose-graph layer. All the layers are shown on a straight line instead of circular trajectory just for the illustration purposes only\relax }}{37}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Loop closure candidate selection process.\relax }}{38}{figure.caption.35}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Cluster centers (plus sign) are calculated via K-Means analysis.\relax }}{39}{figure.caption.36}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Trajectory comparison.\relax }}{40}{figure.caption.37}%
-\contentsline {figure}{\numberline {3.23}{\ignorespaces ICP vs ground truth transformation comparison.\relax }}{40}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Eye-in-hand calibration for hand guided setup. Coordinate frames are arbitrarily shown for illustration purposes only.\relax }}{34}{figure.caption.29}%
+\contentsline {figure}{\numberline {3.15}{\ignorespaces left: Kinect data consists of time stamp and point cloud, center : Cambar data consists of time stamp and pose of a marker attached to Kinect (hence pose of Kinect), right: Cambar time stamps relative to first entry.\relax }}{35}{figure.caption.30}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Time synchronization using raw Kinect depth value.\relax }}{35}{figure.caption.31}%
+\contentsline {figure}{\numberline {3.17}{\ignorespaces Examples of undetected, false positives and bounding box off position.\relax }}{36}{figure.caption.32}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Systematic error in acquiring ground truth data.\relax }}{36}{figure.caption.33}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Depth offset $\beta $ determination process.\relax }}{37}{figure.caption.34}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Data structure to store and provide easy access to the information.\relax }}{38}{figure.caption.35}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces System overview along with pose-graph layer. All the layers are shown on a straight line instead of circular trajectory just for the illustration purposes only\relax }}{38}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Loop closure candidate selection process.\relax }}{39}{figure.caption.37}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Clusters along with centers (plus sign) are calculated via K-Means analysis. Each cluster is plotted with different colors for visualization.\relax }}{40}{figure.caption.38}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Left: an example of ground truth trajectory (robot guided/hand guided). Right: estimated trajectory via SLAM. All the poses are expressed relative to first frame. Fewer poses are shown for illustration purpose.\relax }}{41}{figure.caption.39}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Left: an example of ground truth trajectory (robot guided/hand guided). Right: estimated trajectory via SLAM. Relative transformation between successive frames of ground truth trajectory is being compared with ICP estimation. Fewer poses are shown for illustration purpose.\relax }}{42}{figure.caption.40}%
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Overview of mean L2 norm with different distance from the camera.\relax }}{43}{figure.caption.39}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Average cluster Inertia for each trajectory is calculated, note that, inertia is not a normalized metric. Lower the better and zero is optimum\relax }}{44}{figure.caption.40}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Effect of change in $\beta $ on point cloud.\relax }}{44}{figure.caption.41}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces mean RMSE vs depth offset $\beta $.\relax }}{45}{figure.caption.42}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces mean L2 norm vs depth offset $\beta $.\relax }}{46}{figure.caption.43}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Front and side view of trajectories for one of the cap with 63 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure\relax }}{46}{figure.caption.44}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Post registration results, Mean L2 norm : 3.06 (mm)\relax }}{47}{figure.caption.45}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Front and side view of trajectories for one of the cap with 23 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure\relax }}{47}{figure.caption.46}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Post registration results, Mean L2 norm : 8.6 (mm)\relax }}{48}{figure.caption.47}%
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Front and side view of trajectories for one of the cap with 63 electrodes. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 and 6-1 are not.\relax }}{49}{figure.caption.48}%
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Front and side view of trajectories for one of the cap with 63 electrodes. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 and 6-1 are not.\relax }}{50}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Overview of mean L2 norm with different distance from the camera.\relax }}{44}{figure.caption.41}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces mean RMSE vs depth offset $\beta $.\relax }}{45}{figure.caption.42}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces mean L2 norm vs depth offset $\beta $.\relax }}{46}{figure.caption.43}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Average cluster Inertia for each trajectory is calculated, note that, inertia is not a normalized metric. Lower the better and zero is optimum\relax }}{47}{figure.caption.44}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Effect of change in $\beta $ on point cloud.\relax }}{47}{figure.caption.45}%
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Depth and time synchronization.\relax }}{48}{figure.caption.46}%
+\contentsline {figure}{\numberline {4.7}{\ignorespaces mean L2 norm vs depth offset $\beta $. Bottom: inconsistency in number of clusters estimation\relax }}{49}{figure.caption.47}%
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Front and side view of trajectories for one of the cap with 63 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure,robot trajectory radius is 300mm.\relax }}{50}{figure.caption.48}%
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Post registration results, Mean L2 norm : 3.06 (mm), Plus sign : ground truth , $tri\_down$ sign : estimated\relax }}{50}{figure.caption.49}%
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Front and side view of trajectories for one of the cap with 23 electrodes. Green: Ground truth, Red: ICP alone, White: ICP+Loop closure, robot trajectory radius is 300mm.\relax }}{51}{figure.caption.50}%
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Post registration results, Mean L2 norm : 8.6 (mm), Plus sign : ground truth , $tri\_down$ sign : estimated\relax }}{51}{figure.caption.51}%
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Front and side view of trajectories for one of the cap with 63 electrodes. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 are not. Hand trajectory radius is $\approx $ 500mm.\relax }}{52}{figure.caption.52}%
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Front and side view of trajectories for one of the cap with 63 electrodes. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 are not. Hand trajectory radius is $\approx $ 500mm.\relax }}{53}{figure.caption.53}%
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

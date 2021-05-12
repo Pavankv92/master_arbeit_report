@@ -1,4 +1,4 @@
-\section{Experimental setup} The setup consists of RGB-D camera (Azure kinect), a tracking camera (Cambar B2 by Axios 3D), a robot (KUKA), one phantom head, multiple EEG caps, one chess board, and two reflective markers.  
+\section{Experimental setup} The setup consists of RGB-D camera (Azure kinect), a tracking camera (fusionTrac 500 by Atarcsys and Cambar B2 by Axios 3D), a robot (KUKA), one phantom head, multiple EEG caps, one chess board, and two reflective markers.  
 
 \subsection{Kinect camera} Microsoft azure Kinect camera \cite{azure_kinect} comes with many sophisticated sensors integrated. For example, 12Megapixel RGB sensor, 1 Megapixel time of flight (Tof) depth sensors both capable of recording images at 30 fps, motion sensor (accelerometer and gyroscope) and a microphone as shown in \cref{fig:azure_kinect}. Azure Kinect offers many configurations (Resolution, fps, FOV) for acquiring RGB and depth images. Different camera modes and associated errors are shown in \cref{fig:depth_modes}. Azure Kinect comes with a software development kit (SDK) which can be integrated with robot operating system (ROS). In this thesis Kinect is some times referred as RGB-D or kCam especially in the graphics.
 
@@ -7,23 +7,23 @@
 	\includegraphics[scale=0.5]{azure_kinect.png}
 	\hfill
 	\includegraphics[scale=0.52]{azure_kinect_2.png}
-	\caption{Microsoft azure kinect camera features.} 
+	\caption{Microsoft azure kinect camera features \cite{azure_kinect_data:online}.} 
 	\label{fig:azure_kinect}
 \end{figure}
 
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[scale=0.8]{azure_kinect_3.png}
-	\caption{Figure highlights the different modes offered by Kinect. The random error standard deviation $\le$ 17mm, typical systematic error < 11mm + 0.1\% of distance without multi-path interference.}
+	\caption{Figure highlights the different modes offered by Kinect. The random error standard deviation $\le$ 17mm, typical systematic error < 11mm + 0.1\% of distance without multi-path interference. \cite{azure_kinect_data:online}.}
 	\label{fig:depth_modes}	
 \end{figure}
 
- \subsection{Tracking camera} Cambar B2 by Axios 3D \cref{fig:tracking_camera} is passive and active, real-time optical pose-tracking system specially designed to detect and track reflective spheres, disks, and IR-LEDs in real-time. It consists of stereo set-up to observe reflective and/or active fiducials (IR LEDs) simultaneously, and triangulates the detected markers to calculate their locations with high precision and measurement rates. This system can be used to estimate the pose when several fiducials are arranged to form a specific shape. In this thesis Cambar B2 is some times referred as tracking camera or tCam especially in the graphics.
+ \subsection{Tracking camera} The fusionTrac 500 by Atarcsys and Cambar B2 by Axios 3D \cref{fig:tracking_camera} are passive and active, real-time optical pose-tracking system specially designed to detect and track reflective spheres, disks, and IR-LEDs in real-time. These consists of stereo set-up to observe reflective and/or active fiducials (IR LEDs) simultaneously, and triangulates the detected markers to calculate their locations with high precision and measurement rates. These system can be used to estimate the pose when several fiducials are arranged to form a specific shape. The fusionTrac 500 is used in robotic-guided case while Cambar B2 is used during hand-guided case.  In this thesis both fusionTrac and Cambar is some times interchangeably used and referred as tracking camera or tCam especially in the graphics.
 
 \begin{figure}[hbt!]
 	\centering
-	\includegraphics[scale=1.1]{tracking_camera.png}
-	\caption{Cambar B2 by Axios 3D \cite{CamBar} mounted on the ceiling} 
+	\includegraphics[width=\linewidth]{tracking_camera.png}
+	\caption{Left: fusionTrac 500 by Atarcsys \cite{fustionTrac},  Right: Cambar B2 by Axios 3D \cite{CamBar} mounted on the ceiling} 
 	\label{fig:tracking_camera}
 \end{figure} 
 
@@ -41,12 +41,12 @@ KUKA robot has been employed in order to guide the RGB-D camera along predefined
 \begin{figure}[hbt!]
 	\centering
 	\includegraphics[width=\linewidth]{all_caps.png}
-	\caption{Left to right, 63 electrodes with size M, 23 electrodes size L, 23 electrodes size M}
+	\caption{Left to right, 63 electrodes with size M $(Cap\_63)$, 23 electrodes size L $(Cap\_23\_1)$, 23 electrodes size M $(Cap\_23\_2)$}
 	\label{fig:all_caps}	
 \end{figure}
 
 \subsection{Markers}
-A Chessboard with grid size (5 $\times$ 8) is used for camera and hand-eye calibration. One reflective marker is firmly attached to the Kinect which has a specific arrangement of fiducials. Pose can be estimated when the marker is exposed to tracking camera hence pose of the Kinect.  Since this marker is attached on a arbitrary position, exact transformation between kinect coordinate frame and the marker is unknown which we estimate during hand-eye calibration. Another reflective marker with a different arrangement of fiducials is used for electrode digitalization. Tracking camera records the 3D position of marker tip. Please note that these markers have to be calibrated with tracking camera before hand.  The \cref{fig:markers} provides a glimpse of markers.  
+A Chessboard with grid size (5 $\times$ 8) is used for camera and hand-eye calibration. One reflective marker is firmly attached to the Kinect which has a specific arrangement of fiducials. Pose can be estimated when the marker is exposed to tracking camera hence pose of the Kinect.  Since this marker is attached on a arbitrary position, exact transformation between kinect coordinate frame and the marker is unknown which we estimate during eye-in-hand calibration. Another reflective marker with a different arrangement of fiducials is used for electrode digitalization. Tracking camera records the 3D position of marker tip. Please note that these markers have to be calibrated with tracking camera before hand.  The \cref{fig:markers} provides a glimpse of markers.  
 
 \begin{figure}[hbt!]
 	\centering

@@ -1266,6 +1266,34 @@
     \field{urlyear}{2020}
   \endentry
 
+  \entry{azure_kinect_data:online}{misc}{}
+    \field{labeltitlesource}{title}
+  \field{howpublished}{\url{https://docs.microsoft.com/en-us/azure/kinect-dk/hardware-specification}}
+    \field{note}{(Accessed on 05/06/2021)}
+    \field{title}{Azure Kinect DK hardware specifications | Microsoft Docs}
+  \endentry
+
+  \entry{fustionTrac}{online}{}
+    \name{author}{1}{}{%
+      {{hash=a}{%
+         family={atracsys.com},
+         familyi={a\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{a1}
+    \strng{fullhash}{a1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{title}{{MS Windows NT} Kernel Description}
+    \verb{url}
+    \verb https://www.atracsys-measurement.com/products/fusiontrack-500/
+    \endverb
+    \field{year}{1999}
+    \field{urlday}{20}
+    \field{urlmonth}{05}
+    \field{urlyear}{2020}
+  \endentry
+
   \entry{CamBar}{misc}{}
     \field{labeltitlesource}{title}
   \field{howpublished}{\url{https://axios3d.de/optische-messsysteme/cambar-b2-c4-und-cambar-b2-c8/}}
