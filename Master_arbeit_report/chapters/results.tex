@@ -1,7 +1,7 @@
-In this section, we provide detailed results on various aspects of the thesis.
+This section provides detailed results on various aspects of the thesis.
 
 \section{Camera calibration} 
-Several images at different depth in steps of $\approx$ 200mm starting $\approx$ 400mm from the camera were used for camera calibration. The estimated camera intrinsic parameters using OpenCV, Matlab along with values in the robot-guided data set is provided in \cref{tab:kinect_camera_calibration_result}. Image size 1280$\times$720. 
+Several images at different depths in steps of $\approx$ 200mm starting $\approx$ 400mm from the camera were used for camera calibration. The estimated camera intrinsic parameters using OpenCV, Matlab along with values in the robot-guided data set is provided in \cref{tab:kinect_camera_calibration_result}. Image size 1280$\times$720. 
 
 \begin{table}[hbt!]
 	\centering
@@ -22,7 +22,7 @@ Several images at different depth in steps of $\approx$ 200mm starting $\approx$
 \end{table}
 
 \section{Hand-eye and Eye-in-hand calibration}
-For eye-in-hand calibration (hand guided case) the kinect along with firmly attached marker were moved to $>$40 different position making sure that tracking camera can detect the marker and estimate the pose correctly. The collected data set is divided as training (60\%) and evaluation sets (40\%). We randomly choose training data and calculate errors based on evaluation data set and report (Mean$\pm$STD Deviation) separately for translation and rotation. The \cref{tab:handeye_result} shows errors for robot-guided and hand guided case.
+For eye-in-hand calibration (hand-guided case) the Kinect along with firmly attached marker was moved to $>$40 different positions making sure that the tracking camera can detect the marker and estimate the pose correctly. The collected data set is divided into training (60\%) and evaluation sets (40\%) randomly. The errors are calculated based on the evaluation data set and (Mean$\pm$STD Deviation) separately for translation and rotation is reported. The \cref{tab:handeye_result} shows errors for robot-guided and hand-guided case.
 
 \begin{table}[hbt]
 	\centering
@@ -44,7 +44,7 @@ For eye-in-hand calibration (hand guided case) the kinect along with firmly atta
 
 \section{Pixel points out-projection}
 
-For pixel points out-projection experiment, several images of the chessboard at different depths in steps of $\approx$ 200mm starting $\approx$ 400mm from the camera and at each depth, different orientation were captured. Firstly, ground truth object points are calculated in camera coordinates and corresponding image points are out-projected using raw depth provided by kinect. For each image, out-projected values are then compared to the ground truth values with L2 norm as the metric. Since there are many images at a particular depth distance, L2 norm will be averaged over all the images. The \cref{fig:pixel_value_out_projection} shows the results.
+For the pixel points out-projection experiment, several images of the chessboard at different depths in steps of $\approx$ 200mm starting $\approx$ 400mm from the camera and at each depth, different orientations were captured. Firstly, ground truth object points are calculated in camera coordinates and corresponding image points are out-projected using raw depth provided by Kinect. For each image, out-projected values are then compared to the ground truth values with L2 norm as the metric. Since there are many images at a particular depth distance, L2 norm will be averaged over all the images. The \cref{fig:pixel_value_out_projection} shows the results.
 
 \begin{figure}[hbt]
 	\centering
@@ -56,7 +56,7 @@ For pixel points out-projection experiment, several images of the chessboard at 
 
 \section{Depth offset determination}
 
-For robot-guided case, first at each camera position $x_{1:t} $ both ground truth and out-projected point clouds are known (only those electrodes that are visible from a particular camera pose) and an iterative closest point registration can be performed and output RMSE (root mean square error) can be used as a metric and averaged over all camera poses. Second, one can stitch the point clouds and find the cluster centers and compare them to the ground truth values and measure L2 norm. For the ICP scan registration, $\beta$ is varied from 10 to 29 mm (i.e. out-projected points will be raw kinect depth -  $\beta$) brute forcing with the step of 1 mm. The \cref{fig:icp_depth_offset} shows result for 6 robot guided trajectories (2/cap, for 3 caps). Similarly, with same $\beta$ variation for cluster center comparison, \cref{fig:cluster_depth_offset} shows the results. 
+For the robot-guided case, first at each camera position $x_{1:t} $ both ground truth and out-projected point clouds are known (only those electrodes that are visible from a particular camera pose) and an iterative closest point registration can be performed and output root mean squared error (RMSE) can be used as a metric and averaged over all camera poses. Second, one can stitch the point clouds and find the cluster centers and compare them to the ground truth values and measure L2 norm. For the ICP scan registration, $\beta$ is varied from 10 to 29 mm (i.e. out-projected points will be raw Kinect depth -  $\beta$) while performing grid search with a minimum grid size of 1 mm. The \cref{fig:icp_depth_offset} shows result for 6 robot-guided trajectories (2/cap, for 3 caps). Similarly, with the same $\beta$ variation for cluster center comparison, \cref{fig:cluster_depth_offset} shows the results. 
 
 \begin{figure}[hbt]
 	\centering
@@ -88,8 +88,8 @@ K-Means aims to determine the centroids $\mu_j$ that minimizes the inertia defin
 	\label{fig:depth_offset_beta_variations}
 \end{figure}
 
-For hand-guided case, optimum $\beta$ is found by combining time synchronization as it also effects the cluster inertia. Therefore, For combined optimization, $\beta$ is varied from 0 to 29 mm and skip is varied from 0 to 60. Where $\beta = 0 $ refers to direct use of Kinect raw depth value $ skip = 0 $ means first Cambar entry corresponds to first Kinect entry. At each iteration of $\beta$, we first solve time synchronization problem and note the lowest inertia and skip values.
-The \cref{fig:depth_and_time_sync} shows result of the combined optimization. Numbers in the parenthesis is the average skip value at  which minimum inertia was achieved. On the other hand, higher error in static transform estimation between marker and Kinect led to higher error in absolute 3D position of estimated cluster centers and ground truth electrodes. Therefore, one more ICP between them was inevitable. Cluster center comparison is shown in \cref{fig:depth_offset_hand_cluster}. 
+For the hand-guided case, optimum $\beta$ is found by combining time synchronization as it also affects the cluster inertia. Therefore, For the combined optimization, $\beta$ is varied from 0 to 29 mm and skip is varied from 0 to 60. Where $\beta = 0 $ refers to the direct use of Kinect raw depth value $ skip = 0 $ means the first Cambar entry corresponds to the first Kinect entry. At each iteration of $\beta$, we first the solve time synchronization problem and note the lowest inertia and skip values.
+The \cref{fig:depth_and_time_sync} shows the result of the combined optimization. The numbers in the parenthesis are the average skip value at which minimum inertia was achieved. On the other hand, higher error in static transform estimation between marker and Kinect led to the higher error in absolute 3D position of estimated cluster centers and ground truth electrodes. Therefore, one more ICP between them was necessary. The cluster center comparison result is shown in \cref{fig:depth_offset_hand_cluster}. 
 
 \begin{figure}[hbt]
 	\centering
@@ -101,10 +101,8 @@ The \cref{fig:depth_and_time_sync} shows result of the combined optimization. Nu
 
 \begin{figure}[hbt!]
 	\centering
-	\includegraphics[scale=0.8]{depth_offset_hand_cluster_1.png}
-	\\
-	\includegraphics[scale=0.8]{depth_offset_hand_cluster_2.png}
-	\caption{mean L2 norm vs depth offset $\beta$. Bottom: inconsistency in number of clusters estimation}
+	\includegraphics[width=\linewidth]{depth_offset_hand_cluster.png}
+	\caption{mean L2 norm vs depth offset $\beta$.}
 	\label{fig:depth_offset_hand_cluster}
 \end{figure}
 

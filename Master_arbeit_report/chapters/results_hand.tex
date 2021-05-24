@@ -1,6 +1,6 @@
 \section{Hand-guided trajectory}
 
-The euclidean norm and ICP fitness threshold used to select loop closure candidate is shown in \cref{tab:loop_closure_threshold_hand}. Forthcoming results are for 2 trajectories for each cap (2/cap, for 3 caps) at $\beta = 25mm$. High eye-in-hand calibration errors, which means estimated static transformation between marker attached to kinect is not so accurate therefore only relative 3D position error are shown in \cref{tab:3d_position_error_hand}. Trajectory comparison and ICP performance is shown in \cref{tab:trajectory_comparison_hand} and \cref{tab:icp_gt_hand} respectively. The \cref{fig:ca_124_7_hand_trajectory_summary_beta_10} and \cref{fig:cs_301_7_hand_trajectory_summary_beta_10} shows summary of ground truth and ICP estimated trajectories for cap with 63 and 23 electrodes respectively. For both images, top-left section shows front and side view of ground truth trajectory (green) recorded by attaching a marker. The sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 are not. Top-right section shows front and side view of ICP estimated trajectory (red) which starts from 1 and ends at 2. The bottom-left section shows front and side view of both ground truth and ICP estimated trajectory on top of each other for easy visualization. Bottom-right section on the other hand shows a closer look at starting and ending portion of each trajectories.
+The euclidean norm and ICP fitness threshold used to select the loop closure candidate are shown in \cref{tab:loop_closure_threshold_hand}. Forthcoming results are for 2 trajectories for each cap (2/cap, for 3 caps) at $\beta = 10mm$. High eye-in-hand calibration errors, i,e estimated static transformation between marker attached to the Kinect is not so accurate therefore only relative 3D position errors are shown in \cref{tab:3d_position_error_hand}. Trajectory comparison and ICP performance are shown in \cref{tab:trajectory_comparison_hand} and \cref{tab:icp_gt_hand} respectively. The \cref{fig:ca_124_7_hand_trajectory_summary_beta_10} and \cref{fig:cs_301_7_hand_trajectory_summary_beta_10} shows the summary of ground truth and ICP estimated trajectories for caps with 63 and 23 electrodes respectively. For both images, the top-left section shows the front and side view of ground truth trajectory (green) recorded by attaching a marker. Sections 1-2, 3-4, and 5-6 are visible while sections 2-3, 4-5 are not. The top-right section shows front and side view of ICP estimated trajectory (red) which starts from 1 and ends at 2. The bottom-left section shows the front and side view of both ground truth and ICP estimated trajectory on top of each other for easy visualization. The bottom-right section on the other hand shows a closer look at starting and ending portion of each trajectory. Clusters along with the 3D position of estimated cluster centers and ground truth after post registration are shown in \cref{fig:ca_124_7_hand_cluster_metrics} and \cref{fig:cs_301_7_hand_cluster_metrics} for one of the caps with 63 and 23 electrodes respectively. 
 
 \begin{table}
 	\centering
@@ -20,9 +20,9 @@ The euclidean norm and ICP fitness threshold used to select loop closure candida
 		\centering
 		\begin{tabular}{|c|c|c|c|}
 			\hline
-			Metric & CAP\_63 (49/63) & CAP\_23\_1 (21/23) & CAP\_23\_2 (22/23) \\
+			Metric & CAP\_63 (50/63) & CAP\_23\_1 (21/23) & CAP\_23\_2 (22/23) \\
 			\hline
-			Post registration RMSE & 13.3 mm $\pm$ 0.4  & 15 mm$\pm$ 2.0 mm  & 16.3 mm $\pm$ 0.3 mm \\
+			Post registration RMSE & 10.7 mm $\pm$ 2.7  & 14.6 mm $\pm$ 3.4 mm  & 19.3 mm $\pm$ 2.3 mm \\
 			\hline
 		\end{tabular}
 	\end{adjustbox}
@@ -37,9 +37,9 @@ The euclidean norm and ICP fitness threshold used to select loop closure candida
 			\hline
 			Metric & CAP\_63 & CAP\_23\_1  & CAP\_23\_2 \\ 
 			\hline
-			Translation error   & -43.9 mm $\pm$ 50.7 mm  & -22.3 mm $\pm$ 90.9 mm & -18.8 mm $\pm$ 59.9 mm \\
+			Translation error   & -10.6 mm $\pm$ 50 mm  & -15 mm $\pm$ 91 mm & -18.8 mm $\pm$ 60 mm \\
 			
-			Rotational error & 12.5\textdegree $\pm$ 6.2\textdegree  & 19.8\textdegree $\pm$ 8.3\textdegree  & 15.3\textdegree $\pm$ 4.1\textdegree \\
+			Rotational error & 11\textdegree $\pm$ 4\textdegree  & 16.8\textdegree $\pm$ 11\textdegree  & 15.3\textdegree $\pm$ 4\textdegree \\
 			\hline
 		\end{tabular}
 	\end{adjustbox}
@@ -54,9 +54,9 @@ The euclidean norm and ICP fitness threshold used to select loop closure candida
 			\hline
 			Metric & CAP\_63 & CAP\_23\_1  & CAP\_23\_2 \\ 
 			\hline
-			Translation error   & 7.6 mm $\pm$ 5.6 mm  & 10.2 mm $\pm$ 6.9 mm & 9.0 mm $\pm$ 6.7 mm \\
+			Translation error   & 4 mm $\pm$ 7 mm  & 7.1 mm $\pm$ 9 mm & 8.0 mm $\pm$ 7 mm \\
 		
-			Rotational error & 1.1\textdegree $\pm$ 0.6\textdegree  & 1.5\textdegree $\pm$ 0.8\textdegree  & 1.4\textdegree $\pm$ 0.8\textdegree \\
+			Rotational error & 1.1\textdegree $\pm$ 0.6\textdegree  & 1.5\textdegree $\pm$ 1\textdegree  & 1.4\textdegree $\pm$ 0.8\textdegree \\
 			\hline
 		\end{tabular}
 	\end{adjustbox}
@@ -72,6 +72,14 @@ The euclidean norm and ICP fitness threshold used to select loop closure candida
 	\label{fig:ca_124_7_hand_trajectory_summary_beta_10}
 \end{figure}
 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{ca_124_7_hand_cluster_metrics.png}
+	\caption{Post registration results, Mean L2 norm : 8 (mm), Plus sign : ground truth , $tri\_down$ sign :  estimated}
+	\label{fig:ca_124_7_hand_cluster_metrics}
+\end{figure}
+
 \begin{figure}
 	\centering
 	\includegraphics[width=\linewidth]{cs_301_7_hand_trajectory_summary_beta_10.png}
@@ -79,4 +87,9 @@ The euclidean norm and ICP fitness threshold used to select loop closure candida
 	\label{fig:cs_301_7_hand_trajectory_summary_beta_10}
 \end{figure}
 
-
+\begin{figure}
+	\centering
+	\includegraphics[width=\linewidth]{cs_301_7_hand_cluster_metrics.png}
+	\caption{Post registration results, Mean L2 norm : 10.7 (mm), Plus sign : ground truth , $tri\_down$ sign :  estimated}
+	\label{fig:cs_301_7_hand_cluster_metrics}
+\end{figure}

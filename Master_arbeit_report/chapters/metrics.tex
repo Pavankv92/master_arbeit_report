@@ -1,4 +1,4 @@
-\section{Performance metrics}  This section provides an overview of metrics used to evaluate the performance of algorithms. Firstly, we compute absolute 3D position error between estimated and ground truth electrodes. As we saw earlier that there are series of error involved in gathering ground truth data and transferring it to kinect for frame error computation. Therefore, we also perform an ICP registration between estimated and ground truth electrodes. Quite an insight can be obtained by comparing the estimated and ground truth trajectory (see appendix : pose comparison ). As previously mentioned, all the camera poses are expressed with respect to the first camera pose (which is also global reference frame) before we compare the trajectory as shown in \cref{fig:metric_absolute_pose}. Lastly, we compute the difference between ICP estimated transformation for subsequent camera poses and ground truth poses. As shown in \cref{fig:metric_icp_pose}, we skip one pose in order to have sufficient distance between 2 camera pose ($>$4mm @ 30fps). 
+\section{Performance metrics}  This section provides an overview of metrics used to evaluate the performance of algorithms. Firstly, we compute the absolute 3D position error between estimated and ground truth electrodes. As we saw earlier that there are series of errors involved in gathering ground truth data and transferring it to Kinect for frame error computation. Therefore, we also perform an ICP registration between estimated and ground truth electrodes. Quite an insight can be obtained by comparing the estimated and ground truth trajectory (see appendix : pose comparison ). As previously mentioned, all the camera poses are expressed with respect to the first camera pose (which is also the global reference frame) before we compare the trajectory as shown in \cref{fig:metric_absolute_pose}. Lastly, we compute the difference between ICP estimated transformation for subsequent camera poses and ground truth poses. As shown in \cref{fig:metric_icp_pose}, we skip one pose in order to have sufficient distance between 2 camera pose ($>$4mm @ 30fps). 
 
 \begin{figure}[hbt!]
 	\centering
@@ -13,7 +13,6 @@
 	\caption{Left: an example of ground truth trajectory (robot guided/hand guided). Right: estimated trajectory via SLAM. Relative transformation between successive frames of ground truth trajectory is being compared with ICP estimation. Fewer poses are shown for illustration purpose.}
 	\label{fig:metric_icp_pose}
 \end{figure}
-
 
 Summary of all metrics.
 \begin{enumerate}

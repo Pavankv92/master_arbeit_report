@@ -17,7 +17,7 @@
 \contentsline {subsection}{\numberline {2.6.2}Localization}{17}{subsection.2.6.2}%
 \contentsline {subsection}{\numberline {2.6.3}SLAM}{17}{subsection.2.6.3}%
 \contentsline {section}{\numberline {2.7}Graph-Based SLAM (Pose-Graph SLAM)}{18}{section.2.7}%
-\contentsline {subsection}{\numberline {2.7.1}Pose-Graph construction}{19}{subsection.2.7.1}%
+\contentsline {subsection}{\numberline {2.7.1}Pose-Graph construction}{18}{subsection.2.7.1}%
 \contentsline {subsection}{\numberline {2.7.2}Pose-Graph optimization}{20}{subsection.2.7.2}%
 \contentsline {section}{\numberline {2.8}Electrode detection and localization}{21}{section.2.8}%
 \contentsline {section}{\numberline {2.9}Cluster processing}{21}{section.2.9}%
@@ -46,12 +46,12 @@
 \contentsline {subsection}{\numberline {3.4.3}Eye-in-hand calibration for hand guided trajectory}{31}{subsection.3.4.3}%
 \contentsline {subsection}{\numberline {3.4.4}Time synchronization}{32}{subsection.3.4.4}%
 \contentsline {section}{\numberline {3.5}Point cloud for scan registration}{33}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Ground truth data acquisition}{34}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Out-projection error determination}{35}{subsection.3.6.1}%
+\contentsline {section}{\numberline {3.6}Ground truth data acquisition}{35}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Out-projection error determination}{36}{subsection.3.6.1}%
 \contentsline {section}{\numberline {3.7}Pose-graph construction and optimization}{37}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}Loop closure}{38}{subsection.3.7.1}%
 \contentsline {subsection}{\numberline {3.7.2}Optimization}{39}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}Performance metrics}{40}{section.3.8}%
+\contentsline {section}{\numberline {3.8}Performance metrics}{39}{section.3.8}%
 \contentsline {chapter}{\numberline {4}Results}{43}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Camera calibration}{43}{section.4.1}%
 \contentsline {section}{\numberline {4.2}Hand-eye and Eye-in-hand calibration}{43}{section.4.2}%
@@ -59,18 +59,18 @@
 \contentsline {section}{\numberline {4.4}Depth offset determination}{44}{section.4.4}%
 \contentsline {section}{\numberline {4.5}Robot-guided trajectory}{45}{section.4.5}%
 \contentsline {section}{\numberline {4.6}Hand-guided trajectory}{46}{section.4.6}%
-\contentsline {chapter}{\numberline {5}Discussion}{54}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Calibrations}{54}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Depth offset determination}{54}{section.5.2}%
-\contentsline {section}{\numberline {5.3}SLAM}{55}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Electrode Digitalization}{55}{section.5.4}%
-\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{57}{chapter.6}%
-\contentsline {chapter}{\numberline {A}Listings}{58}{appendix.A}%
-\contentsline {section}{\numberline {A.1}Least square problem}{58}{section.A.1}%
-\contentsline {subsection}{\numberline {A.1.1}Type I}{58}{subsection.A.1.1}%
-\contentsline {subsection}{\numberline {A.1.2}Type II}{58}{subsection.A.1.2}%
-\contentsline {section}{\numberline {A.2}Rotation matrix}{58}{section.A.2}%
-\contentsline {section}{\numberline {A.3}Gaussian distribution}{59}{section.A.3}%
-\contentsline {section}{\numberline {A.4}Pose comparison}{59}{section.A.4}%
-\contentsline {chapter}{\nonumberline Bibliography}{60}{chapter*.54}%
-\contentsline {chapter}{\nonumberline Declaration}{63}{chapter*.55}%
+\contentsline {chapter}{\numberline {5}Discussion}{53}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Calibrations}{53}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Depth offset determination}{53}{section.5.2}%
+\contentsline {section}{\numberline {5.3}SLAM}{54}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Electrode Digitalization}{54}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Conclusion and Future scope}{56}{chapter.6}%
+\contentsline {chapter}{\numberline {A}Listings}{57}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Least square problem}{57}{section.A.1}%
+\contentsline {subsection}{\numberline {A.1.1}Type I}{57}{subsection.A.1.1}%
+\contentsline {subsection}{\numberline {A.1.2}Type II}{57}{subsection.A.1.2}%
+\contentsline {section}{\numberline {A.2}Rotation matrix}{57}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Gaussian distribution}{58}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Pose comparison}{58}{section.A.4}%
+\contentsline {chapter}{\nonumberline Bibliography}{59}{chapter*.56}%
+\contentsline {chapter}{\nonumberline Declaration}{62}{chapter*.57}%

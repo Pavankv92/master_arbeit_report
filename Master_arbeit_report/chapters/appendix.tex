@@ -58,14 +58,13 @@ With few rearrangement canonical form of PDF for multivariate normal distributio
 
 \section{Pose comparison}
 Let $\matr{P}$ be source and $\matr{Q}$ target poses which are 4$\times$4 homogeneous matrices with $ [{R|t}] $. \textit{R} is rotation and \textit{t} is translational part. Task is to compare them and form a metric.   
-Let ($k_P$,$\theta_p$) and ($k_q$,$\theta_q$) be axis angle representation \cite{axis-angle} of rotational part $\mathtt{R}[\matr{P}]$ and $\mathtt{R}[\matr{P}]$ respectively. Then the metric for the rotational part is \cref{eq:rotational_metric}, the axis part is neglected. 
+Let ($k_P$,$\theta_p$) and ($k_q$,$\theta_q$) be axis angle representation \cite{axis-angle} of rotational part $\mathtt{R}[\matr{P}]$ and $\mathtt{R}[\matr{Q}]$ respectively. Then the metric for the rotational part is \cref{eq:rotational_metric}, the axis part is neglected. 
 
 \begin{equation}
 	|\theta_p| - |\theta_q|
 	\label{eq:rotational_metric}
 \end{equation} 
 
-Axis part is neglected
 Let $t_p$ and $t_q$ be the translational part of $\matr{P}$ and $\matr{Q}$ respectively. Then the metric for translational part is \cref{eq:translational_metric}.
 
 \begin{equation}

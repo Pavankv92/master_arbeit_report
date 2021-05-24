@@ -1,6 +1,6 @@
-\section{Experimental setup} The setup consists of RGB-D camera (Azure kinect), a tracking camera (fusionTrac 500 by Atarcsys and Cambar B2 by Axios 3D), a robot (KUKA), one phantom head, multiple EEG caps, one chess board, and two reflective markers.  
+\section{Experimental setup} The setup consists of a RGB-D camera (Azure kinect), a tracking camera (fusionTrac 500 by Atarcsys or Cambar B2 by Axios 3D), a robot (KUKA), one phantom head, multiple EEG caps, one chess board, and two reflective markers.  
 
-\subsection{Kinect camera} Microsoft azure Kinect camera \cite{azure_kinect} comes with many sophisticated sensors integrated. For example, 12Megapixel RGB sensor, 1 Megapixel time of flight (Tof) depth sensors both capable of recording images at 30 fps, motion sensor (accelerometer and gyroscope) and a microphone as shown in \cref{fig:azure_kinect}. Azure Kinect offers many configurations (Resolution, fps, FOV) for acquiring RGB and depth images. Different camera modes and associated errors are shown in \cref{fig:depth_modes}. Azure Kinect comes with a software development kit (SDK) which can be integrated with robot operating system (ROS). In this thesis Kinect is some times referred as RGB-D or kCam especially in the graphics.
+\subsection{Kinect camera} The Azure Kinect camera \cite{azure_kinect} comes with many sophisticated sensors integrated. For example, 12Megapixel RGB sensor, 1 Megapixel time of flight (Tof) depth sensors both capable of recording images at 30 fps, motion sensor (accelerometer and gyroscope), and a microphone as shown in \cref{fig:azure_kinect}. Azure Kinect offers many configurations (Resolution, fps, FOV) for acquiring RGB and depth images. Different camera modes and associated errors are shown in \cref{fig:depth_modes}. Azure Kinect comes with a software development kit (SDK) which can be integrated with robot operating system (ROS). In this thesis, Kinect is sometimes referred to as RGB-D or kCam especially in the graphics.
 
 \begin{figure}[hbt!]
 	\centering
@@ -18,7 +18,7 @@
 	\label{fig:depth_modes}	
 \end{figure}
 
- \subsection{Tracking camera} The fusionTrac 500 by Atarcsys and Cambar B2 by Axios 3D \cref{fig:tracking_camera} are passive and active, real-time optical pose-tracking system specially designed to detect and track reflective spheres, disks, and IR-LEDs in real-time. These consists of stereo set-up to observe reflective and/or active fiducials (IR LEDs) simultaneously, and triangulates the detected markers to calculate their locations with high precision and measurement rates. These system can be used to estimate the pose when several fiducials are arranged to form a specific shape. The fusionTrac 500 is used in robotic-guided case while Cambar B2 is used during hand-guided case.  In this thesis both fusionTrac and Cambar is some times interchangeably used and referred as tracking camera or tCam especially in the graphics.
+ \subsection{Tracking camera} The fusionTrac 500 by Atarcsys and Cambar B2 by Axios 3D \cref{fig:tracking_camera} are active and passive, real-time optical pose-tracking system specially designed to detect and track reflective spheres, disks, and IR-LEDs in real-time. These consists of stereo set-up to observe reflective and/or active fiducials (IR LEDs) simultaneously, and triangulates the detected markers to calculate their locations with high precision and measurement rates. These systems can be used to estimate the pose when several fiducials are arranged to form a specific shape. The fusionTrac 500 is used in robotic-guided case while Cambar B2 is used during hand-guided case.  In this thesis both fusionTrac and Cambar is some times interchangeably used and referred as tracking camera or tCam especially in the graphics.
 
 \begin{figure}[hbt!]
 	\centering
@@ -29,12 +29,12 @@
 
 \subsection{Robot, phantom, EEG caps}
 
-KUKA robot has been employed in order to guide the RGB-D camera along predefined trajectories shown in \cref{fig:kuka}. Several EEG caps are provided by eemagine Medical Imaging Solutions GmbH, Berlin, Germany. One cap with 63 electrodes and two with 23 electrodes each are used in this thesis. These caps are strapped on a dummy phantom head as shown in \cref{fig:all_caps}.
+The KUKA LBR iiwa 14 med robot has been employed in order to guide the RGB-D camera along predefined trajectories shown in \cref{fig:kuka}. Several EEG caps are provided by eemagine Medical Imaging Solutions GmbH, Berlin, Germany. One cap with 63 electrodes and two with 23 electrodes each are used in this thesis. These caps are strapped on a dummy phantom head as shown in \cref{fig:all_caps}.
 
 \begin{figure}[hbt!]
 	\centering
 		\includegraphics[width=\linewidth]{robot.png}
-		\caption{KUKA robot}
+		\caption{The KUKA LBR iiwa 14 med robot.}
 		\label{fig:kuka}	
 \end{figure}
 
@@ -46,7 +46,7 @@ KUKA robot has been employed in order to guide the RGB-D camera along predefined
 \end{figure}
 
 \subsection{Markers}
-A Chessboard with grid size (5 $\times$ 8) is used for camera and hand-eye calibration. One reflective marker is firmly attached to the Kinect which has a specific arrangement of fiducials. Pose can be estimated when the marker is exposed to tracking camera hence pose of the Kinect.  Since this marker is attached on a arbitrary position, exact transformation between kinect coordinate frame and the marker is unknown which we estimate during eye-in-hand calibration. Another reflective marker with a different arrangement of fiducials is used for electrode digitalization. Tracking camera records the 3D position of marker tip. Please note that these markers have to be calibrated with tracking camera before hand.  The \cref{fig:markers} provides a glimpse of markers.  
+A Chessboard with grid size (5 $\times$ 8) is used for camera and hand-eye calibration. One reflective marker which has a specific arrangement of fiducials is rigidly attached to the Kinect. The pose can be estimated when the marker is exposed to the tracking camera. Since this marker is attached on an arbitrary position, exact transformation between kinect coordinate frame and the marker is unknown and will be estimated using eye-in-hand calibration. Another reflective marker with a different arrangement of fiducials is used for electrode digitalization. The tracking camera records the 3D position of marker tip. Please note that these markers have to be calibrated with tracking camera before hand.  The \cref{fig:markers} shows different markers used.  
 
 \begin{figure}[hbt!]
 	\centering
