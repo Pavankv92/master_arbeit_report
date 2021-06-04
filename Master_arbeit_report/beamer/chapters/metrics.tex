@@ -1,0 +1,12 @@
+\section{Pre-Data Acquisition steps}
+\begin{enumerate}
+	\item Absolute 3D Position error 
+	\begin{enumerate}
+		\item $L2 Norm_i $ = $ \sqrt{ {(x_{gi}-x_{ei})^2} + {(y_{gi}-y_{ei})^2} + { (z_{gi}-z_{ei})^2} } $
+		\item Mean +/- STD Deviation of L2 Norm.
+	\end{enumerate}
+	\item Relative 3D position error 
+	\begin{enumerate}
+		\item Post registration RMSE = ICP (Estimated electrode cloud, ground truth electrode cloud)
+	\end{enumerate}
+\end{enumerate}

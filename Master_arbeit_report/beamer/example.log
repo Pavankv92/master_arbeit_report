@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  9 DEC 2020 09:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  4 JUN 2021 09:46
 entering extended mode
 **./example.tex
 (example.tex
@@ -1891,12 +1891,12 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 20--20
 Overfull \vbox (5.0pt too high) detected at line 20
  []
 
-<logoTUHH.pdf, id=124, 1204.5pt x 329.23pt>
+<logoTUHH.pdf, id=56, 1204.5pt x 329.23pt>
 File: logoTUHH.pdf Graphic file (type pdf)
 <use logoTUHH.pdf>
 Package pdftex.def Info: logoTUHH.pdf  used on input line 20.
 (pdftex.def)             Requested size: 164.45677pt x 44.9554pt.
-<logoMTEC.pdf, id=125, 949.14622pt x 305.99626pt>
+<logoMTEC.pdf, id=57, 949.14622pt x 305.99626pt>
 File: logoMTEC.pdf Graphic file (type pdf)
 <use logoMTEC.pdf>
 Package pdftex.def Info: logoMTEC.pdf  used on input line 20.
@@ -1919,7 +1919,7 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
 [][][][]  
  []
 
-<logoMTECFrames.pdf, id=138, 949.14622pt x 212.04514pt>
+<logoMTECFrames.pdf, id=70, 949.14622pt x 212.04514pt>
 File: logoMTECFrames.pdf Graphic file (type pdf)
 <use logoMTECFrames.pdf>
 Package pdftex.def Info: logoMTECFrames.pdf  used on input line 31.
@@ -1951,377 +1951,42 @@ Package pdftex.def Info: logoMTECFrames.pdf  used on input line 14.
 (pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
 [4
 
-]) (chapters/experimental_setup.tex
-<../figures/experimental_setup_1.jpg, id=159, 1445.4pt x 963.6pt>
-File: ../figures/experimental_setup_1.jpg Graphic file (type jpg)
-<use ../figures/experimental_setup_1.jpg>
-Package pdftex.def Info: ../figures/experimental_setup_1.jpg  used on input lin
-e 24.
-(pdftex.def)             Requested size: 122.91406pt x 81.94167pt.
-<../figures/different_EEG_caps.jpg, id=160, 1445.4pt x 963.6pt>
-File: ../figures/different_EEG_caps.jpg Graphic file (type jpg)
-<use ../figures/different_EEG_caps.jpg>
-Package pdftex.def Info: ../figures/different_EEG_caps.jpg  used on input line 
-24.
-(pdftex.def)             Requested size: 122.91406pt x 81.94167pt.
-<../figures/chessboard.jpg, id=161, 1445.4pt x 963.6pt>
-File: ../figures/chessboard.jpg Graphic file (type jpg)
-<use ../figures/chessboard.jpg>
-Package pdftex.def Info: ../figures/chessboard.jpg  used on input line 24.
-(pdftex.def)             Requested size: 122.91406pt x 81.94167pt.
-<../figures/active_marker.jpg, id=162, 1445.4pt x 963.6pt>
-File: ../figures/active_marker.jpg Graphic file (type jpg)
-<use ../figures/active_marker.jpg>
-Package pdftex.def Info: ../figures/active_marker.jpg  used on input line 24.
-(pdftex.def)             Requested size: 122.91406pt x 81.94167pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 24--24
+]) (chapters/camera_calibration.tex
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 21--21
 [][][][]  
  []
 
 File: logoMTECFrames.pdf Graphic file (type pdf)
 <use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 24.
+Package pdftex.def Info: logoMTECFrames.pdf  used on input line 21.
 (pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
 [5
 
- <../figures/experimental_setup_1.jpg> <../figures/different_EEG_caps.jpg> <../
-figures/chessboard.jpg> <../figures/active_marker.jpg>])
-(chapters/camera_calibration.tex
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 29--29
-[][][][]  
- []
+]) (chapters/slam.tex)
 
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 29.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[6
-
-]) (chapters/handeye_calibration.tex
-Overfull \hbox (20.00003pt too wide) in paragraph at lines 25--25
-[] [] 
- []
+LaTeX Warning: Empty bibliography on input line 43.
 
 
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 25--25
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 25.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[7
-
-]) (chapters/csys_generation.tex
-<../figures/BTi_4D.png, id=190, 383.031pt x 372.1905pt>
-File: ../figures/BTi_4D.png Graphic file (type png)
-<use ../figures/BTi_4D.png>
-Package pdftex.def Info: ../figures/BTi_4D.png  used on input line 15.
-(pdftex.def)             Requested size: 103.41974pt x 100.49277pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 15--15
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 15.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[8
-
- <../figures/BTi_4D.png>]) (chapters/csys_generation_2.tex
-<../figures/csys_1.png, id=199, 305.34074pt x 366.77025pt>
-File: ../figures/csys_1.png Graphic file (type png)
-<use ../figures/csys_1.png>
-Package pdftex.def Info: ../figures/csys_1.png  used on input line 22.
-(pdftex.def)             Requested size: 76.82246pt x 92.27437pt.
-<../figures/csys_2.png, id=200, 305.943pt x 367.3725pt>
-File: ../figures/csys_2.png Graphic file (type png)
-<use ../figures/csys_2.png>
-Package pdftex.def Info: ../figures/csys_2.png  used on input line 22.
-(pdftex.def)             Requested size: 76.82246pt x 92.24649pt.
-<../figures/csys_3.png, id=201, 305.943pt x 383.63326pt>
-File: ../figures/csys_3.png Graphic file (type png)
-<use ../figures/csys_3.png>
-Package pdftex.def Info: ../figures/csys_3.png  used on input line 22.
-(pdftex.def)             Requested size: 76.82246pt x 96.32954pt.
-<../figures/csys_4.png, id=202, 304.13625pt x 384.2355pt>
-File: ../figures/csys_4.png Graphic file (type png)
-<use ../figures/csys_4.png>
-Package pdftex.def Info: ../figures/csys_4.png  used on input line 22.
-(pdftex.def)             Requested size: 76.82246pt x 97.05533pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 22--22
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 22.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[9
-
- <../figures/csys_1.png> <../figures/csys_2.png> <../figures/csys_3.png> <../fi
-gures/csys_4.png>]) (chapters/csys_generation_3.tex
-<../figures/head_coordinate.png, id=213, 815.2056pt x 542.025pt>
-File: ../figures/head_coordinate.png Graphic file (type png)
-<use ../figures/head_coordinate.png>
-Package pdftex.def Info: ../figures/head_coordinate.png  used on input line 10.
-
-(pdftex.def)             Requested size: 244.56355pt x 162.60875pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 10--10
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 10.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[10
-
- <../figures/head_coordinate.png>]) ("chapters/electrode mapping.tex"
-<../figures/fusionTrac_phantom.jpg, id=221, 1445.4pt x 963.6pt>
-File: ../figures/fusionTrac_phantom.jpg Graphic file (type jpg)
-<use ../figures/fusionTrac_phantom.jpg>
-Package pdftex.def Info: ../figures/fusionTrac_phantom.jpg  used on input line 
-14.
-(pdftex.def)             Requested size: 202.35461pt x 134.90308pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 14--14
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 14.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[11
-
- <../figures/fusionTrac_phantom.jpg>]) ("chapters/electrode mapping_2.tex"
-LaTeX Font Info:    Font shape `TS1/lmss/b/n' in size <10> not available
-(Font)              Font shape `TS1/lmss/bx/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `TS1/lmss/b/n' in size <7> not available
-(Font)              Font shape `TS1/lmss/bx/n' tried instead on input line 25.
-LaTeX Font Info:    Font shape `TS1/lmss/b/n' in size <5> not available
-(Font)              Font shape `TS1/lmss/bx/n' tried instead on input line 25.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 25--25
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 25.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[12
-
-]) ("chapters/electrode mapping_3.tex"
-<../figures/phantom_single_axis.png, id=236, 389.2944pt x 247.1634pt>
-File: ../figures/phantom_single_axis.png Graphic file (type png)
-<use ../figures/phantom_single_axis.png>
-Package pdftex.def Info: ../figures/phantom_single_axis.png  used on input line
- 27.
-(pdftex.def)             Requested size: 150.57372pt x 95.60133pt.
-<../figures/phantom_multiple_axis.png, id=237, 389.2944pt x 247.1634pt>
-File: ../figures/phantom_multiple_axis.png Graphic file (type png)
-<use ../figures/phantom_multiple_axis.png>
-Package pdftex.def Info: ../figures/phantom_multiple_axis.png  used on input li
-ne 27.
-(pdftex.def)             Requested size: 150.57372pt x 95.60133pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 27--27
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 27.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[13
-
- <../figures/phantom_single_axis.png> <../figures/phantom_multiple_axis.png>]) 
-(chapters/single_axis.tex
-<../figures/normalised_positional_error_single_axis.png, id=248, 518.01584pt x 
-283.74463pt>
-File: ../figures/normalised_positional_error_single_axis.png Graphic file (type
- png)
-<use ../figures/normalised_positional_error_single_axis.png>
-Package pdftex.def Info: ../figures/normalised_positional_error_single_axis.png
-  used on input line 15.
-(pdftex.def)             Requested size: 259.00728pt x 141.87196pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 15--15
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 15.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[14
-
- <../figures/normalised_positional_error_single_axis.png>])
-(chapters/multiple_axis.tex
-<../figures/normalised_positional_error_multiple_axis.png, id=256, 494.73422pt 
-x 258.52289pt>
-File: ../figures/normalised_positional_error_multiple_axis.png Graphic file (ty
-pe png)
-<use ../figures/normalised_positional_error_multiple_axis.png>
-Package pdftex.def Info: ../figures/normalised_positional_error_multiple_axis.p
-ng  used on input line 15.
-(pdftex.def)             Requested size: 247.3665pt x 129.26112pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 15--15
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 15.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[15
-
- <../figures/normalised_positional_error_multiple_axis.png>])
-(chapters/marker_orientation.tex
-<../figures/active_marker_positional_error_normalised.png, id=264, 494.73422pt 
-x 258.52289pt>
-File: ../figures/active_marker_positional_error_normalised.png Graphic file (ty
-pe png)
-<use ../figures/active_marker_positional_error_normalised.png>
-Package pdftex.def Info: ../figures/active_marker_positional_error_normalised.p
-ng  used on input line 15.
-(pdftex.def)             Requested size: 247.3665pt x 129.26112pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 15--15
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 15.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[16
-
- <../figures/active_marker_positional_error_normalised.png>])
-(chapters/data_acquisition.tex
-<../figures/robot_movement.png, id=272, 606.5862pt x 404.712pt>
-File: ../figures/robot_movement.png Graphic file (type png)
-<use ../figures/robot_movement.png>
-Package pdftex.def Info: ../figures/robot_movement.png  used on input line 20.
-(pdftex.def)             Requested size: 151.64618pt x 101.17775pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 20--20
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 20.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[17
-
- <../figures/robot_movement.png>]) (chapters/electrode_variation.tex
-<../figures/blue_cap_all.png, id=280, 963.6pt x 532.389pt>
-File: ../figures/blue_cap_all.png Graphic file (type png)
-<use ../figures/blue_cap_all.png>
-Package pdftex.def Info: ../figures/blue_cap_all.png  used on input line 10.
-(pdftex.def)             Requested size: 307.28987pt x 169.77493pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 10--10
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 10.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[18
-
- <../figures/blue_cap_all.png>]) (chapters/electrode_variation_2.tex
-<../figures/electrode_position_range.png, id=288, 417.7206pt x 257.763pt>
-File: ../figures/electrode_position_range.png Graphic file (type png)
-<use ../figures/electrode_position_range.png>
-Package pdftex.def Info: ../figures/electrode_position_range.png  used on input
- line 15.
-(pdftex.def)             Requested size: 250.6343pt x 154.659pt.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 15--15
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 43--43
 [][][][]  
  []
 
 
-Overfull \vbox (1.99983pt too high) detected at line 15
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: logoMTECFrames.pdf Graphic file (type pdf)
 <use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 15.
+Package pdftex.def Info: logoMTECFrames.pdf  used on input line 43.
 (pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[19
-
- <../figures/electrode_position_range.png>]) (chapters/conclusion.tex
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 17--17
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 17.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[20
-
-]) (chapters/future_scope.tex
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 18--18
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 18.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[21
-
-]) (chapters/the_end.tex
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 5--5
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 5.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[22
-
-]) (chapters/dummy.tex
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 30--30
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 30.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[23
-
-])
-
-LaTeX Warning: Empty bibliography on input line 59.
-
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 59--59
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 59.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[24
+ [6
 
 ]
+File: logoMTECFrames.pdf Graphic file (type pdf)
+<use logoMTECFrames.pdf>
+Package pdftex.def Info: logoMTECFrames.pdf  used on input line 43.
+(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
+
+[7]
 \tf@nav=\write7
 \openout7 = `example.nav'.
 
@@ -2331,53 +1996,47 @@ Package pdftex.def Info: logoMTECFrames.pdf  used on input line 59.
 \tf@snm=\write9
 \openout9 = `example.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 63.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 63.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 45.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
  (example.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 63.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 63.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `example.out' has not changed.
-(rerunfilecheck)             Checksum: 9CB29FCD0CF56A4CFD7FB14546B90711;1385.
+(rerunfilecheck)             Checksum: F8D629C2DE948E27E51118098450E1F1;285.
 Package logreq Info: Writing requests to 'example.run.xml'.
 \openout1 = `example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 46421 strings out of 480930
- 1108764 string characters out of 2899761
- 1841892 words of memory out of 3000000
- 61184 multiletter control sequences out of 15000+200000
- 616600 words of font info for 108 fonts, out of 3000000 for 9000
+ 45983 strings out of 480930
+ 1098998 string characters out of 2899761
+ 1837752 words of memory out of 3000000
+ 60882 multiletter control sequences out of 15000+200000
+ 615472 words of font info for 105 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 67i,15n,106p,1134b,2293s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathe
-x.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
-athsy.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
-lm-rm.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
+ 67i,18n,106p,1134b,2293s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
+y.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-r
+m.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
+athex.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
 lm-mathit.enc}<C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
 lic/lm/lmbx10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmbx5.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/lm/lmbx7.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/lm/lmex10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/lm/lmmi10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/lm/lmmi7.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/lm/lmmi9.pfb><C:/Users/pavan/AppData/Local/Programs/Mi
-KTeX 2.9/fonts/type1/public/lm/lmmib10.pfb><C:/Users/pavan/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/pavan/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/lm/lmr5.pfb><C:/Users/pavan/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/pavan/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/pavan/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users/pavan/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Users/pavan/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/pavan
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/p
-avan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/User
-s/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy9.pfb><C:/U
-sers/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbol
-s/msam10.pfb>
-Output written on example.pdf (24 pages, 54316760 bytes).
+/public/lm/lmex10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmmi10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmmi7.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmmi9.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/pavan/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/pavan/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users/pavan/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Users/pavan/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/pavan/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/pavan/AppData/
+Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Users/pavan/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on example.pdf (7 pages, 202798 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 431 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 173 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
+ 194 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -3,27 +3,23 @@
 	\frametitle{Camera calibration}
 		\begin{table}[hbt]
 			\centering
-			\begin{tabular}{|c|c|c|}
+			\resizebox{\textwidth}{!}{
+			\begin{tabular}{|c|c|c|c|}
 				\hline
-				Parameters & calibrated values \\ 
+				Parameters & Calibrated values (OpenCV) & Calibrated values (Matlab) & Value in robot-guided data set\\ 
 				\hline
-				$\alpha_x$  & \num{968.7}  \\
-				$\alpha_y$ & \num{968.9} \\
-				S & 0.0 \\
-				$C_x$ & \num{1026} \\
-				$C_y$ & \num{774.0} \\
-				$K_1$ & \num{0.07588} \\
-				$K_2$ & \num{0.04285}  \\
-				$P_1$ & \num{-0.00064} \\
-				$P_2$ & \num{0.00132}  \\
-				$K_3$ & \num{-0.25794} \\
+				$\alpha_x$  & \num{601.06} & \num{604.58}  & \num{607.49}\\
+				$\alpha_y$ & \num{601.33} & \num{604.48} & \num{607.44}\\
+				S & 0.0 & 0.0 & 0.0\\
+				$C_x$  & \num{636.54} & \num{639.25}  & \num{638.92}\\
+				$C_y$  & \num{360.29} & \num{358.54}  & \num{364.35}\\
 				\hline
-			\end{tabular}
-			\caption{Microsoft Azure Kinect calibration result}
+			\end{tabular}}
+			\caption{Microsoft azure kinect calibration result}
 			\label{tab:kinect_camera_calibration_result}
 		\end{table}
-	\begin{block}{Implementation}
-		Camera calibration is implemented in OpenCV
-	\end{block}
-		
 \end{frame}
+
+
+
+

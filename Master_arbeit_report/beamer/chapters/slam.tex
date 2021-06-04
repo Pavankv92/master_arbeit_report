@@ -1,0 +1,24 @@
+\section{Pre-Data Acquisition steps}
+\begin{equation}
+	\begin{split}
+		g(\mathcal{X}) = \prod_i f_i(\mathcal{X}_i)
+	\end{split}
+	\label{eq:factor_graph}
+\end{equation}
+
+\begin{equation}
+	\begin{split}
+		f_i(\mathcal{X}_i) \propto exp (\frac{1}{2} \| h_i(\mathcal{X}_i) - z_i \|_\Sigma^2)
+	\end{split}
+\end{equation}
+
+with $\| e \|_\Sigma^2 = e^T\invMat{\Sigma}e$ being the Mahalanobis distance with covariance matrix $\Sigma$.
+
+\begin{equation}
+	\begin{split}
+		\mathcal{X}^* = \underset{\mathcal{X}}{\mathrm{argmin}}  \ \frac{1}{2} \sum_{(i,j) \in \mathcal{C}}  \| h_i(\mathcal{X}_i) - z_i \|_\Sigma^2
+	\end{split}
+	\label{eq:factor_graph_as_non_linear_least_square_problem}
+\end{equation}
+
+with $\| e \|_\Sigma^2 = e^T\invMat{\Sigma}e$ being the Mahalanobis distance with covariance matrix $\Sigma$.

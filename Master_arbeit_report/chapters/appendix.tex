@@ -1,4 +1,4 @@
-\section{Least square problem} There are 2 types of least square problems, non-homogeneous \( \matr{A} \vect{x} = \vect{b}\)  (type I) and homogeneous  \( \matr{A} \vect{x} = \vect{0}\) (type II).
+\section{Least square problem} The least square problem and solutions are referenced from the literature \cite{Hartley:2003:MVG:861369}. There are 2 types of least square problems, non-homogeneous \( \matr{A} \vect{x} = \vect{b}\)  (type I) and homogeneous  \( \matr{A} \vect{x} = \vect{0}\) (type II).
 \subsection{Type I} Consider A system of equations \( \matr{A} \vect{x} = \vect{b}\) where $\matr{A}$ is m $\times$ n matrix. 
 \begin{enumerate}
 	\item if m < n then, there are more unknowns than the number of equations. In this case, there are infinitely many solutions.
@@ -11,20 +11,20 @@
 \subsection{Type II} Consider A system of equations \( \matr{A} \vect{x} = \vect{0}\) where $\matr{A}$ is m $\times$ n matrix. we will see what is the solution to case m > n where there are more equations (data points) than the number of unknowns.
 \begin{enumerate}
 	\item As there is no exact solution, we can minimize the geometric error by solving \( \displaystyle \min_{x \in \mathtt{R}^n} \|Ax\|^2 = 0 \  \textrm{s.t.}\ \|x\| = 1\).
-	\item the solution $\vect{x}$ is the right null space of matrix $\matr{A}$ and is obtained from unit sigular value of A corresponding to the smallest singular value i.e if SVD of $ \matr{A} = \matr{U}\matr{D}\matr{V}^T $, then $\vect{x}$ is the last column of $\matr{V}$.
+	\item the solution $\vect{x}$ is the right null space of matrix $\matr{A}$ and is obtained from unit singular value of A corresponding to the smallest singular value i.e if SVD of $ \matr{A} = \matr{U}\matr{D}\matr{V}^T $, then $\vect{x}$ is the last column of $\matr{V}$.
 \end{enumerate}
 
-\section{Rotation matrix}  Task is to find the rotation matrix $\matr{R}$ which is closest approximation to the given matrix $\matr{Q}$. The "best" here means that the Frobenius norm of the $[\matr{R} -  \matr{Q}]$ is minimized. 
+\section{Rotation matrix}  Task is to find the rotation matrix $\matr{R}$ which is closest approximation to the given matrix $\matr{Q}$. The "best" here means that the Frobenius norm of the $[\matr{R} -  \matr{Q}]$ is minimized \cite{Zhang}.
 
 \begin{equation*}
 	\centering
 	\displaystyle \min_{R} \|R - Q\|_{F}^{2}\ \  \textrm{s.t.}\ R^TR = I
 \end{equation*}
 
-\noindent if SVD of $ \matr{Q} = \matr{U}\matr{D}\matr{V}^T $ , then Matrix $\matr{R}$ which satisfies above condition is  $\matr{R} = \matr{U}\matr{V}^T$ per \cite{Zhang}.
+\noindent if SVD of $ \matr{Q} = \matr{U}\matr{D}\matr{V}^T $ , then Matrix $\matr{R}$ which satisfies above condition is  $\matr{R} = \matr{U}\matr{V}^T$.
 
 \section{Gaussian distribution}
-A random variable possess probability density functions (PDF's) like one dimensional normal distribution function with mean $\mu$ and variance $\sigma^2$. PDF of the normal distribution function is given by,
+This section gives an overview of Gaussian distribution as per \cite{10.5555/1121596}. A random variable possess probability density functions (PDF's) like one dimensional normal distribution function with mean $\mu$ and variance $\sigma^2$. PDF of the normal distribution function is given by,
 
 \begin{equation*}
 		p(x) = (2\pi\sigma^2)^{-\frac{1}{2}} \exp\{-\frac{1}{2} \frac{(x-\mu)^2}{\sigma^2}\}	
@@ -57,11 +57,12 @@ With few rearrangement canonical form of PDF for multivariate normal distributio
 \end{equation*}
 
 \section{Pose comparison}
-Let $\matr{P}$ be source and $\matr{Q}$ target poses which are 4$\times$4 homogeneous matrices with $ [{R|t}] $. \textit{R} is rotation and \textit{t} is translational part. Task is to compare them and form a metric.   
-Let ($k_P$,$\theta_p$) and ($k_q$,$\theta_q$) be axis angle representation \cite{axis-angle} of rotational part $\mathtt{R}[\matr{P}]$ and $\mathtt{R}[\matr{Q}]$ respectively. Then the metric for the rotational part is \cref{eq:rotational_metric}, the axis part is neglected. 
+Let $\matr{P}$ be the source pose and $\matr{Q}$ be the target pose, which are 4$\times$4 homogeneous matrices with $ [{R|t}] $. \textit{R} is the rotation and \textit{t} is the translational part. Let $\matr{P}_q$, $\matr{Q}_q$ be the quaternion form of above poses and $\matr{E}_q$ = $\matr{P}_q$ * $\matr{Q}_q^{-1}$ be the error in quaternion form. Task is to compare them and form a metric.
+
+Let ($k_E$,$\theta_E$) be axis angle representation \cite{axis-angle} of rotational part $\mathtt{R}[{E}_q]$. Then the metric for the rotational part is \cref{eq:rotational_metric}, the axis part is neglected. 
 
 \begin{equation}
-	|\theta_p| - |\theta_q|
+	|\theta_E|
 	\label{eq:rotational_metric}
 \end{equation} 
 
