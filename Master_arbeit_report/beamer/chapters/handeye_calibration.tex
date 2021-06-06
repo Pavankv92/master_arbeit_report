@@ -1,25 +1,21 @@
-\section{Pre-Data Acquisition steps}
 \begin{frame}
-	\frametitle{Hand-eye calibration}
-	\begin{itemize}
-		\item Chessboard pose estimation with new Kinect is integrated to existing hand-eye calibration framework
-		\item Results,
-		\begin{table}[hbt!]
-			\centering
-			\begin{tabular}{|c|c|c|}
-				\hline
-				Camera & Translation error (m) & Rotational error ($\deg$)\\ 
-				\hline
-				Kinect & 0.001$\pm$ $\num{1.40e-07}$  & 0.258 $\pm$ $\num{0.000}$\\
-				fusionTrac & 0.001 $\pm$ $\num{2.8e-07}$  & 0.205 $\pm$ $\num{0.000}$\\
-				\hline
-			\end{tabular}
-			\caption{Hand-eye calibration results}
-			\label{tab:kinect__fusionTrac_handeye_result}
-		\end{table}
-	\end{itemize}
-\begin{block}{Exceeded the benchmark }
-	Translational error $<$ 1.1 mm and rotational error  $<$ 0.3 degrees.
-\end{block}
-		
+\frametitle{Hane-eye calibration}
+\begin{table}[hbt]
+	\centering
+	\resizebox{\textwidth}{!}{
+		\begin{tabular}{|c|c|c|c|}
+			\hline
+			Camera & Translation error (mm) & Rotational error ($\deg$) & Between\\ 
+			\hline
+			Kinect & 8.8$\pm$ 0.2  & 0.7682 $\pm$ 0.0204 & Marker-Kinect\\
+			
+			Tracking camera & 0.18$\pm$ \num{4.5e-06 } & 0.093 $\pm$ \num{5.4e-05 } & Robot-Tracking Camera\\
+			
+			Kinect & 1.28$\pm$ \num{2.1e-04 }  & 0.211 $\pm$ \num{2.1e-04} & Robot-Kinect\\
+			\hline
+	\end{tabular}}
+    \caption{Hand-eye, eye-in-hand calibration result}
+	\label{tab:handeye_result}
+\end{table}
 \end{frame}
+		

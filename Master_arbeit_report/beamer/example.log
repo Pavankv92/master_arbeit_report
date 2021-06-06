@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  4 JUN 2021 09:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 2.9.7400 64-bit) (preloaded format=pdflatex 2020.5.10)  5 JUN 2021 10:39
 entering extended mode
 **./example.tex
 (example.tex
@@ -1891,12 +1891,12 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 20--20
 Overfull \vbox (5.0pt too high) detected at line 20
  []
 
-<logoTUHH.pdf, id=56, 1204.5pt x 329.23pt>
+<logoTUHH.pdf, id=52, 1204.5pt x 329.23pt>
 File: logoTUHH.pdf Graphic file (type pdf)
 <use logoTUHH.pdf>
 Package pdftex.def Info: logoTUHH.pdf  used on input line 20.
 (pdftex.def)             Requested size: 164.45677pt x 44.9554pt.
-<logoMTEC.pdf, id=57, 949.14622pt x 305.99626pt>
+<logoMTEC.pdf, id=53, 949.14622pt x 305.99626pt>
 File: logoMTEC.pdf Graphic file (type pdf)
 <use logoMTEC.pdf>
 Package pdftex.def Info: logoMTEC.pdf  used on input line 20.
@@ -1919,39 +1919,14 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 31--31
 [][][][]  
  []
 
-<logoMTECFrames.pdf, id=70, 949.14622pt x 212.04514pt>
+<logoMTECFrames.pdf, id=66, 949.14622pt x 212.04514pt>
 File: logoMTECFrames.pdf Graphic file (type pdf)
 <use logoMTECFrames.pdf>
 Package pdftex.def Info: logoMTECFrames.pdf  used on input line 31.
 (pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
 [2
 
- <./logoMTECFrames.pdf>] (chapters/motivation.tex
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 19.
-
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 19--19
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 19.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[3
-
-]) (chapters/objectives.tex
-Overfull \hbox (56.90549pt too wide) in paragraph at lines 14--14
-[][][][]  
- []
-
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 14.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-[4
-
-]) (chapters/camera_calibration.tex
+ <./logoMTECFrames.pdf>] (chapters/camera_calibration.tex
 Overfull \hbox (56.90549pt too wide) in paragraph at lines 21--21
 [][][][]  
  []
@@ -1960,9 +1935,42 @@ File: logoMTECFrames.pdf Graphic file (type pdf)
 <use logoMTECFrames.pdf>
 Package pdftex.def Info: logoMTECFrames.pdf  used on input line 21.
 (pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
+[3
+
+]) (chapters/handeye_calibration.tex
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 20--20
+[][][][]  
+ []
+
+File: logoMTECFrames.pdf Graphic file (type pdf)
+<use logoMTECFrames.pdf>
+Package pdftex.def Info: logoMTECFrames.pdf  used on input line 20.
+(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
+[4
+
+]) (chapters/results_robot.tex
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 52--52
+[][][][]  
+ []
+
+File: logoMTECFrames.pdf Graphic file (type pdf)
+<use logoMTECFrames.pdf>
+Package pdftex.def Info: logoMTECFrames.pdf  used on input line 52.
+(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
 [5
 
-]) (chapters/slam.tex)
+]) (chapters/results_hand.tex
+Overfull \hbox (56.90549pt too wide) in paragraph at lines 50--50
+[][][][]  
+ []
+
+File: logoMTECFrames.pdf Graphic file (type pdf)
+<use logoMTECFrames.pdf>
+Package pdftex.def Info: logoMTECFrames.pdf  used on input line 50.
+(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
+[6
+
+])
 
 LaTeX Warning: Empty bibliography on input line 43.
 
@@ -1971,22 +1979,13 @@ Overfull \hbox (56.90549pt too wide) in paragraph at lines 43--43
 [][][][]  
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 File: logoMTECFrames.pdf Graphic file (type pdf)
 <use logoMTECFrames.pdf>
 Package pdftex.def Info: logoMTECFrames.pdf  used on input line 43.
 (pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
- [6
+[7
 
 ]
-File: logoMTECFrames.pdf Graphic file (type pdf)
-<use logoMTECFrames.pdf>
-Package pdftex.def Info: logoMTECFrames.pdf  used on input line 43.
-(pdftex.def)             Requested size: 36.41948pt x 8.13416pt.
-
-[7]
 \tf@nav=\write7
 \openout7 = `example.nav'.
 
@@ -2002,41 +2001,37 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 45.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 45.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 45.
 Package rerunfilecheck Info: File `example.out' has not changed.
-(rerunfilecheck)             Checksum: F8D629C2DE948E27E51118098450E1F1;285.
+(rerunfilecheck)             Checksum: 41906125AE37FD09B39FB7C93BBB8BF9;210.
 Package logreq Info: Writing requests to 'example.run.xml'.
 \openout1 = `example.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 45983 strings out of 480930
- 1098998 string characters out of 2899761
- 1837752 words of memory out of 3000000
- 60882 multiletter control sequences out of 15000+200000
- 615472 words of font info for 105 fonts, out of 3000000 for 9000
+ 45943 strings out of 480930
+ 1098121 string characters out of 2899761
+ 1844998 words of memory out of 3000000
+ 60844 multiletter control sequences out of 15000+200000
+ 607167 words of font info for 95 fonts, out of 3000000 for 9000
  1143 hyphenation exceptions out of 8191
- 67i,18n,106p,1134b,2293s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-maths
-y.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-r
-m.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
-athex.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
-lm-mathit.enc}<C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/lm/lmbx10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/lm/lmex10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/t
-ype1/public/lm/lmmi10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fon
-ts/type1/public/lm/lmmi7.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/lm/lmmi9.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/pavan/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/pavan/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users/pavan/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/lm/lmss8.pfb><C:/Users/pavan/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/pavan/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/pavan/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Users/pavan/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on example.pdf (7 pages, 202798 bytes).
+ 67i,13n,106p,1134b,2293s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ts1.e
+nc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-math
+sy.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-
+rm.enc}{C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-
+mathit.enc}<C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public
+/lm/lmmi10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/lm/lmmi7.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/lm/lmr10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/lm/lmss10.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/lm/lmss12.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmss8.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/lm/lmss9.pfb><C:/Users/pavan/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/pavan/AppData/Local/Programs/M
+iKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Users/pavan/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+Output written on example.pdf (7 pages, 169932 bytes).
 PDF statistics:
- 173 PDF objects out of 1000 (max. 8388607)
- 23 named destinations out of 1000 (max. 500000)
- 194 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 161 PDF objects out of 1000 (max. 8388607)
+ 27 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

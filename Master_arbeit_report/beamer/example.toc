@@ -1,6 +1,5 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {english}{}
-\beamer@sectionintoc {1}{Motivation}{3}{1}{1}
-\beamer@sectionintoc {2}{Motivation}{4}{1}{2}
-\beamer@sectionintoc {3}{Pre-Data Acquisition steps}{5}{1}{3}
-\beamer@sectionintoc {4}{Pre-Data Acquisition steps}{6}{1}{4}
+\beamer@sectionintoc {1}{Pre-Data Acquisition steps}{3}{1}{1}
+\beamer@sectionintoc {2}{Metrics}{5}{1}{2}
+\beamer@sectionintoc {3}{Metrics}{6}{1}{3}

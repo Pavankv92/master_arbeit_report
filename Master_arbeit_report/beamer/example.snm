@@ -1,3 +1,8 @@
-\beamer@slide {tab:kinect_camera_calibration_result}{5}
-\beamer@slide {eq:factor_graph}{6}
-\beamer@slide {eq:factor_graph_as_non_linear_least_square_problem}{6}
+\beamer@slide {tab:kinect_camera_calibration_result}{3}
+\beamer@slide {tab:handeye_result}{4}
+\beamer@slide {tab:3d_position_error_robot}{5}
+\beamer@slide {tab:trajectory_comparison_robot}{5}
+\beamer@slide {tab:icp_gt_robot}{5}
+\beamer@slide {tab:3d_position_error_hand}{6}
+\beamer@slide {tab:trajectory_comparison_hand}{6}
+\beamer@slide {tab:icp_gt_hand}{6}
